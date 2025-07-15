@@ -1,2 +1,2 @@
-# 在ZYNQ7010上制作可变FIR滤波系数demo
-在Vivado 2020.2上用CortexA9控制FIR IP核重装载.coe文件的滤波器系数
+# 在ZYNQ7010上制作可变FIR滤波系数的Demo
+在Vivado 2020.2上使用CortexA9控制FIR IP核重装载.coe文件的不同组别滤波系数
