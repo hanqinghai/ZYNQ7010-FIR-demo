@@ -1,0 +1,1749 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Mon Jul 14 12:10:26 2025
+# Process ID: 7172
+# Current directory: C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent26756 C:\Users\hanqi\Desktop\EDA_XILINX\FIR_COE20\vivado_prj\fir_coe20.xpr
+# Log file: C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/vivado.log
+# Journal file: C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/XILINX_IDE/Vivado/2020.2/data/ip'.
+open_project: Time (s): cpu = 00:00:13 ; elapsed = 00:00:06 . Memory (MB): peak = 1146.746 ; gain = 0.000
+update_compile_order -fileset sources_1
+create_bd_design "design_1"
+Wrote  : <C:\Users\hanqi\Desktop\EDA_XILINX\FIR_COE20\vivado_prj\fir_coe20.srcs\sources_1\bd\design_1\design_1.bd> 
+update_compile_order -fileset sources_1
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:fir_compiler:7.2 fir_compiler_0
+endgroup
+close_bd_design [get_bd_designs design_1]
+Wrote  : <C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+open_bd_design {C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/bd/design_1/design_1.bd}
+Reading block design file <C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/bd/design_1/design_1.bd>...
+Successfully read diagram <design_1> from block design file <C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/bd/design_1/design_1.bd>
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:fir_compiler:7.2 fir_compiler_0
+endgroup
+set_property -dict [list CONFIG.CoefficientSource {COE_File} CONFIG.Coefficient_File {C:/Users/hanqi/Desktop/untitled.coe} CONFIG.Coefficient_Sets {2} CONFIG.Coefficient_Reload {true} CONFIG.Sample_Frequency {5} CONFIG.Optimization_Goal {Speed} CONFIG.Has_ARESETn {true} CONFIG.Sample_Frequency {5} CONFIG.Clock_Frequency {300.0} CONFIG.Coefficient_Sign {Signed} CONFIG.Quantization {Integer_Coefficients} CONFIG.Coefficient_Width {16} CONFIG.Coefficient_Fractional_Bits {0} CONFIG.Coefficient_Structure {Inferred} CONFIG.Output_Width {42} CONFIG.Filter_Architecture {Systolic_Multiply_Accumulate} CONFIG.Optimization_Selection {All} CONFIG.Data_Path_Fanout {true} CONFIG.Pre_Adder_Pipeline {true} CONFIG.Coefficient_Fanout {true} CONFIG.Control_Path_Fanout {true} CONFIG.Control_Column_Fanout {true} CONFIG.Control_Broadcast_Fanout {true} CONFIG.Control_LUT_Pipeline {true} CONFIG.No_BRAM_Read_First_Mode {true} CONFIG.Optimal_Column_Lengths {true} CONFIG.Data_Path_Broadcast {false} CONFIG.Disable_Half_Band_Centre_Tap {false} CONFIG.No_SRL_Attributes {false} CONFIG.Other {true} CONFIG.Optimization_List {Data_Path_Fanout,Pre-Adder_Pipeline,Coefficient_Fanout,Control_Path_Fanout,Control_Column_Fanout,Control_Broadcast_Fanout,Control_LUT_Pipeline,No_BRAM_Read_First_Mode,Optimal_Column_Lengths,Other} CONFIG.ColumnConfig {5} CONFIG.Filter_Selection {1}] [get_bd_cells fir_compiler_0]
+INFO: [IP_Flow 19-3484] Absolute path of file 'c:/Users/hanqi/Desktop/untitled.coe' provided. It will be converted relative to IP Instance files '../../../../../../../../../untitled.coe'
+set_property -dict [list CONFIG.Coefficient_File {C:/Users/hanqi/Desktop/untitled.coe} CONFIG.Coefficient_Sets {2} CONFIG.Sample_Frequency {5} CONFIG.Clock_Frequency {300} CONFIG.Coefficient_Sign {Signed} CONFIG.Quantization {Integer_Coefficients} CONFIG.Coefficient_Width {16} CONFIG.Coefficient_Fractional_Bits {0} CONFIG.Coefficient_Structure {Inferred} CONFIG.Data_Width {16} CONFIG.Output_Width {42} CONFIG.Filter_Architecture {Systolic_Multiply_Accumulate} CONFIG.ColumnConfig {5} CONFIG.Filter_Selection {1}] [get_ips fir_compiler_0]
+INFO: [IP_Flow 19-3484] Absolute path of file 'c:/Users/hanqi/Desktop/untitled.coe' provided. It will be converted relative to IP Instance files '../../../../../../../untitled.coe'
+generate_target all [get_files  C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/ip/fir_compiler_0/fir_compiler_0.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'fir_compiler_0'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'fir_compiler_0'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'fir_compiler_0'...
+INFO: [IP_Flow 19-1686] Generating 'C Simulation' target for IP 'fir_compiler_0'...
+INFO: [IP_Flow 19-1686] Generating 'Test Bench' target for IP 'fir_compiler_0'...
+INFO: [IP_Flow 19-1686] Generating 'Miscellaneous' target for IP 'fir_compiler_0'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'fir_compiler_0'...
+generate_target: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1470.277 ; gain = 0.000
+export_ip_user_files -of_objects [get_files C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/ip/fir_compiler_0/fir_compiler_0.xci] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/ip/fir_compiler_0/fir_compiler_0.xci] -directory C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.ip_user_files -ipstatic_source_dir C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.cache/compile_simlib/modelsim} {questa=C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.cache/compile_simlib/questa} {riviera=C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.cache/compile_simlib/riviera} {activehdl=C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+close [ open C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/new/fir_top.v w ]
+add_files C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/new/fir_top.v
+update_compile_order -fileset sources_1
+save_bd_design
+Wrote  : <C:\Users\hanqi\Desktop\EDA_XILINX\FIR_COE20\vivado_prj\fir_coe20.srcs\sources_1\bd\design_1\design_1.bd> 
+Wrote  : <C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+close [ open C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/new/fir_ctrl.v w ]
+add_files C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/new/fir_ctrl.v
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs synth_1 -jobs 20
+[Mon Jul 14 14:18:24 2025] Launched synth_1...
+Run output will be captured here: C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.runs/synth_1/runme.log
+launch_runs: Time (s): cpu = 00:00:00 ; elapsed = 00:00:23 . Memory (MB): peak = 1543.922 ; gain = 0.000
+launch_runs impl_1 -jobs 20
+[Mon Jul 14 14:20:44 2025] Launched impl_1...
+Run output will be captured here: C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.runs/impl_1/runme.log
+close_bd_design [get_bd_designs design_1]
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/XILINX_IDE/Vivado/2020.2/data/xsim/xsim.ini' copied to run dir:'C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_fir' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.sim/sim_1/behav/xsim/untitled.coe'
+INFO: [SIM-utils-43] Exported 'C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.sim/sim_1/behav/xsim/fir_compiler_0.mif'
+INFO: [SIM-utils-43] Exported 'C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.sim/sim_1/behav/xsim/untitled_100K.coe'
+WARNING: [SIM-utils-52] IP component XML file does not exist: 'c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xml'
+WARNING: [SIM-utils-52] IP component XML file does not exist: 'c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/ip/fir_compiler_0/fir_compiler_0.xml'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_fir_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.ip_user_files/ip/clk_wiz_0/clk_wiz_0_clk_wiz.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clk_wiz_0_clk_wiz
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.ip_user_files/ip/clk_wiz_0/clk_wiz_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clk_wiz_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/new/fir.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fir
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/new/fir_ctrl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fir_ctrl
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/new/fir_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fir_top
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sim_1/new/tb_fir.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_fir
+"xvhdl --incr --relax -prj tb_fir_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.ip_user_files/ip/fir_compiler_0/sim/fir_compiler_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'fir_compiler_0'
+INFO: [USF-XSim-69] 'compile' step finished in '5' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.sim/sim_1/behav/xsim'
+"xelab -wto 099102fdb9a74a79b734f8e292d30a8c --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xbip_utils_v3_0_10 -L axi_utils_v2_0_6 -L fir_compiler_v7_2_15 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_fir_behav xil_defaultlib.tb_fir xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: D:/XILINX_IDE/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto 099102fdb9a74a79b734f8e292d30a8c --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xbip_utils_v3_0_10 -L axi_utils_v2_0_6 -L fir_compiler_v7_2_15 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_fir_behav xil_defaultlib.tb_fir xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 12 differs from formal bit length 1 for port 'fir_data_in' [C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sim_1/new/tb_fir.v:45]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 12 for port 'fir_data_in' [C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/new/fir_top.v:49]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package xbip_utils_v3_0_10.xbip_utils_v3_0_10_pkg
+Compiling package fir_compiler_v7_2_15.fir_compiler_v7_2_15_viv_comp
+Compiling package ieee.std_logic_textio
+Compiling package fir_compiler_v7_2_15.globals_pkg
+Compiling package fir_compiler_v7_2_15.components
+Compiling package ieee.math_real
+Compiling package axi_utils_v2_0_6.global_util_pkg
+Compiling package axi_utils_v2_0_6.axi_utils_comps
+Compiling package unisim.vcomponents
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_signed
+Compiling package ieee.vital_timing
+Compiling package ieee.vital_primitives
+Compiling package unisim.vpkg
+Compiling module unisims_ver.IBUF
+Compiling module unisims_ver.PLLE2_ADV(CLKFBOUT_MULT=18,CLKIN...
+Compiling module unisims_ver.BUFG
+Compiling module xil_defaultlib.clk_wiz_0_clk_wiz
+Compiling module xil_defaultlib.clk_wiz_0
+Compiling module xil_defaultlib.fir_ctrl
+Compiling architecture xilinx of entity axi_utils_v2_0_6.glb_srl_fifo [\glb_srl_fifo(width=16,has_ifx=t...]
+Compiling architecture xilinx of entity axi_utils_v2_0_6.glb_ifx_slave [\glb_ifx_slave(width=16,has_ifx=...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.delay [\delay(c_delay_len=1,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.dpr_mem [\dpr_mem(c_xdevicefamily="zynq",...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.delay [\delay(c_delay_len=4,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.delay [\delay(c_delay_len=3,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.delay [\delay(c_delay_len=0,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.delay [\delay(c_delay_len=4,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.delay [\delay(c_delay_len=6,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.delay [\delay(c_delay_len=5,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.delay [\delay(c_delay_len=5,c_xdevicefa...]
+Compiling architecture xilinx of entity axi_utils_v2_0_6.glb_srl_fifo [\glb_srl_fifo(width=9,has_ifx=tr...]
+Compiling architecture xilinx of entity axi_utils_v2_0_6.glb_ifx_slave [\glb_ifx_slave(width=9,has_ifx=t...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.cnfg_and_reload [\cnfg_and_reload(c_xdevicefamily...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.delay [\delay(c_delay_len=2,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.delay [\delay(c_delay_len=0,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.delay [\delay(c_delay_len=2,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.delay [\delay(c_delay_len=1,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.delay [\delay(c_delay_len=4,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.delay [\delay(c_delay_len=3,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.cntrl_delay [\cntrl_delay(c_delay_len=0,c_mem...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.sp_mem [\sp_mem(c_xdevicefamily="zynq",c...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.filt_mem [\filt_mem(c_xdevicefamily="zynq"...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.filt_mem [\filt_mem(c_xdevicefamily="zynq"...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.filt_mem [\filt_mem(c_xdevicefamily="zynq"...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.filt_mem [\filt_mem(c_xdevicefamily="zynq"...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.filt_mem [\filt_mem(c_xdevicefamily="zynq"...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.dpr_mem [\dpr_mem(c_xdevicefamily="zynq",...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.filt_mem [\filt_mem(c_xdevicefamily="zynq"...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.dpr_mem [\dpr_mem(c_xdevicefamily="zynq",...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.filt_mem [\filt_mem(c_xdevicefamily="zynq"...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.dpr_mem [\dpr_mem(c_xdevicefamily="zynq",...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.filt_mem [\filt_mem(c_xdevicefamily="zynq"...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.dpr_mem [\dpr_mem(c_xdevicefamily="zynq",...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.filt_mem [\filt_mem(c_xdevicefamily="zynq"...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.dpr_mem [\dpr_mem(c_xdevicefamily="zynq",...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.filt_mem [\filt_mem(c_xdevicefamily="zynq"...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.cntrl_delay [\cntrl_delay(c_delay_len=1,c_mem...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.delay [\delay(c_delay_len=1,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.cntrl_delay [\cntrl_delay(c_delay_len=0,c_mem...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.delay [\delay(c_delay_len=2,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.buff [\buff(c_xdevicefamily="zynq",c_d...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.delay [\delay(c_delay_len=1,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.buff [\buff(c_xdevicefamily="zynq",c_d...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.delay [\delay(c_delay_len=0,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.delay [\delay(c_delay_len=0,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.delay [\delay(c_delay_len=0,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.delay [\delay(c_delay_len=0,c_xdevicefa...]
+Compiling architecture dsp48e1_v of entity unisim.DSP48E1 [\DSP48E1(mask="11111111111111111...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.calc [\calc(c_xdevicefamily="zynq",c_p...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.addsub_mult_add [\addsub_mult_add(c_xdevicefamily...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.addsub_mult_add [\addsub_mult_add(c_xdevicefamily...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.delay [\delay(c_delay_len=0,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.delay [\delay(c_delay_len=0,c_xdevicefa...]
+Compiling architecture dsp48e1_v of entity unisim.DSP48E1 [\DSP48E1(inmodereg=0,mask="11111...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.delay [\delay(c_delay_len=0,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.delay [\delay(c_delay_len=0,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.calc [\calc(c_xdevicefamily="zynq",c_p...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.add_accum [\add_accum(c_xdevicefamily="zynq...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.delay [\delay(c_delay_len=5,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.delay [\delay(c_delay_len=2,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.delay [\delay(c_delay_len=3,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.delay [\delay(c_delay_len=1,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.delay [\delay(c_delay_len=1,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.delay [\delay(c_delay_len=10,c_xdevicef...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.delay [\delay(c_delay_len=13,c_xdevicef...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.single_rate [\single_rate(c_xdevicefamily="zy...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.fir_compiler_v7_2_15_viv [\fir_compiler_v7_2_15_viv(c_xdev...]
+Compiling architecture xilinx of entity fir_compiler_v7_2_15.fir_compiler_v7_2_15 [\fir_compiler_v7_2_15(c_xdevicef...]
+Compiling architecture fir_compiler_0_arch of entity xil_defaultlib.fir_compiler_0 [fir_compiler_0_default]
+Compiling module xil_defaultlib.fir
+Compiling module xil_defaultlib.fir_top
+Compiling module xil_defaultlib.tb_fir
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_fir_behav
+
+****** Webtalk v2020.2 (64-bit)
+  **** SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.sim/sim_1/behav/xsim/xsim.dir/tb_fir_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Mon Jul 14 14:27:09 2025...
+run_program: Time (s): cpu = 00:00:02 ; elapsed = 00:00:15 . Memory (MB): peak = 1543.922 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '15' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_fir_behav -key {Behavioral:sim_1:Functional:tb_fir} -tclbatch {tb_fir.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+source tb_fir.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+WARNING: [Wavedata 42-489] Can't add object "/tb_fir/simdata" to the wave window because it has 524288 bits, which exceeds the display limit of 65536 bits.  To change the display limit, use the command "set_property display_limit <new limit> [current_wave_config]".
+# run 1000ns
+[                   0] : reset begin...
+WARNING: Too many words specified in data file C:/Users/hanqi/Desktop/simdata.txt
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_fir_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:08 ; elapsed = 00:00:48 . Memory (MB): peak = 1611.941 ; gain = 68.020
+run all
+[             1990000] : reset stop...
+[             1990000] : read data begin...
+run: Time (s): cpu = 00:00:08 ; elapsed = 00:00:20 . Memory (MB): peak = 1620.043 ; gain = 1.477
+relaunch_sim
+INFO: [Common 17-41] Interrupt caught. Command should exit soon.
+INFO: [Common 17-344] 'suspend_sim' was cancelled
+INFO: [Common 17-17] undo 'relaunch_sim'
+INFO: [Common 17-17] undo 'relaunch_sim'
+INFO: [Common 17-344] 'relaunch_sim' was cancelled
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/XILINX_IDE/Vivado/2020.2/data/xsim/xsim.ini' copied to run dir:'C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_fir' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.sim/sim_1/behav/xsim/untitled.coe'
+INFO: [SIM-utils-43] Exported 'C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.sim/sim_1/behav/xsim/fir_compiler_0.mif'
+INFO: [SIM-utils-43] Exported 'C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.sim/sim_1/behav/xsim/untitled_100K.coe'
+WARNING: [SIM-utils-52] IP component XML file does not exist: 'c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xml'
+WARNING: [SIM-utils-52] IP component XML file does not exist: 'c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/ip/fir_compiler_0/fir_compiler_0.xml'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_fir_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.ip_user_files/ip/clk_wiz_0/clk_wiz_0_clk_wiz.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clk_wiz_0_clk_wiz
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.ip_user_files/ip/clk_wiz_0/clk_wiz_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clk_wiz_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/new/fir.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fir
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/new/fir_ctrl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fir_ctrl
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/new/fir_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fir_top
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sim_1/new/tb_fir.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_fir
+"xvhdl --incr --relax -prj tb_fir_vhdl.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.sim/sim_1/behav/xsim'
+"xelab -wto 099102fdb9a74a79b734f8e292d30a8c --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xbip_utils_v3_0_10 -L axi_utils_v2_0_6 -L fir_compiler_v7_2_15 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_fir_behav xil_defaultlib.tb_fir xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: D:/XILINX_IDE/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto 099102fdb9a74a79b734f8e292d30a8c --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xbip_utils_v3_0_10 -L axi_utils_v2_0_6 -L fir_compiler_v7_2_15 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_fir_behav xil_defaultlib.tb_fir xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-8389] size mismatch in mixed language port association, VHDL port 'm_axis_data_tdata' [C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/new/fir.v:39]
+WARNING: [VRFC 10-3091] actual bit length 12 differs from formal bit length 1 for port 'fir_data_in' [C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sim_1/new/tb_fir.v:45]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 12 for port 'fir_data_in' [C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/new/fir_top.v:49]
+WARNING: [VRFC 10-3091] actual bit length 48 differs from formal bit length 42 for port 'm_axis_data_tdata' [C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/new/fir_top.v:62]
+WARNING: [VRFC 10-3091] actual bit length 48 differs from formal bit length 42 for port 'm_axis_data_tdata' [C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/new/fir_top.v:84]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package xbip_utils_v3_0_10.xbip_utils_v3_0_10_pkg
+Compiling package fir_compiler_v7_2_15.fir_compiler_v7_2_15_viv_comp
+Compiling package ieee.std_logic_textio
+Compiling package fir_compiler_v7_2_15.globals_pkg
+Compiling package fir_compiler_v7_2_15.components
+Compiling package ieee.math_real
+Compiling package axi_utils_v2_0_6.global_util_pkg
+Compiling package axi_utils_v2_0_6.axi_utils_comps
+Compiling package unisim.vcomponents
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_signed
+Compiling package ieee.vital_timing
+Compiling package ieee.vital_primitives
+Compiling package unisim.vpkg
+Compiling module unisims_ver.IBUF
+Compiling module unisims_ver.PLLE2_ADV(CLKFBOUT_MULT=18,CLKIN...
+Compiling module unisims_ver.BUFG
+Compiling module xil_defaultlib.clk_wiz_0_clk_wiz
+Compiling module xil_defaultlib.clk_wiz_0
+Compiling module xil_defaultlib.fir_ctrl
+Compiling architecture xilinx of entity axi_utils_v2_0_6.glb_srl_fifo [\glb_srl_fifo(width=16,has_ifx=t...]
+Compiling architecture xilinx of entity axi_utils_v2_0_6.glb_ifx_slave [\glb_ifx_slave(width=16,has_ifx=...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.delay [\delay(c_delay_len=1,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.dpr_mem [\dpr_mem(c_xdevicefamily="zynq",...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.delay [\delay(c_delay_len=4,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.delay [\delay(c_delay_len=3,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.delay [\delay(c_delay_len=0,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.delay [\delay(c_delay_len=4,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.delay [\delay(c_delay_len=6,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.delay [\delay(c_delay_len=5,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.delay [\delay(c_delay_len=5,c_xdevicefa...]
+Compiling architecture xilinx of entity axi_utils_v2_0_6.glb_srl_fifo [\glb_srl_fifo(width=9,has_ifx=tr...]
+Compiling architecture xilinx of entity axi_utils_v2_0_6.glb_ifx_slave [\glb_ifx_slave(width=9,has_ifx=t...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.cnfg_and_reload [\cnfg_and_reload(c_xdevicefamily...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.delay [\delay(c_delay_len=2,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.delay [\delay(c_delay_len=0,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.delay [\delay(c_delay_len=2,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.delay [\delay(c_delay_len=1,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.delay [\delay(c_delay_len=4,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.delay [\delay(c_delay_len=3,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.cntrl_delay [\cntrl_delay(c_delay_len=0,c_mem...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.sp_mem [\sp_mem(c_xdevicefamily="zynq",c...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.filt_mem [\filt_mem(c_xdevicefamily="zynq"...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.filt_mem [\filt_mem(c_xdevicefamily="zynq"...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.filt_mem [\filt_mem(c_xdevicefamily="zynq"...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.filt_mem [\filt_mem(c_xdevicefamily="zynq"...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.filt_mem [\filt_mem(c_xdevicefamily="zynq"...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.dpr_mem [\dpr_mem(c_xdevicefamily="zynq",...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.filt_mem [\filt_mem(c_xdevicefamily="zynq"...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.dpr_mem [\dpr_mem(c_xdevicefamily="zynq",...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.filt_mem [\filt_mem(c_xdevicefamily="zynq"...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.dpr_mem [\dpr_mem(c_xdevicefamily="zynq",...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.filt_mem [\filt_mem(c_xdevicefamily="zynq"...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.dpr_mem [\dpr_mem(c_xdevicefamily="zynq",...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.filt_mem [\filt_mem(c_xdevicefamily="zynq"...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.dpr_mem [\dpr_mem(c_xdevicefamily="zynq",...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.filt_mem [\filt_mem(c_xdevicefamily="zynq"...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.cntrl_delay [\cntrl_delay(c_delay_len=1,c_mem...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.delay [\delay(c_delay_len=1,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.cntrl_delay [\cntrl_delay(c_delay_len=0,c_mem...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.delay [\delay(c_delay_len=2,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.buff [\buff(c_xdevicefamily="zynq",c_d...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.delay [\delay(c_delay_len=1,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.buff [\buff(c_xdevicefamily="zynq",c_d...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.delay [\delay(c_delay_len=0,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.delay [\delay(c_delay_len=0,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.delay [\delay(c_delay_len=0,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.delay [\delay(c_delay_len=0,c_xdevicefa...]
+Compiling architecture dsp48e1_v of entity unisim.DSP48E1 [\DSP48E1(mask="11111111111111111...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.calc [\calc(c_xdevicefamily="zynq",c_p...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.addsub_mult_add [\addsub_mult_add(c_xdevicefamily...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.addsub_mult_add [\addsub_mult_add(c_xdevicefamily...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.delay [\delay(c_delay_len=0,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.delay [\delay(c_delay_len=0,c_xdevicefa...]
+Compiling architecture dsp48e1_v of entity unisim.DSP48E1 [\DSP48E1(inmodereg=0,mask="11111...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.delay [\delay(c_delay_len=0,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.delay [\delay(c_delay_len=0,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.calc [\calc(c_xdevicefamily="zynq",c_p...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.add_accum [\add_accum(c_xdevicefamily="zynq...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.delay [\delay(c_delay_len=5,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.delay [\delay(c_delay_len=2,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.delay [\delay(c_delay_len=3,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.delay [\delay(c_delay_len=1,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.delay [\delay(c_delay_len=1,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.delay [\delay(c_delay_len=10,c_xdevicef...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.delay [\delay(c_delay_len=13,c_xdevicef...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.single_rate [\single_rate(c_xdevicefamily="zy...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.fir_compiler_v7_2_15_viv [\fir_compiler_v7_2_15_viv(c_xdev...]
+Compiling architecture xilinx of entity fir_compiler_v7_2_15.fir_compiler_v7_2_15 [\fir_compiler_v7_2_15(c_xdevicef...]
+Compiling architecture fir_compiler_0_arch of entity xil_defaultlib.fir_compiler_0 [fir_compiler_0_default]
+Compiling module xil_defaultlib.fir
+Compiling module xil_defaultlib.fir_top
+Compiling module xil_defaultlib.tb_fir
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_fir_behav
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:09 . Memory (MB): peak = 1633.066 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '9' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_fir_behav -key {Behavioral:sim_1:Functional:tb_fir} -tclbatch {tb_fir.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+source tb_fir.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+WARNING: [Wavedata 42-489] Can't add object "/tb_fir/simdata" to the wave window because it has 524288 bits, which exceeds the display limit of 65536 bits.  To change the display limit, use the command "set_property display_limit <new limit> [current_wave_config]".
+# run 1000ns
+[                   0] : reset begin...
+WARNING: Too many words specified in data file C:/Users/hanqi/Desktop/simdata.txt
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_fir_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:16 . Memory (MB): peak = 1633.066 ; gain = 0.000
+run all
+[             1990000] : reset stop...
+[             1990000] : read data begin...
+run: Time (s): cpu = 00:00:04 ; elapsed = 00:00:10 . Memory (MB): peak = 1651.543 ; gain = 18.477
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/XILINX_IDE/Vivado/2020.2/data/xsim/xsim.ini' copied to run dir:'C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_fir' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.sim/sim_1/behav/xsim/untitled.coe'
+INFO: [SIM-utils-43] Exported 'C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.sim/sim_1/behav/xsim/fir_compiler_0.mif'
+INFO: [SIM-utils-43] Exported 'C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.sim/sim_1/behav/xsim/untitled_100K.coe'
+WARNING: [SIM-utils-52] IP component XML file does not exist: 'c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xml'
+WARNING: [SIM-utils-52] IP component XML file does not exist: 'c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/ip/fir_compiler_0/fir_compiler_0.xml'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_fir_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.ip_user_files/ip/clk_wiz_0/clk_wiz_0_clk_wiz.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clk_wiz_0_clk_wiz
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.ip_user_files/ip/clk_wiz_0/clk_wiz_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clk_wiz_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/new/fir.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fir
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/new/fir_ctrl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fir_ctrl
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/new/fir_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fir_top
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sim_1/new/tb_fir.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_fir
+"xvhdl --incr --relax -prj tb_fir_vhdl.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:16 . Memory (MB): peak = 1656.773 ; gain = 0.000
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.sim/sim_1/behav/xsim'
+"xelab -wto 099102fdb9a74a79b734f8e292d30a8c --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xbip_utils_v3_0_10 -L axi_utils_v2_0_6 -L fir_compiler_v7_2_15 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_fir_behav xil_defaultlib.tb_fir xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: D:/XILINX_IDE/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto 099102fdb9a74a79b734f8e292d30a8c --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xbip_utils_v3_0_10 -L axi_utils_v2_0_6 -L fir_compiler_v7_2_15 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_fir_behav xil_defaultlib.tb_fir xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-8389] size mismatch in mixed language port association, VHDL port 'm_axis_data_tdata' [C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/new/fir.v:39]
+WARNING: [VRFC 10-3091] actual bit length 48 differs from formal bit length 42 for port 'm_axis_data_tdata' [C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/new/fir_top.v:62]
+WARNING: [VRFC 10-3091] actual bit length 48 differs from formal bit length 42 for port 'm_axis_data_tdata' [C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/new/fir_top.v:84]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package xbip_utils_v3_0_10.xbip_utils_v3_0_10_pkg
+Compiling package fir_compiler_v7_2_15.fir_compiler_v7_2_15_viv_comp
+Compiling package ieee.std_logic_textio
+Compiling package fir_compiler_v7_2_15.globals_pkg
+Compiling package fir_compiler_v7_2_15.components
+Compiling package ieee.math_real
+Compiling package axi_utils_v2_0_6.global_util_pkg
+Compiling package axi_utils_v2_0_6.axi_utils_comps
+Compiling package unisim.vcomponents
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_signed
+Compiling package ieee.vital_timing
+Compiling package ieee.vital_primitives
+Compiling package unisim.vpkg
+Compiling module unisims_ver.IBUF
+Compiling module unisims_ver.PLLE2_ADV(CLKFBOUT_MULT=18,CLKIN...
+Compiling module unisims_ver.BUFG
+Compiling module xil_defaultlib.clk_wiz_0_clk_wiz
+Compiling module xil_defaultlib.clk_wiz_0
+Compiling module xil_defaultlib.fir_ctrl
+Compiling architecture xilinx of entity axi_utils_v2_0_6.glb_srl_fifo [\glb_srl_fifo(width=16,has_ifx=t...]
+Compiling architecture xilinx of entity axi_utils_v2_0_6.glb_ifx_slave [\glb_ifx_slave(width=16,has_ifx=...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.delay [\delay(c_delay_len=1,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.dpr_mem [\dpr_mem(c_xdevicefamily="zynq",...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.delay [\delay(c_delay_len=4,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.delay [\delay(c_delay_len=3,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.delay [\delay(c_delay_len=0,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.delay [\delay(c_delay_len=4,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.delay [\delay(c_delay_len=6,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.delay [\delay(c_delay_len=5,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.delay [\delay(c_delay_len=5,c_xdevicefa...]
+Compiling architecture xilinx of entity axi_utils_v2_0_6.glb_srl_fifo [\glb_srl_fifo(width=9,has_ifx=tr...]
+Compiling architecture xilinx of entity axi_utils_v2_0_6.glb_ifx_slave [\glb_ifx_slave(width=9,has_ifx=t...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.cnfg_and_reload [\cnfg_and_reload(c_xdevicefamily...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.delay [\delay(c_delay_len=2,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.delay [\delay(c_delay_len=0,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.delay [\delay(c_delay_len=2,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.delay [\delay(c_delay_len=1,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.delay [\delay(c_delay_len=4,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.delay [\delay(c_delay_len=3,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.cntrl_delay [\cntrl_delay(c_delay_len=0,c_mem...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.sp_mem [\sp_mem(c_xdevicefamily="zynq",c...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.filt_mem [\filt_mem(c_xdevicefamily="zynq"...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.filt_mem [\filt_mem(c_xdevicefamily="zynq"...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.filt_mem [\filt_mem(c_xdevicefamily="zynq"...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.filt_mem [\filt_mem(c_xdevicefamily="zynq"...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.filt_mem [\filt_mem(c_xdevicefamily="zynq"...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.dpr_mem [\dpr_mem(c_xdevicefamily="zynq",...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.filt_mem [\filt_mem(c_xdevicefamily="zynq"...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.dpr_mem [\dpr_mem(c_xdevicefamily="zynq",...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.filt_mem [\filt_mem(c_xdevicefamily="zynq"...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.dpr_mem [\dpr_mem(c_xdevicefamily="zynq",...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.filt_mem [\filt_mem(c_xdevicefamily="zynq"...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.dpr_mem [\dpr_mem(c_xdevicefamily="zynq",...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.filt_mem [\filt_mem(c_xdevicefamily="zynq"...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.dpr_mem [\dpr_mem(c_xdevicefamily="zynq",...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.filt_mem [\filt_mem(c_xdevicefamily="zynq"...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.cntrl_delay [\cntrl_delay(c_delay_len=1,c_mem...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.delay [\delay(c_delay_len=1,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.cntrl_delay [\cntrl_delay(c_delay_len=0,c_mem...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.delay [\delay(c_delay_len=2,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.buff [\buff(c_xdevicefamily="zynq",c_d...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.delay [\delay(c_delay_len=1,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.buff [\buff(c_xdevicefamily="zynq",c_d...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.delay [\delay(c_delay_len=0,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.delay [\delay(c_delay_len=0,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.delay [\delay(c_delay_len=0,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.delay [\delay(c_delay_len=0,c_xdevicefa...]
+Compiling architecture dsp48e1_v of entity unisim.DSP48E1 [\DSP48E1(mask="11111111111111111...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.calc [\calc(c_xdevicefamily="zynq",c_p...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.addsub_mult_add [\addsub_mult_add(c_xdevicefamily...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.addsub_mult_add [\addsub_mult_add(c_xdevicefamily...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.delay [\delay(c_delay_len=0,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.delay [\delay(c_delay_len=0,c_xdevicefa...]
+Compiling architecture dsp48e1_v of entity unisim.DSP48E1 [\DSP48E1(inmodereg=0,mask="11111...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.delay [\delay(c_delay_len=0,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.delay [\delay(c_delay_len=0,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.calc [\calc(c_xdevicefamily="zynq",c_p...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.add_accum [\add_accum(c_xdevicefamily="zynq...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.delay [\delay(c_delay_len=5,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.delay [\delay(c_delay_len=2,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.delay [\delay(c_delay_len=3,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.delay [\delay(c_delay_len=1,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.delay [\delay(c_delay_len=1,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.delay [\delay(c_delay_len=10,c_xdevicef...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.delay [\delay(c_delay_len=13,c_xdevicef...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.single_rate [\single_rate(c_xdevicefamily="zy...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.fir_compiler_v7_2_15_viv [\fir_compiler_v7_2_15_viv(c_xdev...]
+Compiling architecture xilinx of entity fir_compiler_v7_2_15.fir_compiler_v7_2_15 [\fir_compiler_v7_2_15(c_xdevicef...]
+Compiling architecture fir_compiler_0_arch of entity xil_defaultlib.fir_compiler_0 [fir_compiler_0_default]
+Compiling module xil_defaultlib.fir
+Compiling module xil_defaultlib.fir_top
+Compiling module xil_defaultlib.tb_fir
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_fir_behav
+run_program: Time (s): cpu = 00:00:04 ; elapsed = 00:00:09 . Memory (MB): peak = 1656.773 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '9' seconds
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:09 . Memory (MB): peak = 1656.773 ; gain = 0.000
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+[                   0] : reset begin...
+WARNING: Too many words specified in data file C:/Users/hanqi/Desktop/simdata.txt
+relaunch_sim: Time (s): cpu = 00:00:06 ; elapsed = 00:00:29 . Memory (MB): peak = 1656.773 ; gain = 0.000
+run all
+[             1990000] : reset stop...
+[             1990000] : read data begin...
+[           821100000] : read data stop...
+$finish called at time : 821100 ns
+run: Time (s): cpu = 00:01:14 ; elapsed = 00:08:39 . Memory (MB): peak = 1659.809 ; gain = 3.035
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+synth_design -rtl -rtl_skip_mlo -name rtl_1
+Command: synth_design -rtl -rtl_skip_mlo -name rtl_1
+Starting synth_design
+Using part: xc7z010clg400-1
+Top: fir_top
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2058.621 ; gain = 244.977
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'fir_top' [C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/new/fir_top.v:23]
+INFO: [Synth 8-6157] synthesizing module 'fir_ctrl' [C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/new/fir_ctrl.v:1]
+INFO: [Synth 8-6157] synthesizing module 'clk_wiz_0' [C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/.Xil/Vivado-7172-hanqinghai/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_0' (1#1) [C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/.Xil/Vivado-7172-hanqinghai/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'fir_ctrl' (2#1) [C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/new/fir_ctrl.v:1]
+WARNING: [Synth 8-689] width (48) of port connection 'm_axis_data_tdata' does not match port width (42) of module 'fir_ctrl' [C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/new/fir_top.v:62]
+INFO: [Synth 8-6157] synthesizing module 'fir' [C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/new/fir.v:14]
+INFO: [Synth 8-638] synthesizing module 'fir_compiler_0' [c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/ip/fir_compiler_0/synth/fir_compiler_0.vhd:80]
+	Parameter C_XDEVICEFAMILY bound to: zynq - type: string 
+	Parameter C_ELABORATION_DIR bound to: ./ - type: string 
+	Parameter C_COMPONENT_NAME bound to: fir_compiler_0 - type: string 
+	Parameter C_COEF_FILE bound to: fir_compiler_0.mif - type: string 
+	Parameter C_COEF_FILE_LINES bound to: 960 - type: integer 
+	Parameter C_FILTER_TYPE bound to: 0 - type: integer 
+	Parameter C_INTERP_RATE bound to: 1 - type: integer 
+	Parameter C_DECIM_RATE bound to: 1 - type: integer 
+	Parameter C_ZERO_PACKING_FACTOR bound to: 1 - type: integer 
+	Parameter C_SYMMETRY bound to: 1 - type: integer 
+	Parameter C_NUM_FILTS bound to: 2 - type: integer 
+	Parameter C_NUM_TAPS bound to: 571 - type: integer 
+	Parameter C_NUM_CHANNELS bound to: 1 - type: integer 
+	Parameter C_CHANNEL_PATTERN bound to: fixed - type: string 
+	Parameter C_ROUND_MODE bound to: 0 - type: integer 
+	Parameter C_COEF_RELOAD bound to: 1 - type: integer 
+	Parameter C_NUM_RELOAD_SLOTS bound to: 1 - type: integer 
+	Parameter C_COL_MODE bound to: 1 - type: integer 
+	Parameter C_COL_PIPE_LEN bound to: 4 - type: integer 
+	Parameter C_COL_CONFIG bound to: 5 - type: string 
+	Parameter C_OPTIMIZATION bound to: 2046 - type: integer 
+	Parameter C_DATA_PATH_WIDTHS bound to: 16 - type: string 
+	Parameter C_DATA_IP_PATH_WIDTHS bound to: 16 - type: string 
+	Parameter C_DATA_PX_PATH_WIDTHS bound to: 16 - type: string 
+	Parameter C_DATA_WIDTH bound to: 16 - type: integer 
+	Parameter C_COEF_PATH_WIDTHS bound to: 16 - type: string 
+	Parameter C_COEF_WIDTH bound to: 16 - type: integer 
+	Parameter C_DATA_PATH_SRC bound to: 0 - type: string 
+	Parameter C_COEF_PATH_SRC bound to: 0 - type: string 
+	Parameter C_PX_PATH_SRC bound to: 0 - type: string 
+	Parameter C_DATA_PATH_SIGN bound to: 0 - type: string 
+	Parameter C_COEF_PATH_SIGN bound to: 0 - type: string 
+	Parameter C_ACCUM_PATH_WIDTHS bound to: 42 - type: string 
+	Parameter C_OUTPUT_WIDTH bound to: 42 - type: integer 
+	Parameter C_OUTPUT_PATH_WIDTHS bound to: 42 - type: string 
+	Parameter C_ACCUM_OP_PATH_WIDTHS bound to: 42 - type: string 
+	Parameter C_EXT_MULT_CNFG bound to: none - type: string 
+	Parameter C_DATA_PATH_PSAMP_SRC bound to: 0 - type: string 
+	Parameter C_OP_PATH_PSAMP_SRC bound to: 0 - type: string 
+	Parameter C_NUM_MADDS bound to: 5 - type: integer 
+	Parameter C_OPT_MADDS bound to: none - type: string 
+	Parameter C_OVERSAMPLING_RATE bound to: 58 - type: integer 
+	Parameter C_INPUT_RATE bound to: 60 - type: integer 
+	Parameter C_OUTPUT_RATE bound to: 60 - type: integer 
+	Parameter C_DATA_MEMTYPE bound to: 0 - type: integer 
+	Parameter C_COEF_MEMTYPE bound to: 1 - type: integer 
+	Parameter C_IPBUFF_MEMTYPE bound to: 0 - type: integer 
+	Parameter C_OPBUFF_MEMTYPE bound to: 0 - type: integer 
+	Parameter C_DATAPATH_MEMTYPE bound to: 0 - type: integer 
+	Parameter C_MEM_ARRANGEMENT bound to: 3 - type: integer 
+	Parameter C_DATA_MEM_PACKING bound to: 0 - type: integer 
+	Parameter C_COEF_MEM_PACKING bound to: 0 - type: integer 
+	Parameter C_FILTS_PACKED bound to: 0 - type: integer 
+	Parameter C_LATENCY bound to: 77 - type: integer 
+	Parameter C_HAS_ARESETn bound to: 1 - type: integer 
+	Parameter C_HAS_ACLKEN bound to: 0 - type: integer 
+	Parameter C_DATA_HAS_TLAST bound to: 0 - type: integer 
+	Parameter C_S_DATA_HAS_FIFO bound to: 1 - type: integer 
+	Parameter C_S_DATA_HAS_TUSER bound to: 0 - type: integer 
+	Parameter C_S_DATA_TDATA_WIDTH bound to: 16 - type: integer 
+	Parameter C_S_DATA_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_DATA_HAS_TREADY bound to: 0 - type: integer 
+	Parameter C_M_DATA_HAS_TUSER bound to: 0 - type: integer 
+	Parameter C_M_DATA_TDATA_WIDTH bound to: 48 - type: integer 
+	Parameter C_M_DATA_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_HAS_CONFIG_CHANNEL bound to: 1 - type: integer 
+	Parameter C_CONFIG_SYNC_MODE bound to: 0 - type: integer 
+	Parameter C_CONFIG_PACKET_SIZE bound to: 0 - type: integer 
+	Parameter C_CONFIG_TDATA_WIDTH bound to: 8 - type: integer 
+	Parameter C_RELOAD_TDATA_WIDTH bound to: 16 - type: integer 
+INFO: [Synth 8-3491] module 'fir_compiler_v7_2_15' declared at 'c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/ip/fir_compiler_0/hdl/fir_compiler_v7_2_vh_rfs.vhd:67113' bound to instance 'U0' of component 'fir_compiler_v7_2_15' [c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/ip/fir_compiler_0/synth/fir_compiler_0.vhd:223]
+INFO: [Synth 8-256] done synthesizing module 'fir_compiler_0' (18#1) [c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/ip/fir_compiler_0/synth/fir_compiler_0.vhd:80]
+WARNING: [Synth 8-689] width (42) of port connection 'm_axis_data_tdata' does not match port width (48) of module 'fir_compiler_0' [C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/new/fir.v:51]
+INFO: [Synth 8-6155] done synthesizing module 'fir' (19#1) [C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/new/fir.v:14]
+WARNING: [Synth 8-689] width (48) of port connection 'm_axis_data_tdata' does not match port width (42) of module 'fir' [C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/new/fir_top.v:84]
+INFO: [Synth 8-6155] done synthesizing module 'fir_top' (20#1) [C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/new/fir_top.v:23]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 2323.168 ; gain = 509.523
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 2345.082 ; gain = 531.438
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 2345.082 ; gain = 531.438
+---------------------------------------------------------------------------------
+INFO: [Synth 37-8] Instance 'i_synth' of a module 'fir_compiler_v7_2_15_viv' contains a secure attribute.  This instance will appear as a black box in elaborated RTL design. [c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/ip/fir_compiler_0/hdl/fir_compiler_v7_2_vh_rfs.vhd:65745]
+INFO: [Project 1-454] Reading design checkpoint 'C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/.Xil/Vivado-7172-hanqinghai/clk_wiz_0/clk_wiz_0.dcp' for cell 'fir_ctrl_inst/clk_wiz_0_inst'
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 2366.668 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2020.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+WARNING: [Designutils 20-1758] instance U0 wraps a black box. Constraint reading is skipped for elaborated designs in this case. Skipping constraint file 'c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/ip/fir_compiler_0/constraints/fir_compiler_v7_2.xdc'.
+Parsing XDC File [c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'fir_ctrl_inst/clk_wiz_0_inst/inst'
+Finished Parsing XDC File [c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'fir_ctrl_inst/clk_wiz_0_inst/inst'
+Parsing XDC File [c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'fir_ctrl_inst/clk_wiz_0_inst/inst'
+Finished Parsing XDC File [c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'fir_ctrl_inst/clk_wiz_0_inst/inst'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/fir_top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/fir_top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Timing 38-2] Deriving generated clocks
+Parsing XDC File [C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/constrs_1/new/fir_coe20.xdc]
+WARNING: [Vivado 12-584] No ports matched 'adc_clk_o'. [C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/constrs_1/new/fir_coe20.xdc:1]
+WARNING: [Vivado 12-584] No ports matched 'dac_clk_o'. [C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/constrs_1/new/fir_coe20.xdc:3]
+WARNING: [Vivado 12-584] No ports matched 'adc_clk_o'. [C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/constrs_1/new/fir_coe20.xdc:36]
+WARNING: [Vivado 12-584] No ports matched 'dac_clk_o'. [C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/constrs_1/new/fir_coe20.xdc:37]
+Finished Parsing XDC File [C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/constrs_1/new/fir_coe20.xdc]
+WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/constrs_1/new/fir_coe20.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/fir_top_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2429.395 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+RTL Elaboration Complete:  : Time (s): cpu = 00:00:17 ; elapsed = 00:00:13 . Memory (MB): peak = 2477.859 ; gain = 664.215
+21 Infos, 9 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:21 ; elapsed = 00:00:18 . Memory (MB): peak = 2477.859 ; gain = 818.051
+set_property IOSTANDARD LVCMOS33 [get_ports [list fir_data_in_clk_o]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list fir_data_out_clk_o]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list {freq_ctrl_i[2]}]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list {freq_ctrl_i[3]}]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list {freq_ctrl_i[4]}]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list {freq_ctrl_i[5]}]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list {freq_ctrl_i[6]}]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list {freq_ctrl_i[7]}]]
+place_ports fir_data_in_clk_o L17
+place_ports fir_data_out_clk_o P18
+save_constraints
+close_design
+reset_run synth_1
+launch_runs synth_1 -jobs 20
+[Mon Jul 14 15:01:05 2025] Launched synth_1...
+Run output will be captured here: C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.runs/synth_1/runme.log
+launch_runs impl_1 -jobs 20
+[Mon Jul 14 15:01:55 2025] Launched impl_1...
+Run output will be captured here: C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.runs/impl_1/runme.log
+synth_design -rtl -rtl_skip_mlo -name rtl_1
+Command: synth_design -rtl -rtl_skip_mlo -name rtl_1
+Starting synth_design
+Using part: xc7z010clg400-1
+Top: fir_top
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 2532.434 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'fir_top' [C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/new/fir_top.v:23]
+INFO: [Synth 8-6157] synthesizing module 'fir_ctrl' [C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/new/fir_ctrl.v:1]
+INFO: [Synth 8-6157] synthesizing module 'clk_wiz_0' [C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/.Xil/Vivado-7172-hanqinghai/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_0' (1#1) [C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/.Xil/Vivado-7172-hanqinghai/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'fir_ctrl' (2#1) [C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/new/fir_ctrl.v:1]
+WARNING: [Synth 8-689] width (48) of port connection 'm_axis_data_tdata' does not match port width (42) of module 'fir_ctrl' [C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/new/fir_top.v:62]
+INFO: [Synth 8-6157] synthesizing module 'fir' [C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/new/fir.v:14]
+INFO: [Synth 8-638] synthesizing module 'fir_compiler_0' [c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/ip/fir_compiler_0/synth/fir_compiler_0.vhd:80]
+	Parameter C_XDEVICEFAMILY bound to: zynq - type: string 
+	Parameter C_ELABORATION_DIR bound to: ./ - type: string 
+	Parameter C_COMPONENT_NAME bound to: fir_compiler_0 - type: string 
+	Parameter C_COEF_FILE bound to: fir_compiler_0.mif - type: string 
+	Parameter C_COEF_FILE_LINES bound to: 960 - type: integer 
+	Parameter C_FILTER_TYPE bound to: 0 - type: integer 
+	Parameter C_INTERP_RATE bound to: 1 - type: integer 
+	Parameter C_DECIM_RATE bound to: 1 - type: integer 
+	Parameter C_ZERO_PACKING_FACTOR bound to: 1 - type: integer 
+	Parameter C_SYMMETRY bound to: 1 - type: integer 
+	Parameter C_NUM_FILTS bound to: 2 - type: integer 
+	Parameter C_NUM_TAPS bound to: 571 - type: integer 
+	Parameter C_NUM_CHANNELS bound to: 1 - type: integer 
+	Parameter C_CHANNEL_PATTERN bound to: fixed - type: string 
+	Parameter C_ROUND_MODE bound to: 0 - type: integer 
+	Parameter C_COEF_RELOAD bound to: 1 - type: integer 
+	Parameter C_NUM_RELOAD_SLOTS bound to: 1 - type: integer 
+	Parameter C_COL_MODE bound to: 1 - type: integer 
+	Parameter C_COL_PIPE_LEN bound to: 4 - type: integer 
+	Parameter C_COL_CONFIG bound to: 5 - type: string 
+	Parameter C_OPTIMIZATION bound to: 2046 - type: integer 
+	Parameter C_DATA_PATH_WIDTHS bound to: 16 - type: string 
+	Parameter C_DATA_IP_PATH_WIDTHS bound to: 16 - type: string 
+	Parameter C_DATA_PX_PATH_WIDTHS bound to: 16 - type: string 
+	Parameter C_DATA_WIDTH bound to: 16 - type: integer 
+	Parameter C_COEF_PATH_WIDTHS bound to: 16 - type: string 
+	Parameter C_COEF_WIDTH bound to: 16 - type: integer 
+	Parameter C_DATA_PATH_SRC bound to: 0 - type: string 
+	Parameter C_COEF_PATH_SRC bound to: 0 - type: string 
+	Parameter C_PX_PATH_SRC bound to: 0 - type: string 
+	Parameter C_DATA_PATH_SIGN bound to: 0 - type: string 
+	Parameter C_COEF_PATH_SIGN bound to: 0 - type: string 
+	Parameter C_ACCUM_PATH_WIDTHS bound to: 42 - type: string 
+	Parameter C_OUTPUT_WIDTH bound to: 42 - type: integer 
+	Parameter C_OUTPUT_PATH_WIDTHS bound to: 42 - type: string 
+	Parameter C_ACCUM_OP_PATH_WIDTHS bound to: 42 - type: string 
+	Parameter C_EXT_MULT_CNFG bound to: none - type: string 
+	Parameter C_DATA_PATH_PSAMP_SRC bound to: 0 - type: string 
+	Parameter C_OP_PATH_PSAMP_SRC bound to: 0 - type: string 
+	Parameter C_NUM_MADDS bound to: 5 - type: integer 
+	Parameter C_OPT_MADDS bound to: none - type: string 
+	Parameter C_OVERSAMPLING_RATE bound to: 58 - type: integer 
+	Parameter C_INPUT_RATE bound to: 60 - type: integer 
+	Parameter C_OUTPUT_RATE bound to: 60 - type: integer 
+	Parameter C_DATA_MEMTYPE bound to: 0 - type: integer 
+	Parameter C_COEF_MEMTYPE bound to: 1 - type: integer 
+	Parameter C_IPBUFF_MEMTYPE bound to: 0 - type: integer 
+	Parameter C_OPBUFF_MEMTYPE bound to: 0 - type: integer 
+	Parameter C_DATAPATH_MEMTYPE bound to: 0 - type: integer 
+	Parameter C_MEM_ARRANGEMENT bound to: 3 - type: integer 
+	Parameter C_DATA_MEM_PACKING bound to: 0 - type: integer 
+	Parameter C_COEF_MEM_PACKING bound to: 0 - type: integer 
+	Parameter C_FILTS_PACKED bound to: 0 - type: integer 
+	Parameter C_LATENCY bound to: 77 - type: integer 
+	Parameter C_HAS_ARESETn bound to: 1 - type: integer 
+	Parameter C_HAS_ACLKEN bound to: 0 - type: integer 
+	Parameter C_DATA_HAS_TLAST bound to: 0 - type: integer 
+	Parameter C_S_DATA_HAS_FIFO bound to: 1 - type: integer 
+	Parameter C_S_DATA_HAS_TUSER bound to: 0 - type: integer 
+	Parameter C_S_DATA_TDATA_WIDTH bound to: 16 - type: integer 
+	Parameter C_S_DATA_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_DATA_HAS_TREADY bound to: 0 - type: integer 
+	Parameter C_M_DATA_HAS_TUSER bound to: 0 - type: integer 
+	Parameter C_M_DATA_TDATA_WIDTH bound to: 48 - type: integer 
+	Parameter C_M_DATA_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_HAS_CONFIG_CHANNEL bound to: 1 - type: integer 
+	Parameter C_CONFIG_SYNC_MODE bound to: 0 - type: integer 
+	Parameter C_CONFIG_PACKET_SIZE bound to: 0 - type: integer 
+	Parameter C_CONFIG_TDATA_WIDTH bound to: 8 - type: integer 
+	Parameter C_RELOAD_TDATA_WIDTH bound to: 16 - type: integer 
+INFO: [Synth 8-3491] module 'fir_compiler_v7_2_15' declared at 'c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/ip/fir_compiler_0/hdl/fir_compiler_v7_2_vh_rfs.vhd:67113' bound to instance 'U0' of component 'fir_compiler_v7_2_15' [c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/ip/fir_compiler_0/synth/fir_compiler_0.vhd:223]
+INFO: [Synth 8-256] done synthesizing module 'fir_compiler_0' (18#1) [c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/ip/fir_compiler_0/synth/fir_compiler_0.vhd:80]
+WARNING: [Synth 8-689] width (42) of port connection 'm_axis_data_tdata' does not match port width (48) of module 'fir_compiler_0' [C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/new/fir.v:51]
+INFO: [Synth 8-6155] done synthesizing module 'fir' (19#1) [C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/new/fir.v:14]
+WARNING: [Synth 8-689] width (48) of port connection 'm_axis_data_tdata' does not match port width (42) of module 'fir' [C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/new/fir_top.v:84]
+INFO: [Synth 8-6155] done synthesizing module 'fir_top' (20#1) [C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/new/fir_top.v:23]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2532.434 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:11 ; elapsed = 00:00:10 . Memory (MB): peak = 2532.434 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:10 . Memory (MB): peak = 2532.434 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 37-8] Instance 'i_synth' of a module 'fir_compiler_v7_2_15_viv' contains a secure attribute.  This instance will appear as a black box in elaborated RTL design. [c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/ip/fir_compiler_0/hdl/fir_compiler_v7_2_vh_rfs.vhd:65745]
+INFO: [Project 1-454] Reading design checkpoint 'C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/.Xil/Vivado-7172-hanqinghai/clk_wiz_0/clk_wiz_0.dcp' for cell 'fir_ctrl_inst/clk_wiz_0_inst'
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 2532.434 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2020.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+WARNING: [Designutils 20-1758] instance U0 wraps a black box. Constraint reading is skipped for elaborated designs in this case. Skipping constraint file 'c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/ip/fir_compiler_0/constraints/fir_compiler_v7_2.xdc'.
+Parsing XDC File [c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'fir_ctrl_inst/clk_wiz_0_inst/inst'
+Finished Parsing XDC File [c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'fir_ctrl_inst/clk_wiz_0_inst/inst'
+Parsing XDC File [c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'fir_ctrl_inst/clk_wiz_0_inst/inst'
+Finished Parsing XDC File [c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'fir_ctrl_inst/clk_wiz_0_inst/inst'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/fir_top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/fir_top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Timing 38-2] Deriving generated clocks
+Parsing XDC File [C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/constrs_1/new/fir_coe20.xdc]
+Finished Parsing XDC File [C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/constrs_1/new/fir_coe20.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2550.461 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+RTL Elaboration Complete:  : Time (s): cpu = 00:00:16 ; elapsed = 00:00:13 . Memory (MB): peak = 2566.000 ; gain = 33.566
+20 Infos, 4 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:16 ; elapsed = 00:00:13 . Memory (MB): peak = 2566.000 ; gain = 33.566
+close_design
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 20
+[Mon Jul 14 15:04:52 2025] Launched synth_1...
+Run output will be captured here: C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.runs/synth_1/runme.log
+[Mon Jul 14 15:04:52 2025] Launched impl_1...
+Run output will be captured here: C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.runs/impl_1/runme.log
+synth_design -rtl -rtl_skip_mlo -name rtl_1
+Command: synth_design -rtl -rtl_skip_mlo -name rtl_1
+Starting synth_design
+Using part: xc7z010clg400-1
+Top: fir_top
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 2610.578 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'fir_top' [C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/new/fir_top.v:23]
+INFO: [Synth 8-6157] synthesizing module 'fir_ctrl' [C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/new/fir_ctrl.v:1]
+INFO: [Synth 8-6157] synthesizing module 'clk_wiz_0' [C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/.Xil/Vivado-7172-hanqinghai/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_0' (1#1) [C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/.Xil/Vivado-7172-hanqinghai/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'fir_ctrl' (2#1) [C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/new/fir_ctrl.v:1]
+WARNING: [Synth 8-689] width (48) of port connection 'm_axis_data_tdata' does not match port width (42) of module 'fir_ctrl' [C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/new/fir_top.v:62]
+INFO: [Synth 8-6157] synthesizing module 'fir' [C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/new/fir.v:14]
+INFO: [Synth 8-638] synthesizing module 'fir_compiler_0' [c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/ip/fir_compiler_0/synth/fir_compiler_0.vhd:80]
+	Parameter C_XDEVICEFAMILY bound to: zynq - type: string 
+	Parameter C_ELABORATION_DIR bound to: ./ - type: string 
+	Parameter C_COMPONENT_NAME bound to: fir_compiler_0 - type: string 
+	Parameter C_COEF_FILE bound to: fir_compiler_0.mif - type: string 
+	Parameter C_COEF_FILE_LINES bound to: 960 - type: integer 
+	Parameter C_FILTER_TYPE bound to: 0 - type: integer 
+	Parameter C_INTERP_RATE bound to: 1 - type: integer 
+	Parameter C_DECIM_RATE bound to: 1 - type: integer 
+	Parameter C_ZERO_PACKING_FACTOR bound to: 1 - type: integer 
+	Parameter C_SYMMETRY bound to: 1 - type: integer 
+	Parameter C_NUM_FILTS bound to: 2 - type: integer 
+	Parameter C_NUM_TAPS bound to: 571 - type: integer 
+	Parameter C_NUM_CHANNELS bound to: 1 - type: integer 
+	Parameter C_CHANNEL_PATTERN bound to: fixed - type: string 
+	Parameter C_ROUND_MODE bound to: 0 - type: integer 
+	Parameter C_COEF_RELOAD bound to: 1 - type: integer 
+	Parameter C_NUM_RELOAD_SLOTS bound to: 1 - type: integer 
+	Parameter C_COL_MODE bound to: 1 - type: integer 
+	Parameter C_COL_PIPE_LEN bound to: 4 - type: integer 
+	Parameter C_COL_CONFIG bound to: 5 - type: string 
+	Parameter C_OPTIMIZATION bound to: 2046 - type: integer 
+	Parameter C_DATA_PATH_WIDTHS bound to: 16 - type: string 
+	Parameter C_DATA_IP_PATH_WIDTHS bound to: 16 - type: string 
+	Parameter C_DATA_PX_PATH_WIDTHS bound to: 16 - type: string 
+	Parameter C_DATA_WIDTH bound to: 16 - type: integer 
+	Parameter C_COEF_PATH_WIDTHS bound to: 16 - type: string 
+	Parameter C_COEF_WIDTH bound to: 16 - type: integer 
+	Parameter C_DATA_PATH_SRC bound to: 0 - type: string 
+	Parameter C_COEF_PATH_SRC bound to: 0 - type: string 
+	Parameter C_PX_PATH_SRC bound to: 0 - type: string 
+	Parameter C_DATA_PATH_SIGN bound to: 0 - type: string 
+	Parameter C_COEF_PATH_SIGN bound to: 0 - type: string 
+	Parameter C_ACCUM_PATH_WIDTHS bound to: 42 - type: string 
+	Parameter C_OUTPUT_WIDTH bound to: 42 - type: integer 
+	Parameter C_OUTPUT_PATH_WIDTHS bound to: 42 - type: string 
+	Parameter C_ACCUM_OP_PATH_WIDTHS bound to: 42 - type: string 
+	Parameter C_EXT_MULT_CNFG bound to: none - type: string 
+	Parameter C_DATA_PATH_PSAMP_SRC bound to: 0 - type: string 
+	Parameter C_OP_PATH_PSAMP_SRC bound to: 0 - type: string 
+	Parameter C_NUM_MADDS bound to: 5 - type: integer 
+	Parameter C_OPT_MADDS bound to: none - type: string 
+	Parameter C_OVERSAMPLING_RATE bound to: 58 - type: integer 
+	Parameter C_INPUT_RATE bound to: 60 - type: integer 
+	Parameter C_OUTPUT_RATE bound to: 60 - type: integer 
+	Parameter C_DATA_MEMTYPE bound to: 0 - type: integer 
+	Parameter C_COEF_MEMTYPE bound to: 1 - type: integer 
+	Parameter C_IPBUFF_MEMTYPE bound to: 0 - type: integer 
+	Parameter C_OPBUFF_MEMTYPE bound to: 0 - type: integer 
+	Parameter C_DATAPATH_MEMTYPE bound to: 0 - type: integer 
+	Parameter C_MEM_ARRANGEMENT bound to: 3 - type: integer 
+	Parameter C_DATA_MEM_PACKING bound to: 0 - type: integer 
+	Parameter C_COEF_MEM_PACKING bound to: 0 - type: integer 
+	Parameter C_FILTS_PACKED bound to: 0 - type: integer 
+	Parameter C_LATENCY bound to: 77 - type: integer 
+	Parameter C_HAS_ARESETn bound to: 1 - type: integer 
+	Parameter C_HAS_ACLKEN bound to: 0 - type: integer 
+	Parameter C_DATA_HAS_TLAST bound to: 0 - type: integer 
+	Parameter C_S_DATA_HAS_FIFO bound to: 1 - type: integer 
+	Parameter C_S_DATA_HAS_TUSER bound to: 0 - type: integer 
+	Parameter C_S_DATA_TDATA_WIDTH bound to: 16 - type: integer 
+	Parameter C_S_DATA_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_DATA_HAS_TREADY bound to: 0 - type: integer 
+	Parameter C_M_DATA_HAS_TUSER bound to: 0 - type: integer 
+	Parameter C_M_DATA_TDATA_WIDTH bound to: 48 - type: integer 
+	Parameter C_M_DATA_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_HAS_CONFIG_CHANNEL bound to: 1 - type: integer 
+	Parameter C_CONFIG_SYNC_MODE bound to: 0 - type: integer 
+	Parameter C_CONFIG_PACKET_SIZE bound to: 0 - type: integer 
+	Parameter C_CONFIG_TDATA_WIDTH bound to: 8 - type: integer 
+	Parameter C_RELOAD_TDATA_WIDTH bound to: 16 - type: integer 
+INFO: [Synth 8-3491] module 'fir_compiler_v7_2_15' declared at 'c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/ip/fir_compiler_0/hdl/fir_compiler_v7_2_vh_rfs.vhd:67113' bound to instance 'U0' of component 'fir_compiler_v7_2_15' [c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/ip/fir_compiler_0/synth/fir_compiler_0.vhd:223]
+INFO: [Synth 8-256] done synthesizing module 'fir_compiler_0' (18#1) [c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/ip/fir_compiler_0/synth/fir_compiler_0.vhd:80]
+WARNING: [Synth 8-689] width (42) of port connection 'm_axis_data_tdata' does not match port width (48) of module 'fir_compiler_0' [C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/new/fir.v:51]
+INFO: [Synth 8-6155] done synthesizing module 'fir' (19#1) [C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/new/fir.v:14]
+WARNING: [Synth 8-689] width (48) of port connection 'm_axis_data_tdata' does not match port width (42) of module 'fir' [C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/new/fir_top.v:84]
+INFO: [Synth 8-6155] done synthesizing module 'fir_top' (20#1) [C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/new/fir_top.v:23]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2610.578 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:10 ; elapsed = 00:00:09 . Memory (MB): peak = 2610.578 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:09 . Memory (MB): peak = 2610.578 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 37-8] Instance 'i_synth' of a module 'fir_compiler_v7_2_15_viv' contains a secure attribute.  This instance will appear as a black box in elaborated RTL design. [c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/ip/fir_compiler_0/hdl/fir_compiler_v7_2_vh_rfs.vhd:65745]
+INFO: [Project 1-454] Reading design checkpoint 'C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/.Xil/Vivado-7172-hanqinghai/clk_wiz_0/clk_wiz_0.dcp' for cell 'fir_ctrl_inst/clk_wiz_0_inst'
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 2610.578 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2020.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+WARNING: [Designutils 20-1758] instance U0 wraps a black box. Constraint reading is skipped for elaborated designs in this case. Skipping constraint file 'c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/ip/fir_compiler_0/constraints/fir_compiler_v7_2.xdc'.
+Parsing XDC File [c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'fir_ctrl_inst/clk_wiz_0_inst/inst'
+Finished Parsing XDC File [c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'fir_ctrl_inst/clk_wiz_0_inst/inst'
+Parsing XDC File [c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'fir_ctrl_inst/clk_wiz_0_inst/inst'
+Finished Parsing XDC File [c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'fir_ctrl_inst/clk_wiz_0_inst/inst'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/fir_top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/fir_top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Timing 38-2] Deriving generated clocks
+Parsing XDC File [C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/constrs_1/new/fir_coe20.xdc]
+Finished Parsing XDC File [C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/constrs_1/new/fir_coe20.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2610.578 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+RTL Elaboration Complete:  : Time (s): cpu = 00:00:14 ; elapsed = 00:00:12 . Memory (MB): peak = 2610.578 ; gain = 0.000
+20 Infos, 4 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:14 ; elapsed = 00:00:12 . Memory (MB): peak = 2610.578 ; gain = 0.000
+place_ports {freq_ctrl_i[2]} M19
+place_ports {freq_ctrl_i[3]} M20
+place_ports {freq_ctrl_i[4]} F19
+place_ports {freq_ctrl_i[5]} F20
+place_ports {freq_ctrl_i[6]} L19
+place_ports {freq_ctrl_i[7]} L20
+save_constraints
+close_design
+reset_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 20
+[Mon Jul 14 15:10:30 2025] Launched impl_1...
+Run output will be captured here: C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.runs/impl_1/runme.log
+open_hw_manager
+connect_hw_server -allow_non_jtag
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2020.2
+  **** Build date : Nov 18 2020 at 10:01:48
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042
+INFO: [Labtools 27-3417] Launching cs_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+
+******** Xilinx cs_server v2020.2
+  ****** Build date   : Nov 04 2020-05:02:56
+    **** Build number : 2020.2.1604437376
+      ** Copyright 2017-2020 Xilinx, Inc. All Rights Reserved.
+
+
+
+connect_hw_server: Time (s): cpu = 00:00:01 ; elapsed = 00:00:16 . Memory (MB): peak = 2644.340 ; gain = 0.000
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210299495526
+open_hw_target: Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 3802.922 ; gain = 1158.582
+set_property PROGRAM.FILE {C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.runs/impl_1/fir_top.bit} [get_hw_devices xc7z010_1]
+current_hw_device [get_hw_devices xc7z010_1]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7z010_1] 0]
+INFO: [Labtools 27-1435] Device xc7z010 (JTAG device index = 1) is not programmed (DONE status = 0).
+set_property PROBES.FILE {} [get_hw_devices xc7z010_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z010_1]
+set_property PROGRAM.FILE {C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.runs/impl_1/fir_top.bit} [get_hw_devices xc7z010_1]
+program_hw_devices [get_hw_devices xc7z010_1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7z010_1] 0]
+INFO: [Labtools 27-1434] Device xc7z010 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210299495526
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210299495526
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+INFO: [Labtools 27-1435] Device xc7z010 (JTAG device index = 1) is not programmed (DONE status = 0).
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+set_property PROBES.FILE {} [get_hw_devices xc7z010_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z010_1]
+set_property PROGRAM.FILE {C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.runs/impl_1/fir_top.bit} [get_hw_devices xc7z010_1]
+program_hw_devices [get_hw_devices xc7z010_1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7z010_1] 0]
+INFO: [Labtools 27-1434] Device xc7z010 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210299495526
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210299495526
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+INFO: [Labtools 27-1435] Device xc7z010 (JTAG device index = 1) is not programmed (DONE status = 0).
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+set_property PROBES.FILE {} [get_hw_devices xc7z010_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z010_1]
+set_property PROGRAM.FILE {C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.runs/impl_1/fir_top.bit} [get_hw_devices xc7z010_1]
+program_hw_devices [get_hw_devices xc7z010_1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7z010_1] 0]
+INFO: [Labtools 27-1434] Device xc7z010 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+close_hw_manager
+set_property -dict [list CONFIG.Coefficient_File {C:/Users/hanqi/Desktop/untitled.coe} CONFIG.Coefficient_Sets {2} CONFIG.Coefficient_Sign {Signed} CONFIG.Quantization {Integer_Coefficients} CONFIG.Coefficient_Width {16} CONFIG.Coefficient_Fractional_Bits {0} CONFIG.Coefficient_Structure {Inferred} CONFIG.Data_Width {16} CONFIG.Output_Width {42}] [get_ips fir_compiler_0]
+INFO: [IP_Flow 19-3484] Absolute path of file 'c:/Users/hanqi/Desktop/untitled.coe' provided. It will be converted relative to IP Instance files '../../../../../../../untitled.coe'
+generate_target all [get_files  C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/ip/fir_compiler_0/fir_compiler_0.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'fir_compiler_0'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'fir_compiler_0'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'fir_compiler_0'...
+INFO: [IP_Flow 19-1686] Generating 'C Simulation' target for IP 'fir_compiler_0'...
+INFO: [IP_Flow 19-1686] Generating 'Test Bench' target for IP 'fir_compiler_0'...
+INFO: [IP_Flow 19-1686] Generating 'Miscellaneous' target for IP 'fir_compiler_0'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'fir_compiler_0'...
+generate_target: Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 3886.770 ; gain = 9.367
+export_ip_user_files -of_objects [get_files C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/ip/fir_compiler_0/fir_compiler_0.xci] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/ip/fir_compiler_0/fir_compiler_0.xci] -directory C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.ip_user_files -ipstatic_source_dir C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.cache/compile_simlib/modelsim} {questa=C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.cache/compile_simlib/questa} {riviera=C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.cache/compile_simlib/riviera} {activehdl=C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 20
+[Mon Jul 14 15:43:28 2025] Launched synth_1...
+Run output will be captured here: C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.runs/synth_1/runme.log
+[Mon Jul 14 15:43:28 2025] Launched impl_1...
+Run output will be captured here: C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.runs/impl_1/runme.log
+open_hw_manager
+connect_hw_server -allow_non_jtag
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2020.2
+  **** Build date : Nov 18 2020 at 10:01:48
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042
+INFO: [Labtools 27-3417] Launching cs_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+
+******** Xilinx cs_server v2020.2
+  ****** Build date   : Nov 04 2020-05:02:56
+    **** Build number : 2020.2.1604437376
+      ** Copyright 2017-2020 Xilinx, Inc. All Rights Reserved.
+
+
+
+connect_hw_server: Time (s): cpu = 00:00:00 ; elapsed = 00:00:09 . Memory (MB): peak = 3902.387 ; gain = 0.000
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210299495526
+set_property PROGRAM.FILE {C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.runs/impl_1/fir_top.bit} [get_hw_devices xc7z010_1]
+current_hw_device [get_hw_devices xc7z010_1]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7z010_1] 0]
+INFO: [Labtools 27-1434] Device xc7z010 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7z010_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z010_1]
+set_property PROGRAM.FILE {C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.runs/impl_1/fir_top.bit} [get_hw_devices xc7z010_1]
+program_hw_devices [get_hw_devices xc7z010_1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7z010_1] 0]
+INFO: [Labtools 27-1434] Device xc7z010 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+close_hw_manager
+synth_design -rtl -rtl_skip_mlo -name rtl_1
+Command: synth_design -rtl -rtl_skip_mlo -name rtl_1
+Starting synth_design
+Using part: xc7z010clg400-1
+Top: fir_top
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 3914.848 ; gain = 12.461
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'fir_top' [C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/new/fir_top.v:23]
+INFO: [Synth 8-6157] synthesizing module 'fir_ctrl' [C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/new/fir_ctrl.v:1]
+INFO: [Synth 8-6157] synthesizing module 'clk_wiz_0' [C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/.Xil/Vivado-7172-hanqinghai/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_0' (1#1) [C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/.Xil/Vivado-7172-hanqinghai/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'fir_ctrl' (2#1) [C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/new/fir_ctrl.v:1]
+WARNING: [Synth 8-689] width (48) of port connection 'm_axis_data_tdata' does not match port width (42) of module 'fir_ctrl' [C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/new/fir_top.v:62]
+INFO: [Synth 8-6157] synthesizing module 'fir' [C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/new/fir.v:14]
+INFO: [Synth 8-638] synthesizing module 'fir_compiler_0' [c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/ip/fir_compiler_0/synth/fir_compiler_0.vhd:80]
+	Parameter C_XDEVICEFAMILY bound to: zynq - type: string 
+	Parameter C_ELABORATION_DIR bound to: ./ - type: string 
+	Parameter C_COMPONENT_NAME bound to: fir_compiler_0 - type: string 
+	Parameter C_COEF_FILE bound to: fir_compiler_0.mif - type: string 
+	Parameter C_COEF_FILE_LINES bound to: 960 - type: integer 
+	Parameter C_FILTER_TYPE bound to: 0 - type: integer 
+	Parameter C_INTERP_RATE bound to: 1 - type: integer 
+	Parameter C_DECIM_RATE bound to: 1 - type: integer 
+	Parameter C_ZERO_PACKING_FACTOR bound to: 1 - type: integer 
+	Parameter C_SYMMETRY bound to: 1 - type: integer 
+	Parameter C_NUM_FILTS bound to: 2 - type: integer 
+	Parameter C_NUM_TAPS bound to: 571 - type: integer 
+	Parameter C_NUM_CHANNELS bound to: 1 - type: integer 
+	Parameter C_CHANNEL_PATTERN bound to: fixed - type: string 
+	Parameter C_ROUND_MODE bound to: 0 - type: integer 
+	Parameter C_COEF_RELOAD bound to: 1 - type: integer 
+	Parameter C_NUM_RELOAD_SLOTS bound to: 1 - type: integer 
+	Parameter C_COL_MODE bound to: 1 - type: integer 
+	Parameter C_COL_PIPE_LEN bound to: 4 - type: integer 
+	Parameter C_COL_CONFIG bound to: 5 - type: string 
+	Parameter C_OPTIMIZATION bound to: 2046 - type: integer 
+	Parameter C_DATA_PATH_WIDTHS bound to: 16 - type: string 
+	Parameter C_DATA_IP_PATH_WIDTHS bound to: 16 - type: string 
+	Parameter C_DATA_PX_PATH_WIDTHS bound to: 16 - type: string 
+	Parameter C_DATA_WIDTH bound to: 16 - type: integer 
+	Parameter C_COEF_PATH_WIDTHS bound to: 16 - type: string 
+	Parameter C_COEF_WIDTH bound to: 16 - type: integer 
+	Parameter C_DATA_PATH_SRC bound to: 0 - type: string 
+	Parameter C_COEF_PATH_SRC bound to: 0 - type: string 
+	Parameter C_PX_PATH_SRC bound to: 0 - type: string 
+	Parameter C_DATA_PATH_SIGN bound to: 0 - type: string 
+	Parameter C_COEF_PATH_SIGN bound to: 0 - type: string 
+	Parameter C_ACCUM_PATH_WIDTHS bound to: 42 - type: string 
+	Parameter C_OUTPUT_WIDTH bound to: 42 - type: integer 
+	Parameter C_OUTPUT_PATH_WIDTHS bound to: 42 - type: string 
+	Parameter C_ACCUM_OP_PATH_WIDTHS bound to: 42 - type: string 
+	Parameter C_EXT_MULT_CNFG bound to: none - type: string 
+	Parameter C_DATA_PATH_PSAMP_SRC bound to: 0 - type: string 
+	Parameter C_OP_PATH_PSAMP_SRC bound to: 0 - type: string 
+	Parameter C_NUM_MADDS bound to: 5 - type: integer 
+	Parameter C_OPT_MADDS bound to: none - type: string 
+	Parameter C_OVERSAMPLING_RATE bound to: 58 - type: integer 
+	Parameter C_INPUT_RATE bound to: 60 - type: integer 
+	Parameter C_OUTPUT_RATE bound to: 60 - type: integer 
+	Parameter C_DATA_MEMTYPE bound to: 0 - type: integer 
+	Parameter C_COEF_MEMTYPE bound to: 1 - type: integer 
+	Parameter C_IPBUFF_MEMTYPE bound to: 0 - type: integer 
+	Parameter C_OPBUFF_MEMTYPE bound to: 0 - type: integer 
+	Parameter C_DATAPATH_MEMTYPE bound to: 0 - type: integer 
+	Parameter C_MEM_ARRANGEMENT bound to: 3 - type: integer 
+	Parameter C_DATA_MEM_PACKING bound to: 0 - type: integer 
+	Parameter C_COEF_MEM_PACKING bound to: 0 - type: integer 
+	Parameter C_FILTS_PACKED bound to: 0 - type: integer 
+	Parameter C_LATENCY bound to: 77 - type: integer 
+	Parameter C_HAS_ARESETn bound to: 1 - type: integer 
+	Parameter C_HAS_ACLKEN bound to: 0 - type: integer 
+	Parameter C_DATA_HAS_TLAST bound to: 0 - type: integer 
+	Parameter C_S_DATA_HAS_FIFO bound to: 1 - type: integer 
+	Parameter C_S_DATA_HAS_TUSER bound to: 0 - type: integer 
+	Parameter C_S_DATA_TDATA_WIDTH bound to: 16 - type: integer 
+	Parameter C_S_DATA_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_DATA_HAS_TREADY bound to: 0 - type: integer 
+	Parameter C_M_DATA_HAS_TUSER bound to: 0 - type: integer 
+	Parameter C_M_DATA_TDATA_WIDTH bound to: 48 - type: integer 
+	Parameter C_M_DATA_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_HAS_CONFIG_CHANNEL bound to: 1 - type: integer 
+	Parameter C_CONFIG_SYNC_MODE bound to: 0 - type: integer 
+	Parameter C_CONFIG_PACKET_SIZE bound to: 0 - type: integer 
+	Parameter C_CONFIG_TDATA_WIDTH bound to: 8 - type: integer 
+	Parameter C_RELOAD_TDATA_WIDTH bound to: 16 - type: integer 
+INFO: [Synth 8-3491] module 'fir_compiler_v7_2_15' declared at 'c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/ip/fir_compiler_0/hdl/fir_compiler_v7_2_vh_rfs.vhd:67113' bound to instance 'U0' of component 'fir_compiler_v7_2_15' [c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/ip/fir_compiler_0/synth/fir_compiler_0.vhd:223]
+INFO: [Synth 8-256] done synthesizing module 'fir_compiler_0' (18#1) [c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/ip/fir_compiler_0/synth/fir_compiler_0.vhd:80]
+WARNING: [Synth 8-689] width (42) of port connection 'm_axis_data_tdata' does not match port width (48) of module 'fir_compiler_0' [C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/new/fir.v:51]
+INFO: [Synth 8-6155] done synthesizing module 'fir' (19#1) [C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/new/fir.v:14]
+WARNING: [Synth 8-689] width (48) of port connection 'm_axis_data_tdata' does not match port width (42) of module 'fir' [C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/new/fir_top.v:84]
+INFO: [Synth 8-6155] done synthesizing module 'fir_top' (20#1) [C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/new/fir_top.v:23]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 4114.398 ; gain = 212.012
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 4138.277 ; gain = 235.891
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 4138.277 ; gain = 235.891
+---------------------------------------------------------------------------------
+INFO: [Synth 37-8] Instance 'i_synth' of a module 'fir_compiler_v7_2_15_viv' contains a secure attribute.  This instance will appear as a black box in elaborated RTL design. [c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/ip/fir_compiler_0/hdl/fir_compiler_v7_2_vh_rfs.vhd:65745]
+INFO: [Project 1-454] Reading design checkpoint 'C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/.Xil/Vivado-7172-hanqinghai/clk_wiz_0/clk_wiz_0.dcp' for cell 'fir_ctrl_inst/clk_wiz_0_inst'
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 4138.277 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2020.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+WARNING: [Designutils 20-1758] instance U0 wraps a black box. Constraint reading is skipped for elaborated designs in this case. Skipping constraint file 'c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/ip/fir_compiler_0/constraints/fir_compiler_v7_2.xdc'.
+Parsing XDC File [c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'fir_ctrl_inst/clk_wiz_0_inst/inst'
+Finished Parsing XDC File [c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'fir_ctrl_inst/clk_wiz_0_inst/inst'
+Parsing XDC File [c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'fir_ctrl_inst/clk_wiz_0_inst/inst'
+Finished Parsing XDC File [c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'fir_ctrl_inst/clk_wiz_0_inst/inst'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/fir_top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/fir_top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Timing 38-2] Deriving generated clocks
+Parsing XDC File [C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/constrs_1/new/fir_coe20.xdc]
+Finished Parsing XDC File [C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/constrs_1/new/fir_coe20.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4216.992 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+RTL Elaboration Complete:  : Time (s): cpu = 00:00:16 ; elapsed = 00:00:13 . Memory (MB): peak = 4232.418 ; gain = 330.031
+20 Infos, 4 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:16 ; elapsed = 00:00:13 . Memory (MB): peak = 4232.418 ; gain = 330.031
+close_design
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/XILINX_IDE/Vivado/2020.2/data/xsim/xsim.ini' copied to run dir:'C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_fir' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.sim/sim_1/behav/xsim/untitled.coe'
+INFO: [SIM-utils-43] Exported 'C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.sim/sim_1/behav/xsim/fir_compiler_0.mif'
+INFO: [SIM-utils-43] Exported 'C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.sim/sim_1/behav/xsim/untitled_100K.coe'
+WARNING: [SIM-utils-52] IP component XML file does not exist: 'c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xml'
+WARNING: [SIM-utils-52] IP component XML file does not exist: 'c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/ip/fir_compiler_0/fir_compiler_0.xml'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_fir_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.ip_user_files/ip/clk_wiz_0/clk_wiz_0_clk_wiz.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clk_wiz_0_clk_wiz
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.ip_user_files/ip/clk_wiz_0/clk_wiz_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clk_wiz_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/new/fir.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fir
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/new/fir_ctrl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fir_ctrl
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/new/fir_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fir_top
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sim_1/new/tb_fir.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_fir
+"xvhdl --incr --relax -prj tb_fir_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.ip_user_files/ip/fir_compiler_0/sim/fir_compiler_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'fir_compiler_0'
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.sim/sim_1/behav/xsim'
+"xelab -wto 099102fdb9a74a79b734f8e292d30a8c --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xbip_utils_v3_0_10 -L axi_utils_v2_0_6 -L fir_compiler_v7_2_15 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_fir_behav xil_defaultlib.tb_fir xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: D:/XILINX_IDE/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto 099102fdb9a74a79b734f8e292d30a8c --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xbip_utils_v3_0_10 -L axi_utils_v2_0_6 -L fir_compiler_v7_2_15 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_fir_behav xil_defaultlib.tb_fir xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-8389] size mismatch in mixed language port association, VHDL port 'm_axis_data_tdata' [C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/new/fir.v:39]
+WARNING: [VRFC 10-3091] actual bit length 48 differs from formal bit length 42 for port 'm_axis_data_tdata' [C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/new/fir_top.v:62]
+WARNING: [VRFC 10-3091] actual bit length 48 differs from formal bit length 42 for port 'm_axis_data_tdata' [C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/new/fir_top.v:84]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package xbip_utils_v3_0_10.xbip_utils_v3_0_10_pkg
+Compiling package fir_compiler_v7_2_15.fir_compiler_v7_2_15_viv_comp
+Compiling package ieee.std_logic_textio
+Compiling package fir_compiler_v7_2_15.globals_pkg
+Compiling package fir_compiler_v7_2_15.components
+Compiling package ieee.math_real
+Compiling package axi_utils_v2_0_6.global_util_pkg
+Compiling package axi_utils_v2_0_6.axi_utils_comps
+Compiling package unisim.vcomponents
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_signed
+Compiling package ieee.vital_timing
+Compiling package ieee.vital_primitives
+Compiling package unisim.vpkg
+Compiling module unisims_ver.IBUF
+Compiling module unisims_ver.PLLE2_ADV(CLKFBOUT_MULT=18,CLKIN...
+Compiling module unisims_ver.BUFG
+Compiling module xil_defaultlib.clk_wiz_0_clk_wiz
+Compiling module xil_defaultlib.clk_wiz_0
+Compiling module xil_defaultlib.fir_ctrl
+Compiling architecture xilinx of entity axi_utils_v2_0_6.glb_srl_fifo [\glb_srl_fifo(width=16,has_ifx=t...]
+Compiling architecture xilinx of entity axi_utils_v2_0_6.glb_ifx_slave [\glb_ifx_slave(width=16,has_ifx=...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.delay [\delay(c_delay_len=1,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.dpr_mem [\dpr_mem(c_xdevicefamily="zynq",...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.delay [\delay(c_delay_len=4,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.delay [\delay(c_delay_len=3,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.delay [\delay(c_delay_len=0,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.delay [\delay(c_delay_len=4,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.delay [\delay(c_delay_len=6,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.delay [\delay(c_delay_len=5,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.delay [\delay(c_delay_len=5,c_xdevicefa...]
+Compiling architecture xilinx of entity axi_utils_v2_0_6.glb_srl_fifo [\glb_srl_fifo(width=9,has_ifx=tr...]
+Compiling architecture xilinx of entity axi_utils_v2_0_6.glb_ifx_slave [\glb_ifx_slave(width=9,has_ifx=t...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.cnfg_and_reload [\cnfg_and_reload(c_xdevicefamily...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.delay [\delay(c_delay_len=2,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.delay [\delay(c_delay_len=0,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.delay [\delay(c_delay_len=2,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.delay [\delay(c_delay_len=1,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.delay [\delay(c_delay_len=4,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.delay [\delay(c_delay_len=3,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.cntrl_delay [\cntrl_delay(c_delay_len=0,c_mem...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.sp_mem [\sp_mem(c_xdevicefamily="zynq",c...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.filt_mem [\filt_mem(c_xdevicefamily="zynq"...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.filt_mem [\filt_mem(c_xdevicefamily="zynq"...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.filt_mem [\filt_mem(c_xdevicefamily="zynq"...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.filt_mem [\filt_mem(c_xdevicefamily="zynq"...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.filt_mem [\filt_mem(c_xdevicefamily="zynq"...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.dpr_mem [\dpr_mem(c_xdevicefamily="zynq",...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.filt_mem [\filt_mem(c_xdevicefamily="zynq"...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.dpr_mem [\dpr_mem(c_xdevicefamily="zynq",...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.filt_mem [\filt_mem(c_xdevicefamily="zynq"...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.dpr_mem [\dpr_mem(c_xdevicefamily="zynq",...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.filt_mem [\filt_mem(c_xdevicefamily="zynq"...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.dpr_mem [\dpr_mem(c_xdevicefamily="zynq",...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.filt_mem [\filt_mem(c_xdevicefamily="zynq"...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.dpr_mem [\dpr_mem(c_xdevicefamily="zynq",...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.filt_mem [\filt_mem(c_xdevicefamily="zynq"...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.cntrl_delay [\cntrl_delay(c_delay_len=1,c_mem...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.delay [\delay(c_delay_len=1,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.cntrl_delay [\cntrl_delay(c_delay_len=0,c_mem...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.delay [\delay(c_delay_len=2,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.buff [\buff(c_xdevicefamily="zynq",c_d...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.delay [\delay(c_delay_len=1,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.buff [\buff(c_xdevicefamily="zynq",c_d...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.delay [\delay(c_delay_len=0,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.delay [\delay(c_delay_len=0,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.delay [\delay(c_delay_len=0,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.delay [\delay(c_delay_len=0,c_xdevicefa...]
+Compiling architecture dsp48e1_v of entity unisim.DSP48E1 [\DSP48E1(mask="11111111111111111...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.calc [\calc(c_xdevicefamily="zynq",c_p...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.addsub_mult_add [\addsub_mult_add(c_xdevicefamily...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.addsub_mult_add [\addsub_mult_add(c_xdevicefamily...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.delay [\delay(c_delay_len=0,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.delay [\delay(c_delay_len=0,c_xdevicefa...]
+Compiling architecture dsp48e1_v of entity unisim.DSP48E1 [\DSP48E1(inmodereg=0,mask="11111...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.delay [\delay(c_delay_len=0,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.delay [\delay(c_delay_len=0,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.calc [\calc(c_xdevicefamily="zynq",c_p...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.add_accum [\add_accum(c_xdevicefamily="zynq...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.delay [\delay(c_delay_len=5,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.delay [\delay(c_delay_len=2,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.delay [\delay(c_delay_len=3,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.delay [\delay(c_delay_len=1,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.delay [\delay(c_delay_len=1,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.delay [\delay(c_delay_len=10,c_xdevicef...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.delay [\delay(c_delay_len=13,c_xdevicef...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.single_rate [\single_rate(c_xdevicefamily="zy...]
+Compiling architecture synth of entity fir_compiler_v7_2_15.fir_compiler_v7_2_15_viv [\fir_compiler_v7_2_15_viv(c_xdev...]
+Compiling architecture xilinx of entity fir_compiler_v7_2_15.fir_compiler_v7_2_15 [\fir_compiler_v7_2_15(c_xdevicef...]
+Compiling architecture fir_compiler_0_arch of entity xil_defaultlib.fir_compiler_0 [fir_compiler_0_default]
+Compiling module xil_defaultlib.fir
+Compiling module xil_defaultlib.fir_top
+Compiling module xil_defaultlib.tb_fir
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_fir_behav
+run_program: Time (s): cpu = 00:00:01 ; elapsed = 00:00:09 . Memory (MB): peak = 4246.828 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '9' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_fir_behav -key {Behavioral:sim_1:Functional:tb_fir} -tclbatch {tb_fir.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+source tb_fir.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+WARNING: [Wavedata 42-489] Can't add object "/tb_fir/simdata" to the wave window because it has 524288 bits, which exceeds the display limit of 65536 bits.  To change the display limit, use the command "set_property display_limit <new limit> [current_wave_config]".
+# run 1000ns
+[                   0] : reset begin...
+WARNING: Too many words specified in data file C:/Users/hanqi/Desktop/simdata.txt
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_fir_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:06 ; elapsed = 00:00:17 . Memory (MB): peak = 4246.828 ; gain = 0.000
+run all
+[             1990000] : reset stop...
+[             1990000] : read data begin...
+run: Time (s): cpu = 00:02:39 ; elapsed = 00:06:41 . Memory (MB): peak = 4246.828 ; gain = 0.000
+open_hw_manager
+connect_hw_server -allow_non_jtag
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2020.2
+  **** Build date : Nov 18 2020 at 10:01:48
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042
+INFO: [Labtools 27-3417] Launching cs_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+
+******** Xilinx cs_server v2020.2
+  ****** Build date   : Nov 04 2020-05:02:56
+    **** Build number : 2020.2.1604437376
+      ** Copyright 2017-2020 Xilinx, Inc. All Rights Reserved.
+
+
+
+connect_hw_server: Time (s): cpu = 00:00:01 ; elapsed = 00:00:09 . Memory (MB): peak = 4246.828 ; gain = 0.000
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210299495526
+set_property PROGRAM.FILE {C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.runs/impl_1/fir_top.bit} [get_hw_devices xc7z010_1]
+current_hw_device [get_hw_devices xc7z010_1]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7z010_1] 0]
+INFO: [Labtools 27-1435] Device xc7z010 (JTAG device index = 1) is not programmed (DONE status = 0).
+set_property PROBES.FILE {} [get_hw_devices xc7z010_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z010_1]
+set_property PROGRAM.FILE {C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.runs/impl_1/fir_top.bit} [get_hw_devices xc7z010_1]
+program_hw_devices [get_hw_devices xc7z010_1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7z010_1] 0]
+INFO: [Labtools 27-1434] Device xc7z010 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7z010_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z010_1]
+set_property PROGRAM.FILE {C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.runs/impl_1/fir_top.bit} [get_hw_devices xc7z010_1]
+program_hw_devices [get_hw_devices xc7z010_1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7z010_1] 0]
+INFO: [Labtools 27-1434] Device xc7z010 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210299495526
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210299495526
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+INFO: [Labtools 27-1435] Device xc7z010 (JTAG device index = 1) is not programmed (DONE status = 0).
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+set_property PROBES.FILE {} [get_hw_devices xc7z010_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z010_1]
+set_property PROGRAM.FILE {C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.runs/impl_1/fir_top.bit} [get_hw_devices xc7z010_1]
+program_hw_devices [get_hw_devices xc7z010_1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7z010_1] 0]
+INFO: [Labtools 27-1434] Device xc7z010 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+close_hw_manager
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/XILINX_IDE/Vivado/2020.2/data/xsim/xsim.ini' copied to run dir:'C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_fir' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.sim/sim_1/behav/xsim/untitled.coe'
+INFO: [SIM-utils-43] Exported 'C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.sim/sim_1/behav/xsim/fir_compiler_0.mif'
+INFO: [SIM-utils-43] Exported 'C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.sim/sim_1/behav/xsim/untitled_100K.coe'
+WARNING: [SIM-utils-52] IP component XML file does not exist: 'c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xml'
+WARNING: [SIM-utils-52] IP component XML file does not exist: 'c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/ip/fir_compiler_0/fir_compiler_0.xml'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.sim/sim_1/behav/xsim'
+INFO: [Common 17-41] Interrupt caught. Command should exit soon.
+"xvlog --incr --relax -prj tb_fir_vlog.prj"
+"xvhdl --incr --relax -prj tb_fir_vhdl.prj"
+INFO: [Common 17-344] 'run_program' was cancelled
+INFO: [Vivado 12-5357] 'compile' step aborted
+INFO: [Common 17-344] 'launch_simulation' was cancelled
+INFO: [Common 17-344] 'relaunch_sim' was cancelled
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+set_property -dict [list CONFIG.Coefficient_File {C:/Users/hanqi/Desktop/untitled.coe} CONFIG.Coefficient_Sets {2} CONFIG.Coefficient_Sign {Signed} CONFIG.Quantization {Integer_Coefficients} CONFIG.Coefficient_Width {16} CONFIG.Coefficient_Fractional_Bits {0} CONFIG.Coefficient_Structure {Inferred} CONFIG.Data_Width {16} CONFIG.Output_Width {42}] [get_ips fir_compiler_0]
+INFO: [IP_Flow 19-3484] Absolute path of file 'c:/Users/hanqi/Desktop/untitled.coe' provided. It will be converted relative to IP Instance files '../../../../../../../untitled.coe'
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.runs/synth_1
+
+launch_runs synth_1 -jobs 20
+[Mon Jul 14 16:27:42 2025] Launched synth_1...
+Run output will be captured here: C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.runs/synth_1/runme.log
+launch_runs impl_1 -jobs 20
+[Mon Jul 14 16:28:32 2025] Launched impl_1...
+Run output will be captured here: C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.runs/impl_1/runme.log
+launch_runs impl_1 -to_step write_bitstream -jobs 20
+[Mon Jul 14 16:30:03 2025] Launched impl_1...
+Run output will be captured here: C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.runs/impl_1/runme.log
+open_hw_manager
+connect_hw_server -allow_non_jtag
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2020.2
+  **** Build date : Nov 18 2020 at 10:01:48
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042
+INFO: [Labtools 27-3417] Launching cs_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+
+******** Xilinx cs_server v2020.2
+  ****** Build date   : Nov 04 2020-05:02:56
+    **** Build number : 2020.2.1604437376
+      ** Copyright 2017-2020 Xilinx, Inc. All Rights Reserved.
+
+
+
+connect_hw_server: Time (s): cpu = 00:00:01 ; elapsed = 00:00:09 . Memory (MB): peak = 4246.828 ; gain = 0.000
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210299495526
+set_property PROGRAM.FILE {C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.runs/impl_1/fir_top.bit} [get_hw_devices xc7z010_1]
+current_hw_device [get_hw_devices xc7z010_1]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7z010_1] 0]
+INFO: [Labtools 27-1434] Device xc7z010 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7z010_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z010_1]
+set_property PROGRAM.FILE {C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.runs/impl_1/fir_top.bit} [get_hw_devices xc7z010_1]
+program_hw_devices [get_hw_devices xc7z010_1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7z010_1] 0]
+INFO: [Labtools 27-1434] Device xc7z010 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+close_hw_manager
+open_hw_manager
+connect_hw_server -allow_non_jtag
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2020.2
+  **** Build date : Nov 18 2020 at 10:01:48
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042
+INFO: [Labtools 27-3417] Launching cs_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+
+******** Xilinx cs_server v2020.2
+  ****** Build date   : Nov 04 2020-05:02:56
+    **** Build number : 2020.2.1604437376
+      ** Copyright 2017-2020 Xilinx, Inc. All Rights Reserved.
+
+
+
+connect_hw_server: Time (s): cpu = 00:00:01 ; elapsed = 00:00:09 . Memory (MB): peak = 4246.828 ; gain = 0.000
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210299495526
+set_property PROGRAM.FILE {C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.runs/impl_1/fir_top.bit} [get_hw_devices xc7z010_1]
+current_hw_device [get_hw_devices xc7z010_1]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7z010_1] 0]
+INFO: [Labtools 27-1434] Device xc7z010 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7z010_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z010_1]
+set_property PROGRAM.FILE {C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.runs/impl_1/fir_top.bit} [get_hw_devices xc7z010_1]
+program_hw_devices [get_hw_devices xc7z010_1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7z010_1] 0]
+INFO: [Labtools 27-1434] Device xc7z010 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/XILINX_IDE/Vivado/2020.2/data/xsim/xsim.ini' copied to run dir:'C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_fir' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.sim/sim_1/behav/xsim/untitled.coe'
+INFO: [SIM-utils-43] Exported 'C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.sim/sim_1/behav/xsim/fir_compiler_0.mif'
+INFO: [SIM-utils-43] Exported 'C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.sim/sim_1/behav/xsim/untitled_100K.coe'
+WARNING: [SIM-utils-52] IP component XML file does not exist: 'c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xml'
+WARNING: [SIM-utils-52] IP component XML file does not exist: 'c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/ip/fir_compiler_0/fir_compiler_0.xml'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_fir_vlog.prj"
+"xvhdl --incr --relax -prj tb_fir_vhdl.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '4' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.sim/sim_1/behav/xsim'
+"xelab -wto 099102fdb9a74a79b734f8e292d30a8c --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xbip_utils_v3_0_10 -L axi_utils_v2_0_6 -L fir_compiler_v7_2_15 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_fir_behav xil_defaultlib.tb_fir xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: D:/XILINX_IDE/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto 099102fdb9a74a79b734f8e292d30a8c --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xbip_utils_v3_0_10 -L axi_utils_v2_0_6 -L fir_compiler_v7_2_15 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_fir_behav xil_defaultlib.tb_fir xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-8389] size mismatch in mixed language port association, VHDL port 'm_axis_data_tdata' [C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/new/fir.v:39]
+WARNING: [VRFC 10-3091] actual bit length 48 differs from formal bit length 42 for port 'm_axis_data_tdata' [C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/new/fir_top.v:62]
+WARNING: [VRFC 10-3091] actual bit length 48 differs from formal bit length 42 for port 'm_axis_data_tdata' [C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/new/fir_top.v:84]
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_fir_behav -key {Behavioral:sim_1:Functional:tb_fir} -tclbatch {tb_fir.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+source tb_fir.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+WARNING: [Wavedata 42-489] Can't add object "/tb_fir/simdata" to the wave window because it has 524288 bits, which exceeds the display limit of 65536 bits.  To change the display limit, use the command "set_property display_limit <new limit> [current_wave_config]".
+# run 1000ns
+[                   0] : reset begin...
+WARNING: Too many words specified in data file C:/Users/hanqi/Desktop/simdata.txt
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_fir_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:09 . Memory (MB): peak = 4246.828 ; gain = 0.000
+run all
+[             1990000] : reset stop...
+[             1990000] : read data begin...
+[           821100000] : read data stop...
+$finish called at time : 821100 ns
+run: Time (s): cpu = 00:02:29 ; elapsed = 00:08:50 . Memory (MB): peak = 4246.828 ; gain = 0.000
+run all
+run: Time (s): cpu = 00:00:08 ; elapsed = 00:00:26 . Memory (MB): peak = 4246.828 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_hw_manager
+exit
+INFO: [Common 17-206] Exiting Vivado at Mon Jul 14 18:00:47 2025...

@@ -1,0 +1,12 @@
+0.7
+2020.2
+Nov 18 2020
+09:47:47
+C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.ip_user_files/ip/clk_wiz_0/clk_wiz_0.v,1752412676,verilog,,C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/new/fir.v,,clk_wiz_0,,,../../../../fir_coe20.srcs/sources_1/ip/clk_wiz_0,,,,,
+C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.ip_user_files/ip/clk_wiz_0/clk_wiz_0_clk_wiz.v,1752412676,verilog,,C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.ip_user_files/ip/clk_wiz_0/clk_wiz_0.v,,clk_wiz_0_clk_wiz,,,../../../../fir_coe20.srcs/sources_1/ip/clk_wiz_0,,,,,
+C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.ip_user_files/ip/fir_compiler_0/sim/fir_compiler_0.vhd,1752478944,vhdl,,,,fir_compiler_0,,,,,,,,
+C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.sim/sim_1/behav/xsim/glbl.v,1605673889,verilog,,,,glbl,,,,,,,,
+C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sim_1/new/tb_fir.v,1752474356,verilog,,,,tb_fir,,,../../../../fir_coe20.srcs/sources_1/ip/clk_wiz_0,,,,,
+C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/new/fir.v,1752475078,verilog,,C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/new/fir_ctrl.v,,fir,,,../../../../fir_coe20.srcs/sources_1/ip/clk_wiz_0,,,,,
+C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/new/fir_ctrl.v,1752475078,verilog,,C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/new/fir_top.v,,fir_ctrl,,,../../../../fir_coe20.srcs/sources_1/ip/clk_wiz_0,,,,,
+C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/new/fir_top.v,1752475394,verilog,,C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sim_1/new/tb_fir.v,,fir_top,,,../../../../fir_coe20.srcs/sources_1/ip/clk_wiz_0,,,,,

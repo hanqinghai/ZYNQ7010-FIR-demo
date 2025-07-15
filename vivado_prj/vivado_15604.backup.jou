@@ -1,0 +1,401 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Mon Jul 14 18:01:27 2025
+# Process ID: 15604
+# Current directory: C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent32016 C:\Users\hanqi\Desktop\EDA_XILINX\FIR_COE20\vivado_prj\fir_coe20.xpr
+# Log file: C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/vivado.log
+# Journal file: C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.xpr
+update_compile_order -fileset sources_1
+set_property  ip_repo_paths  C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/my_ip/fir_ip_1.0 [current_project]
+update_ip_catalog
+set_property  ip_repo_paths  {} [current_project]
+update_ip_catalog
+set_property  ip_repo_paths  C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/my_ip/fir_ip_1.0 [current_project]
+update_ip_catalog
+open_bd_design {C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/bd/design_1/design_1.bd}
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:user:fir_ip:1.0 fir_ip_0
+endgroup
+set_property location {0.5 -129 -284} [get_bd_cells fir_ip_0]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:processing_system7:5.5 processing_system7_0
+endgroup
+set_property location {2.5 420 -482} [get_bd_cells processing_system7_0]
+set_property -dict [list CONFIG.PCW_UIPARAM_DDR_BUS_WIDTH {16 Bit} CONFIG.PCW_UIPARAM_DDR_PARTNO {MT41J256M16 RE-125} CONFIG.PCW_UART0_PERIPHERAL_ENABLE {1} CONFIG.PCW_UART0_UART0_IO {MIO 14 .. 15}] [get_bd_cells processing_system7_0]
+connect_bd_net [get_bd_pins fir_ip_0/clk_300M] [get_bd_pins fir_compiler_0/aclk]
+set_property location {1 32 -258} [get_bd_cells fir_ip_0]
+set_property location {1 129 -262} [get_bd_cells fir_ip_0]
+connect_bd_net [get_bd_pins fir_ip_0/s_axis_data_tdata] [get_bd_pins fir_compiler_0/s_axis_data_tdata]
+connect_bd_net [get_bd_pins fir_ip_0/s_axis_data_tready] [get_bd_pins fir_compiler_0/s_axis_data_tready]
+connect_bd_net [get_bd_pins fir_ip_0/s_axis_data_tvalid] [get_bd_pins fir_compiler_0/s_axis_data_tvalid]
+connect_bd_net [get_bd_pins fir_ip_0/m_axis_data_tvalid] [get_bd_pins fir_compiler_0/s_axis_config_tvalid]
+delete_bd_objs [get_bd_nets Net]
+connect_bd_net [get_bd_pins fir_ip_0/filter_config_tready] [get_bd_pins fir_compiler_0/s_axis_config_tready]
+connect_bd_net [get_bd_pins fir_ip_0/filter_config_tvalid] [get_bd_pins fir_compiler_0/s_axis_config_tvalid]
+connect_bd_net [get_bd_pins fir_ip_0/filter_config_tdata] [get_bd_pins fir_compiler_0/s_axis_config_tdata]
+connect_bd_net [get_bd_pins fir_ip_0/m_axis_data_tdata] [get_bd_pins fir_compiler_0/m_axis_data_tdata]
+connect_bd_net [get_bd_pins fir_ip_0/m_axis_data_tvalid] [get_bd_pins fir_compiler_0/m_axis_data_tvalid]
+apply_bd_automation -rule xilinx.com:bd_rule:processing_system7 -config {make_external "FIXED_IO, DDR" Master "Disable" Slave "Disable" }  [get_bd_cells processing_system7_0]
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {Auto} Clk_slave {Auto} Clk_xbar {Auto} Master {/processing_system7_0/M_AXI_GP0} Slave {/fir_ip_0/S00_AXI} ddr_seg {Auto} intc_ip {New AXI Interconnect} master_apm {0}}  [get_bd_intf_pins fir_ip_0/S00_AXI]
+connect_bd_net [get_bd_pins fir_compiler_0/aresetn] [get_bd_pins rst_ps7_0_50M/peripheral_aresetn]
+validate_bd_design
+startgroup
+make_bd_pins_external  [get_bd_pins fir_ip_0/fir_data_in]
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_pins fir_ip_0/fir_data_invalid]
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_pins fir_ip_0/fir_data_out]
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_pins fir_ip_0/fir_data_outvalid]
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_pins fir_ip_0/fir_data_in_clk_o]
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_pins fir_ip_0/fir_data_out_clk_o]
+endgroup
+regenerate_bd_layout
+validate_bd_design
+regenerate_bd_layout
+generate_target all [get_files  C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/bd/design_1/design_1.bd]
+catch { config_ip_cache -export [get_ips -all design_1_fir_compiler_0_0] }
+catch { config_ip_cache -export [get_ips -all design_1_fir_ip_0_0] }
+catch { config_ip_cache -export [get_ips -all design_1_processing_system7_0_0] }
+catch { config_ip_cache -export [get_ips -all design_1_auto_pc_0] }
+catch { config_ip_cache -export [get_ips -all design_1_rst_ps7_0_50M_0] }
+export_ip_user_files -of_objects [get_files C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/bd/design_1/design_1.bd]
+launch_runs design_1_fir_compiler_0_0_synth_1 design_1_fir_ip_0_0_synth_1 design_1_processing_system7_0_0_synth_1 design_1_auto_pc_0_synth_1 design_1_rst_ps7_0_50M_0_synth_1 -jobs 20
+wait_on_run design_1_fir_compiler_0_0_synth_1
+wait_on_run design_1_fir_ip_0_0_synth_1
+wait_on_run design_1_processing_system7_0_0_synth_1
+wait_on_run design_1_auto_pc_0_synth_1
+wait_on_run design_1_rst_ps7_0_50M_0_synth_1
+export_simulation -of_objects [get_files C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/bd/design_1/design_1.bd] -directory C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.ip_user_files -ipstatic_source_dir C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.cache/compile_simlib/modelsim} {questa=C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.cache/compile_simlib/questa} {riviera=C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.cache/compile_simlib/riviera} {activehdl=C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+delete_bd_objs [get_bd_nets fir_compiler_0_m_axis_data_tdata]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 xlconstant_0
+endgroup
+set_property location {3 1049 197} [get_bd_cells xlconstant_0]
+delete_bd_objs [get_bd_cells xlconstant_0]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:xlconcat:2.1 xlconcat_0
+endgroup
+set_property location {3 1041 238} [get_bd_cells xlconcat_0]
+set_property location {3 1035 258} [get_bd_cells xlconcat_0]
+delete_bd_objs [get_bd_cells xlconcat_0]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:xlslice:1.0 xlslice_0
+endgroup
+set_property location {3 1079 294} [get_bd_cells xlslice_0]
+set_property -dict [list CONFIG.DIN_WIDTH {47} CONFIG.DOUT_WIDTH {41}] [get_bd_cells xlslice_0]
+set_property -dict [list CONFIG.DIN_WIDTH {48} CONFIG.DOUT_WIDTH {1}] [get_bd_cells xlslice_0]
+set_property -dict [list CONFIG.DOUT_WIDTH {42}] [get_bd_cells xlslice_0]
+set_property -dict [list CONFIG.DIN_TO {41} CONFIG.DIN_FROM {41} CONFIG.DOUT_WIDTH {41}] [get_bd_cells xlslice_0]
+set_property -dict [list CONFIG.DIN_TO {8} CONFIG.DIN_FROM {8} CONFIG.DOUT_WIDTH {42}] [get_bd_cells xlslice_0]
+connect_bd_net [get_bd_pins xlslice_0/Din] [get_bd_pins fir_compiler_0/m_axis_data_tdata]
+startgroup
+set_property -dict [list CONFIG.DIN_TO {8} CONFIG.DIN_FROM {8} CONFIG.DOUT_WIDTH {42}] [get_bd_cells xlslice_0]
+endgroup
+startgroup
+set_property -dict [list CONFIG.DIN_TO {0} CONFIG.DIN_FROM {41} CONFIG.DOUT_WIDTH {42}] [get_bd_cells xlslice_0]
+endgroup
+connect_bd_net [get_bd_pins xlslice_0/Dout] [get_bd_pins fir_ip_0/m_axis_data_tdata]
+validate_bd_design
+regenerate_bd_layout
+reset_target all [get_files  C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/bd/design_1/design_1.bd]
+export_ip_user_files -of_objects  [get_files  C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/bd/design_1/design_1.bd] -sync -no_script -force -quiet
+delete_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/bd/design_1/design_1.bd]
+generate_target all [get_files  C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/bd/design_1/design_1.bd]
+catch { config_ip_cache -export [get_ips -all design_1_fir_compiler_0_0] }
+catch { config_ip_cache -export [get_ips -all design_1_fir_ip_0_0] }
+catch { config_ip_cache -export [get_ips -all design_1_processing_system7_0_0] }
+catch { config_ip_cache -export [get_ips -all design_1_rst_ps7_0_50M_0] }
+catch { config_ip_cache -export [get_ips -all design_1_auto_pc_0] }
+export_ip_user_files -of_objects [get_files C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/bd/design_1/design_1.bd]
+export_simulation -of_objects [get_files C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/bd/design_1/design_1.bd] -directory C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.ip_user_files -ipstatic_source_dir C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.cache/compile_simlib/modelsim} {questa=C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.cache/compile_simlib/questa} {riviera=C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.cache/compile_simlib/riviera} {activehdl=C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+make_wrapper -files [get_files C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/bd/design_1/design_1.bd] -top
+add_files -norecurse c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.gen/sources_1/bd/design_1/hdl/design_1_wrapper.v
+update_compile_order -fileset sources_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top design_1_wrapper [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sources_1
+export_ip_user_files -of_objects  [get_files C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/constrs_1/new/fir_coe20.xdc] -no_script -reset -force -quiet
+remove_files  -fileset constrs_1 C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/constrs_1/new/fir_coe20.xdc
+reset_run synth_1
+launch_runs synth_1 -jobs 20
+wait_on_run synth_1
+close_bd_design [get_bd_designs design_1]
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/bd/design_1/design_1.bd]
+synth_design -rtl -rtl_skip_mlo -name rtl_1
+open_bd_design {C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/bd/design_1/design_1.bd}
+close_bd_design [get_bd_designs design_1]
+place_ports fir_data_in_clk_o_0 L17
+place_ports fir_data_invalid_0 J20
+place_ports fir_data_out_clk_o_0 P18
+place_ports fir_data_outvalid_0 H20
+set_property IOSTANDARD LVCMOS33 [get_ports [list fir_data_in_clk_o_0]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list fir_data_invalid_0]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list fir_data_out_clk_o_0]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list fir_data_outvalid_0]]
+place_ports {fir_data_in_0[11]} D18
+place_ports {fir_data_in_0[10]} E17
+place_ports {fir_data_in_0[9]} D20
+place_ports {fir_data_in_0[8]} D19
+place_ports {fir_data_in_0[7]} A20
+place_ports {fir_data_in_0[6]} B19
+place_ports {fir_data_in_0[5]} E19
+place_ports {fir_data_in_0[4]} E18
+place_ports {fir_data_in_0[3]} F17
+place_ports {fir_data_in_0[2]} F16
+place_ports {fir_data_in_0[1]} G15
+place_ports {fir_data_in_0[0]} H15
+set_property IOSTANDARD LVCMOS33 [get_ports [list {fir_data_in_0[11]}]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list {fir_data_in_0[10]}]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list {fir_data_in_0[9]}]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list {fir_data_in_0[8]}]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list {fir_data_in_0[7]}]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list {fir_data_in_0[6]}]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list {fir_data_in_0[5]}]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list {fir_data_in_0[4]}]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list {fir_data_in_0[3]}]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list {fir_data_in_0[2]}]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list {fir_data_in_0[1]}]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list {fir_data_in_0[0]}]]
+place_ports {fir_data_out_0[13]} R16
+place_ports {fir_data_out_0[12]} R17
+place_ports {fir_data_out_0[11]} T16
+place_ports {fir_data_out_0[10]} U17
+place_ports {fir_data_out_0[9]} W18
+place_ports {fir_data_out_0[9]} W19
+place_ports {fir_data_out_0[8]} Y18
+place_ports {fir_data_out_0[9]} W18
+place_ports {fir_data_out_0[8]} W19
+place_ports {fir_data_out_0[7]} Y18
+place_ports {fir_data_out_0[6]} Y19
+place_ports {fir_data_out_0[5]} Y16
+place_ports {fir_data_out_0[4]} Y17
+place_ports {fir_data_out_0[3]} V17
+place_ports {fir_data_out_0[2]} V18
+place_ports {fir_data_out_0[1]} W14
+place_ports {fir_data_out_0[0]} Y14
+set_property IOSTANDARD LVCMOS33 [get_ports [list {fir_data_out_0[13]}]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list {fir_data_out_0[12]}]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list {fir_data_out_0[11]}]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list {fir_data_out_0[10]}]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list {fir_data_out_0[9]}]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list {fir_data_out_0[8]}]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list {fir_data_out_0[7]}]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list {fir_data_out_0[6]}]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list {fir_data_out_0[5]}]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list {fir_data_out_0[4]}]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list {fir_data_out_0[3]}]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list {fir_data_out_0[2]}]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list {fir_data_out_0[1]}]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list {fir_data_out_0[0]}]]
+close [ open C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/constrs_1/new/fir.xdc w ]
+add_files -fileset constrs_1 C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/constrs_1/new/fir.xdc
+set_property target_constrs_file C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/constrs_1/new/fir.xdc [current_fileset -constrset]
+save_constraints -force
+close_design
+reset_run synth_1
+launch_runs synth_1 -jobs 20
+wait_on_run synth_1
+launch_runs impl_1 -jobs 20
+wait_on_run impl_1
+ipx::edit_ip_in_project -upgrade true -name fir_ip_v1_0_project -directory C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.tmp/fir_ip_v1_0_project c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/my_ip/fir_ip_1.0/component.xml
+update_compile_order -fileset sources_1
+export_ip_user_files -of_objects  [get_files c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/my_ip/fir_ip_1.0/src/clk_wiz_0/clk_wiz_0.xci] -no_script -reset -force -quiet
+remove_files  c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/my_ip/fir_ip_1.0/src/clk_wiz_0/clk_wiz_0.xci
+create_ip -name clk_wiz -vendor xilinx.com -library ip -version 6.0 -module_name clk_wiz_0 -dir c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/my_ip/fir_ip_1.0/src
+set_property -dict [list CONFIG.PRIMITIVE {PLL} CONFIG.PRIM_IN_FREQ {50.000} CONFIG.CLK_OUT1_PORT {clk_300M} CONFIG.USE_RESET {false} CONFIG.CLKIN1_JITTER_PS {200.0} CONFIG.CLKOUT1_DRIVES {BUFG} CONFIG.CLKOUT2_DRIVES {BUFG} CONFIG.CLKOUT3_DRIVES {BUFG} CONFIG.CLKOUT4_DRIVES {BUFG} CONFIG.CLKOUT5_DRIVES {BUFG} CONFIG.CLKOUT6_DRIVES {BUFG} CONFIG.CLKOUT7_DRIVES {BUFG} CONFIG.MMCM_BANDWIDTH {OPTIMIZED} CONFIG.MMCM_CLKFBOUT_MULT_F {18} CONFIG.MMCM_CLKIN1_PERIOD {20.000} CONFIG.MMCM_CLKIN2_PERIOD {10.0} CONFIG.MMCM_COMPENSATION {ZHOLD} CONFIG.MMCM_CLKOUT0_DIVIDE_F {9} CONFIG.PLL_CLKIN_PERIOD {20.000} CONFIG.CLKOUT1_JITTER {175.200} CONFIG.CLKOUT1_PHASE_ERROR {161.614}] [get_ips clk_wiz_0]
+generate_target {instantiation_template} [get_files c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/my_ip/fir_ip_1.0/src/clk_wiz_0_1/clk_wiz_0.xci]
+generate_target all [get_files  c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/my_ip/fir_ip_1.0/src/clk_wiz_0_1/clk_wiz_0.xci]
+catch { config_ip_cache -export [get_ips -all clk_wiz_0] }
+export_ip_user_files -of_objects [get_files c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/my_ip/fir_ip_1.0/src/clk_wiz_0_1/clk_wiz_0.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/my_ip/fir_ip_1.0/src/clk_wiz_0_1/clk_wiz_0.xci]
+launch_runs clk_wiz_0_synth_1 -jobs 20
+wait_on_run clk_wiz_0_synth_1
+export_simulation -of_objects [get_files c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/my_ip/fir_ip_1.0/src/clk_wiz_0_1/clk_wiz_0.xci] -directory c:/users/hanqi/desktop/eda_xilinx/fir_coe20/vivado_prj/fir_coe20.tmp/fir_ip_v1_0_project/fir_ip_v1_0_project.ip_user_files/sim_scripts -ip_user_files_dir c:/users/hanqi/desktop/eda_xilinx/fir_coe20/vivado_prj/fir_coe20.tmp/fir_ip_v1_0_project/fir_ip_v1_0_project.ip_user_files -ipstatic_source_dir c:/users/hanqi/desktop/eda_xilinx/fir_coe20/vivado_prj/fir_coe20.tmp/fir_ip_v1_0_project/fir_ip_v1_0_project.ip_user_files/ipstatic -lib_map_path [list {modelsim=c:/users/hanqi/desktop/eda_xilinx/fir_coe20/vivado_prj/fir_coe20.tmp/fir_ip_v1_0_project/fir_ip_v1_0_project.cache/compile_simlib/modelsim} {questa=c:/users/hanqi/desktop/eda_xilinx/fir_coe20/vivado_prj/fir_coe20.tmp/fir_ip_v1_0_project/fir_ip_v1_0_project.cache/compile_simlib/questa} {riviera=c:/users/hanqi/desktop/eda_xilinx/fir_coe20/vivado_prj/fir_coe20.tmp/fir_ip_v1_0_project/fir_ip_v1_0_project.cache/compile_simlib/riviera} {activehdl=c:/users/hanqi/desktop/eda_xilinx/fir_coe20/vivado_prj/fir_coe20.tmp/fir_ip_v1_0_project/fir_ip_v1_0_project.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+current_project fir_coe20
+current_project fir_ip_v1_0_project
+ipx::merge_project_changes files [ipx::current_core]
+set_property core_revision 3 [ipx::current_core]
+ipx::update_source_project_archive -component [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::check_integrity [ipx::current_core]
+ipx::save_core [ipx::current_core]
+ipx::move_temp_component_back -component [ipx::current_core]
+close_project -delete
+update_ip_catalog -rebuild -repo_path c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/my_ip/fir_ip_1.0
+open_bd_design {C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/bd/design_1/design_1.bd}
+ipx::edit_ip_in_project -upgrade true -name fir_ip_v1_0_project -directory C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.tmp/fir_ip_v1_0_project c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/my_ip/fir_ip_1.0/component.xml
+update_compile_order -fileset sources_1
+set_property -dict [list CONFIG.PRIM_SOURCE {Global_buffer}] [get_ips clk_wiz_0]
+set_property generate_synth_checkpoint true [get_files  c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/my_ip/fir_ip_1.0/src/clk_wiz_0_1/clk_wiz_0.xci]
+generate_target all [get_files  c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/my_ip/fir_ip_1.0/src/clk_wiz_0_1/clk_wiz_0.xci]
+catch { config_ip_cache -export [get_ips -all clk_wiz_0] }
+export_ip_user_files -of_objects [get_files c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/my_ip/fir_ip_1.0/src/clk_wiz_0_1/clk_wiz_0.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/my_ip/fir_ip_1.0/src/clk_wiz_0_1/clk_wiz_0.xci]
+launch_runs clk_wiz_0_synth_1 -jobs 20
+wait_on_run clk_wiz_0_synth_1
+export_simulation -of_objects [get_files c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/my_ip/fir_ip_1.0/src/clk_wiz_0_1/clk_wiz_0.xci] -directory c:/users/hanqi/desktop/eda_xilinx/fir_coe20/vivado_prj/fir_coe20.tmp/fir_ip_v1_0_project/fir_ip_v1_0_project.ip_user_files/sim_scripts -ip_user_files_dir c:/users/hanqi/desktop/eda_xilinx/fir_coe20/vivado_prj/fir_coe20.tmp/fir_ip_v1_0_project/fir_ip_v1_0_project.ip_user_files -ipstatic_source_dir c:/users/hanqi/desktop/eda_xilinx/fir_coe20/vivado_prj/fir_coe20.tmp/fir_ip_v1_0_project/fir_ip_v1_0_project.ip_user_files/ipstatic -lib_map_path [list {modelsim=c:/users/hanqi/desktop/eda_xilinx/fir_coe20/vivado_prj/fir_coe20.tmp/fir_ip_v1_0_project/fir_ip_v1_0_project.cache/compile_simlib/modelsim} {questa=c:/users/hanqi/desktop/eda_xilinx/fir_coe20/vivado_prj/fir_coe20.tmp/fir_ip_v1_0_project/fir_ip_v1_0_project.cache/compile_simlib/questa} {riviera=c:/users/hanqi/desktop/eda_xilinx/fir_coe20/vivado_prj/fir_coe20.tmp/fir_ip_v1_0_project/fir_ip_v1_0_project.cache/compile_simlib/riviera} {activehdl=c:/users/hanqi/desktop/eda_xilinx/fir_coe20/vivado_prj/fir_coe20.tmp/fir_ip_v1_0_project/fir_ip_v1_0_project.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+current_project fir_coe20
+current_project fir_ip_v1_0_project
+current_project fir_coe20
+current_project fir_ip_v1_0_project
+ipx::merge_project_changes files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+set_property core_revision 4 [ipx::current_core]
+ipx::update_source_project_archive -component [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::check_integrity [ipx::current_core]
+ipx::save_core [ipx::current_core]
+ipx::move_temp_component_back -component [ipx::current_core]
+close_project -delete
+update_ip_catalog -rebuild -repo_path c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/my_ip/fir_ip_1.0
+delete_bd_objs [get_bd_nets fir_data_invalid_0_1] [get_bd_nets fir_compiler_0_m_axis_data_tvalid] [get_bd_nets fir_ip_0_filter_config_tvalid] [get_bd_nets fir_data_in_0_1] [get_bd_nets fir_ip_0_filter_config_tdata] [get_bd_nets fir_ip_0_fir_data_out_clk_o] [get_bd_intf_nets ps7_0_axi_periph_M00_AXI] [get_bd_nets fir_ip_0_s_axis_data_tdata] [get_bd_nets fir_ip_0_fir_data_outvalid] [get_bd_nets xlslice_0_Dout] [get_bd_nets fir_compiler_0_s_axis_config_tready] [get_bd_nets fir_ip_0_fir_data_in_clk_o] [get_bd_nets fir_ip_0_s_axis_data_tvalid] [get_bd_nets fir_compiler_0_s_axis_data_tready] [get_bd_nets fir_ip_0_fir_data_out] [get_bd_nets fir_ip_0_clk_300M] [get_bd_cells fir_ip_0]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:user:fir_ip:1.0 fir_ip_0
+endgroup
+set_property location {4.5 1500 266} [get_bd_cells fir_ip_0]
+undo
+undo
+undo
+ipx::edit_ip_in_project -upgrade true -name fir_ip_v1_0_project -directory C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.tmp/fir_ip_v1_0_project c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/my_ip/fir_ip_1.0/component.xml
+update_compile_order -fileset sources_1
+close_project
+update_ip_catalog -rebuild -scan_changes
+report_ip_status -name ip_status
+upgrade_ip -vlnv xilinx.com:user:fir_ip:1.0 [get_ips  design_1_fir_ip_0_0] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips design_1_fir_ip_0_0] -no_script -sync -force -quiet
+generate_target all [get_files  C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/bd/design_1/design_1.bd]
+catch { config_ip_cache -export [get_ips -all design_1_fir_ip_0_0] }
+catch { config_ip_cache -export [get_ips -all design_1_auto_pc_0] }
+export_ip_user_files -of_objects [get_files C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/bd/design_1/design_1.bd]
+launch_runs design_1_fir_ip_0_0_synth_1 -jobs 20
+wait_on_run design_1_fir_ip_0_0_synth_1
+export_simulation -of_objects [get_files C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/bd/design_1/design_1.bd] -directory C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.ip_user_files -ipstatic_source_dir C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.cache/compile_simlib/modelsim} {questa=C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.cache/compile_simlib/questa} {riviera=C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.cache/compile_simlib/riviera} {activehdl=C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+regenerate_bd_layout
+close_bd_design [get_bd_designs design_1]
+reset_run synth_1
+launch_runs synth_1 -jobs 20
+wait_on_run synth_1
+launch_runs impl_1 -jobs 20
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 20
+wait_on_run impl_1
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/bd/design_1/design_1.bd]
+synth_design -rtl -rtl_skip_mlo -name rtl_1
+close_design
+open_run impl_1
+close_design
+update_ip_catalog -rebuild -scan_changes
+report_ip_status -name ip_status
+upgrade_ip -vlnv xilinx.com:user:fir_ip:1.0 [get_ips  design_1_fir_ip_0_0] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips design_1_fir_ip_0_0] -no_script -sync -force -quiet
+generate_target all [get_files  C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/bd/design_1/design_1.bd]
+catch { config_ip_cache -export [get_ips -all design_1_fir_ip_0_0] }
+catch { config_ip_cache -export [get_ips -all design_1_auto_pc_0] }
+export_ip_user_files -of_objects [get_files C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/bd/design_1/design_1.bd]
+export_simulation -of_objects [get_files C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/bd/design_1/design_1.bd] -directory C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.ip_user_files -ipstatic_source_dir C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.cache/compile_simlib/modelsim} {questa=C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.cache/compile_simlib/questa} {riviera=C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.cache/compile_simlib/riviera} {activehdl=C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+generate_target all [get_files  C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/bd/design_1/design_1.bd]
+export_ip_user_files -of_objects [get_files C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/bd/design_1/design_1.bd]
+export_simulation -of_objects [get_files C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/bd/design_1/design_1.bd] -directory C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.ip_user_files -ipstatic_source_dir C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.cache/compile_simlib/modelsim} {questa=C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.cache/compile_simlib/questa} {riviera=C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.cache/compile_simlib/riviera} {activehdl=C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+make_wrapper -files [get_files C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/bd/design_1/design_1.bd] -top
+reset_run synth_1
+launch_runs synth_1 -jobs 20
+wait_on_run synth_1
+close_bd_design [get_bd_designs design_1]
+report_ip_status -name ip_status 
+launch_runs impl_1 -jobs 20
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 20
+wait_on_run impl_1
+open_run impl_1
+close_design
+write_hw_platform -fixed -include_bit -force -file C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/vitis/design_1_wrapper.xsa
+open_bd_design {C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/bd/design_1/design_1.bd}
+close_bd_design [get_bd_designs design_1]
+open_bd_design {C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/bd/design_1/design_1.bd}
+launch_simulation
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top fir_top [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sources_1
+launch_simulation
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top design_1_wrapper [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sources_1
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROGRAM.FILE {C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.runs/impl_1/design_1_wrapper.bit} [get_hw_devices xc7z010_1]
+current_hw_device [get_hw_devices xc7z010_1]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7z010_1] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7z010_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z010_1]
+set_property PROGRAM.FILE {C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.runs/impl_1/design_1_wrapper.bit} [get_hw_devices xc7z010_1]
+program_hw_devices [get_hw_devices xc7z010_1]
+refresh_hw_device [lindex [get_hw_devices xc7z010_1] 0]
+close_hw_manager
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROGRAM.FILE {C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.runs/impl_1/design_1_wrapper.bit} [get_hw_devices xc7z010_1]
+current_hw_device [get_hw_devices xc7z010_1]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7z010_1] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7z010_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z010_1]
+set_property PROGRAM.FILE {C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.runs/impl_1/design_1_wrapper.bit} [get_hw_devices xc7z010_1]
+program_hw_devices [get_hw_devices xc7z010_1]
+refresh_hw_device [lindex [get_hw_devices xc7z010_1] 0]
+close_hw_manager
+startgroup
+set_property -dict [list CONFIG.Clock_Frequency {50} CONFIG.Coefficient_Width {16} CONFIG.Coefficient_Structure {Inferred} CONFIG.Filter_Architecture {Systolic_Multiply_Accumulate} CONFIG.ColumnConfig {29}] [get_bd_cells fir_compiler_0]
+endgroup
+delete_bd_objs [get_bd_nets fir_ip_0_clk_300M]
+connect_bd_net [get_bd_pins fir_compiler_0/aclk] [get_bd_pins processing_system7_0/FCLK_CLK0]
+validate_bd_design
+generate_target all [get_files  C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/bd/design_1/design_1.bd]
+catch { config_ip_cache -export [get_ips -all design_1_fir_compiler_0_0] }
+catch { config_ip_cache -export [get_ips -all design_1_auto_pc_0] }
+export_ip_user_files -of_objects [get_files C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/bd/design_1/design_1.bd]
+launch_runs design_1_fir_compiler_0_0_synth_1 -jobs 20
+wait_on_run design_1_fir_compiler_0_0_synth_1
+export_simulation -of_objects [get_files C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/bd/design_1/design_1.bd] -directory C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.ip_user_files -ipstatic_source_dir C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.cache/compile_simlib/modelsim} {questa=C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.cache/compile_simlib/questa} {riviera=C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.cache/compile_simlib/riviera} {activehdl=C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+make_wrapper -files [get_files C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/bd/design_1/design_1.bd] -top
+reset_run synth_1
+launch_runs synth_1 -jobs 20
+wait_on_run synth_1
+close_bd_design [get_bd_designs design_1]
+launch_runs impl_1 -jobs 20
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 20
+wait_on_run impl_1
+write_hw_platform -fixed -include_bit -force -file C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/vitis/design_1_wrapper.xsa

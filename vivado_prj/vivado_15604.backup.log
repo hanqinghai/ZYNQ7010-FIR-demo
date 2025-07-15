@@ -1,0 +1,1014 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Mon Jul 14 18:01:27 2025
+# Process ID: 15604
+# Current directory: C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent32016 C:\Users\hanqi\Desktop\EDA_XILINX\FIR_COE20\vivado_prj\fir_coe20.xpr
+# Log file: C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/vivado.log
+# Journal file: C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/XILINX_IDE/Vivado/2020.2/data/ip'.
+open_project: Time (s): cpu = 00:00:10 ; elapsed = 00:00:06 . Memory (MB): peak = 1147.098 ; gain = 0.000
+update_compile_order -fileset sources_1
+set_property  ip_repo_paths  C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/my_ip/fir_ip_1.0 [current_project]
+update_ip_catalog
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/my_ip/fir_ip_1.0'.
+set_property  ip_repo_paths  {} [current_project]
+update_ip_catalog
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+set_property  ip_repo_paths  C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/my_ip/fir_ip_1.0 [current_project]
+update_ip_catalog
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/my_ip/fir_ip_1.0'.
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\hanqi\Desktop\EDA_XILINX\FIR_COE20\vivado_prj\fir_coe20.srcs\sources_1\new\fir_ctrl.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\hanqi\Desktop\EDA_XILINX\FIR_COE20\vivado_prj\fir_coe20.srcs\sources_1\new\fir_top.v:]
+ERROR: [Common 17-180] Spawn failed: No error
+open_bd_design {C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/bd/design_1/design_1.bd}
+Reading block design file <C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/bd/design_1/design_1.bd>...
+Adding component instance block -- xilinx.com:ip:fir_compiler:7.2 - fir_compiler_0
+Successfully read diagram <design_1> from block design file <C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/bd/design_1/design_1.bd>
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:user:fir_ip:1.0 fir_ip_0
+endgroup
+set_property location {0.5 -129 -284} [get_bd_cells fir_ip_0]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:processing_system7:5.5 processing_system7_0
+endgroup
+set_property location {2.5 420 -482} [get_bd_cells processing_system7_0]
+WARNING: [IP_Flow 19-474] Invalid Parameter 'Component_Name'
+set_property -dict [list CONFIG.PCW_UIPARAM_DDR_BUS_WIDTH {16 Bit} CONFIG.PCW_UIPARAM_DDR_PARTNO {MT41J256M16 RE-125} CONFIG.PCW_UART0_PERIPHERAL_ENABLE {1} CONFIG.PCW_UART0_UART0_IO {MIO 14 .. 15}] [get_bd_cells processing_system7_0]
+connect_bd_net [get_bd_pins fir_ip_0/clk_300M] [get_bd_pins fir_compiler_0/aclk]
+set_property location {1 32 -258} [get_bd_cells fir_ip_0]
+set_property location {1 129 -262} [get_bd_cells fir_ip_0]
+connect_bd_net [get_bd_pins fir_ip_0/s_axis_data_tdata] [get_bd_pins fir_compiler_0/s_axis_data_tdata]
+WARNING: [BD 41-1306] The connection to interface pin </fir_compiler_0/s_axis_data_tdata> is being overridden by the user with net <fir_ip_0_s_axis_data_tdata>. This pin will not be connected as a part of interface connection <S_AXIS_DATA>.
+connect_bd_net [get_bd_pins fir_ip_0/s_axis_data_tready] [get_bd_pins fir_compiler_0/s_axis_data_tready]
+WARNING: [BD 41-1306] The connection to interface pin </fir_compiler_0/s_axis_data_tready> is being overridden by the user with net <fir_compiler_0_s_axis_data_tready>. This pin will not be connected as a part of interface connection <S_AXIS_DATA>.
+connect_bd_net [get_bd_pins fir_ip_0/s_axis_data_tvalid] [get_bd_pins fir_compiler_0/s_axis_data_tvalid]
+WARNING: [BD 41-1306] The connection to interface pin </fir_compiler_0/s_axis_data_tvalid> is being overridden by the user with net <fir_ip_0_s_axis_data_tvalid>. This pin will not be connected as a part of interface connection <S_AXIS_DATA>.
+connect_bd_net [get_bd_pins fir_ip_0/m_axis_data_tvalid] [get_bd_pins fir_compiler_0/s_axis_config_tvalid]
+WARNING: [BD 41-1306] The connection to interface pin </fir_compiler_0/s_axis_config_tvalid> is being overridden by the user with net <Net>. This pin will not be connected as a part of interface connection <S_AXIS_CONFIG>.
+delete_bd_objs [get_bd_nets Net]
+connect_bd_net [get_bd_pins fir_ip_0/filter_config_tready] [get_bd_pins fir_compiler_0/s_axis_config_tready]
+WARNING: [BD 41-1306] The connection to interface pin </fir_compiler_0/s_axis_config_tready> is being overridden by the user with net <fir_compiler_0_s_axis_config_tready>. This pin will not be connected as a part of interface connection <S_AXIS_CONFIG>.
+connect_bd_net [get_bd_pins fir_ip_0/filter_config_tvalid] [get_bd_pins fir_compiler_0/s_axis_config_tvalid]
+WARNING: [BD 41-1306] The connection to interface pin </fir_compiler_0/s_axis_config_tvalid> is being overridden by the user with net <fir_ip_0_filter_config_tvalid>. This pin will not be connected as a part of interface connection <S_AXIS_CONFIG>.
+connect_bd_net [get_bd_pins fir_ip_0/filter_config_tdata] [get_bd_pins fir_compiler_0/s_axis_config_tdata]
+WARNING: [BD 41-1306] The connection to interface pin </fir_compiler_0/s_axis_config_tdata> is being overridden by the user with net <fir_ip_0_filter_config_tdata>. This pin will not be connected as a part of interface connection <S_AXIS_CONFIG>.
+connect_bd_net [get_bd_pins fir_ip_0/m_axis_data_tdata] [get_bd_pins fir_compiler_0/m_axis_data_tdata]
+WARNING: [BD 41-1306] The connection to interface pin </fir_compiler_0/m_axis_data_tdata> is being overridden by the user with net <fir_compiler_0_m_axis_data_tdata>. This pin will not be connected as a part of interface connection <M_AXIS_DATA>.
+connect_bd_net [get_bd_pins fir_ip_0/m_axis_data_tvalid] [get_bd_pins fir_compiler_0/m_axis_data_tvalid]
+WARNING: [BD 41-1306] The connection to interface pin </fir_compiler_0/m_axis_data_tvalid> is being overridden by the user with net <fir_compiler_0_m_axis_data_tvalid>. This pin will not be connected as a part of interface connection <M_AXIS_DATA>.
+WARNING: [Boardtcl 53-1] No current board_part set.
+apply_bd_automation -rule xilinx.com:bd_rule:processing_system7 -config {make_external "FIXED_IO, DDR" Master "Disable" Slave "Disable" }  [get_bd_cells processing_system7_0]
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {Auto} Clk_slave {Auto} Clk_xbar {Auto} Master {/processing_system7_0/M_AXI_GP0} Slave {/fir_ip_0/S00_AXI} ddr_seg {Auto} intc_ip {New AXI Interconnect} master_apm {0}}  [get_bd_intf_pins fir_ip_0/S00_AXI]
+Slave segment '/fir_ip_0/S00_AXI/S00_AXI_reg' is being assigned into address space '/processing_system7_0/Data' at <0x43C0_0000 [ 64K ]>.
+connect_bd_net [get_bd_pins fir_compiler_0/aresetn] [get_bd_pins rst_ps7_0_50M/peripheral_aresetn]
+validate_bd_design
+CRITICAL WARNING: [BD 41-759] The input pins (listed below) are either not connected or do not have a source port, and they don't have a tie-off specified. These pins are tied-off to all 0's to avoid error in Implementation flow.
+Please check your design and connect them as needed: 
+/fir_ip_0/fir_data_in
+/fir_ip_0/fir_data_invalid
+
+validate_bd_design: Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1527.090 ; gain = 16.461
+startgroup
+make_bd_pins_external  [get_bd_pins fir_ip_0/fir_data_in]
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_pins fir_ip_0/fir_data_invalid]
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_pins fir_ip_0/fir_data_out]
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_pins fir_ip_0/fir_data_outvalid]
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_pins fir_ip_0/fir_data_in_clk_o]
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_pins fir_ip_0/fir_data_out_clk_o]
+endgroup
+regenerate_bd_layout
+validate_bd_design
+regenerate_bd_layout
+generate_target all [get_files  C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/bd/design_1/design_1.bd]
+INFO: [BD 41-1662] The design 'design_1.bd' is already validated. Therefore parameter propagation will not be re-run.
+Wrote  : <C:\Users\hanqi\Desktop\EDA_XILINX\FIR_COE20\vivado_prj\fir_coe20.srcs\sources_1\bd\design_1\design_1.bd> 
+Wrote  : <C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+CRITICAL WARNING: [BD 41-2383] Width mismatch when connecting input pin '/fir_ip_0/m_axis_data_tdata'(42) to pin '/fir_compiler_0/m_axis_data_tdata'(48) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+VHDL Output written to : c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.gen/sources_1/bd/design_1/synth/design_1.v
+CRITICAL WARNING: [BD 41-2383] Width mismatch when connecting input pin '/fir_ip_0/m_axis_data_tdata'(42) to pin '/fir_compiler_0/m_axis_data_tdata'(48) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+VHDL Output written to : c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.gen/sources_1/bd/design_1/sim/design_1.v
+VHDL Output written to : c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.gen/sources_1/bd/design_1/hdl/design_1_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block fir_compiler_0 .
+INFO: [IP_Flow 19-3420] Updated clk_wiz_0 to use current project options
+INFO: [IP_Flow 19-4701] Upgrade has renamed interface 'CLOCK_CLK_IN1' as 'clock_CLK_IN1' (xilinx.com:signal:clock:1.0)
+WARNING: [IP_Flow 19-4703] Upgraded interface 'clock_CLK_IN1' (xilinx.com:signal:clock:1.0) differs from original interface ':::'
+INFO: [IP_Flow 19-4701] Upgrade has renamed interface 'CLOCK_CLK_OUT1' as 'clock_CLK_OUT1' (xilinx.com:signal:clock:1.0)
+WARNING: [IP_Flow 19-4703] Upgraded interface 'clock_CLK_OUT1' (xilinx.com:signal:clock:1.0) differs from original interface ':::'
+WARNING: [IP_Flow 19-3670] Detected external interface differences while upgrading 'clk_wiz_0'.
+WARNING: [IP_Flow 19-4698] Upgrade has added port 'clk_300M'
+WARNING: [IP_Flow 19-4698] Upgrade has added port 'clk_in1'
+WARNING: [IP_Flow 19-4698] Upgrade has added port 'locked'
+WARNING: [IP_Flow 19-3298] Detected external port differences while upgrading 'clk_wiz_0'. These changes may impact your design.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block fir_ip_0 .
+WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'M_AXI_GP0'. A default connection has been created.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.gen/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps7_0_50M .
+Exporting to file c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.gen/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Block Design Tcl file c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.gen/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.gen/sources_1/bd/design_1/synth/design_1.hwdef
+generate_target: Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 2230.953 ; gain = 653.625
+catch { config_ip_cache -export [get_ips -all design_1_fir_compiler_0_0] }
+catch { config_ip_cache -export [get_ips -all design_1_fir_ip_0_0] }
+catch { config_ip_cache -export [get_ips -all design_1_processing_system7_0_0] }
+catch { config_ip_cache -export [get_ips -all design_1_auto_pc_0] }
+catch { config_ip_cache -export [get_ips -all design_1_rst_ps7_0_50M_0] }
+export_ip_user_files -of_objects [get_files C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/bd/design_1/design_1.bd]
+launch_runs design_1_fir_compiler_0_0_synth_1 design_1_fir_ip_0_0_synth_1 design_1_processing_system7_0_0_synth_1 design_1_auto_pc_0_synth_1 design_1_rst_ps7_0_50M_0_synth_1 -jobs 20
+[Mon Jul 14 19:41:23 2025] Launched design_1_fir_compiler_0_0_synth_1, design_1_fir_ip_0_0_synth_1, design_1_processing_system7_0_0_synth_1, design_1_auto_pc_0_synth_1, design_1_rst_ps7_0_50M_0_synth_1...
+Run output will be captured here:
+design_1_fir_compiler_0_0_synth_1: C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.runs/design_1_fir_compiler_0_0_synth_1/runme.log
+design_1_fir_ip_0_0_synth_1: C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.runs/design_1_fir_ip_0_0_synth_1/runme.log
+design_1_processing_system7_0_0_synth_1: C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.runs/design_1_processing_system7_0_0_synth_1/runme.log
+design_1_auto_pc_0_synth_1: C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.runs/design_1_auto_pc_0_synth_1/runme.log
+design_1_rst_ps7_0_50M_0_synth_1: C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.runs/design_1_rst_ps7_0_50M_0_synth_1/runme.log
+export_simulation -of_objects [get_files C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/bd/design_1/design_1.bd] -directory C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.ip_user_files -ipstatic_source_dir C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.cache/compile_simlib/modelsim} {questa=C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.cache/compile_simlib/questa} {riviera=C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.cache/compile_simlib/riviera} {activehdl=C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+delete_bd_objs [get_bd_nets fir_compiler_0_m_axis_data_tdata]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 xlconstant_0
+endgroup
+set_property location {3 1049 197} [get_bd_cells xlconstant_0]
+delete_bd_objs [get_bd_cells xlconstant_0]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:xlconcat:2.1 xlconcat_0
+endgroup
+set_property location {3 1041 238} [get_bd_cells xlconcat_0]
+set_property location {3 1035 258} [get_bd_cells xlconcat_0]
+delete_bd_objs [get_bd_cells xlconcat_0]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:xlslice:1.0 xlslice_0
+endgroup
+set_property location {3 1079 294} [get_bd_cells xlslice_0]
+set_property -dict [list CONFIG.DIN_WIDTH {47} CONFIG.DOUT_WIDTH {41}] [get_bd_cells xlslice_0]
+set_property -dict [list CONFIG.DIN_WIDTH {48} CONFIG.DOUT_WIDTH {1}] [get_bd_cells xlslice_0]
+set_property -dict [list CONFIG.DOUT_WIDTH {42}] [get_bd_cells xlslice_0]
+set_property -dict [list CONFIG.DIN_TO {41} CONFIG.DIN_FROM {41} CONFIG.DOUT_WIDTH {41}] [get_bd_cells xlslice_0]
+set_property -dict [list CONFIG.DIN_TO {8} CONFIG.DIN_FROM {8} CONFIG.DOUT_WIDTH {42}] [get_bd_cells xlslice_0]
+connect_bd_net [get_bd_pins xlslice_0/Din] [get_bd_pins fir_compiler_0/m_axis_data_tdata]
+WARNING: [BD 41-1306] The connection to interface pin </fir_compiler_0/m_axis_data_tdata> is being overridden by the user with net <fir_compiler_0_m_axis_data_tdata>. This pin will not be connected as a part of interface connection <M_AXIS_DATA>.
+startgroup
+set_property -dict [list CONFIG.DIN_TO {8} CONFIG.DIN_FROM {8} CONFIG.DOUT_WIDTH {42}] [get_bd_cells xlslice_0]
+endgroup
+startgroup
+set_property -dict [list CONFIG.DIN_TO {0} CONFIG.DIN_FROM {41} CONFIG.DOUT_WIDTH {42}] [get_bd_cells xlslice_0]
+endgroup
+connect_bd_net [get_bd_pins xlslice_0/Dout] [get_bd_pins fir_ip_0/m_axis_data_tdata]
+validate_bd_design
+regenerate_bd_layout
+reset_target all [get_files  C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/bd/design_1/design_1.bd]
+export_ip_user_files -of_objects  [get_files  C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/bd/design_1/design_1.bd] -sync -no_script -force -quiet
+delete_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/bd/design_1/design_1.bd]
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.runs/design_1_fir_compiler_0_0_synth_1
+
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.runs/design_1_fir_ip_0_0_synth_1
+
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.runs/design_1_processing_system7_0_0_synth_1
+
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.runs/design_1_rst_ps7_0_50M_0_synth_1
+
+generate_target all [get_files  C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/bd/design_1/design_1.bd]
+INFO: [BD 41-1662] The design 'design_1.bd' is already validated. Therefore parameter propagation will not be re-run.
+Wrote  : <C:\Users\hanqi\Desktop\EDA_XILINX\FIR_COE20\vivado_prj\fir_coe20.srcs\sources_1\bd\design_1\design_1.bd> 
+Wrote  : <C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+VHDL Output written to : c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.gen/sources_1/bd/design_1/synth/design_1.v
+VHDL Output written to : c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.gen/sources_1/bd/design_1/sim/design_1.v
+VHDL Output written to : c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.gen/sources_1/bd/design_1/hdl/design_1_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block fir_compiler_0 .
+INFO: [IP_Flow 19-3420] Updated clk_wiz_0 to use current project options
+INFO: [IP_Flow 19-4701] Upgrade has renamed interface 'CLOCK_CLK_IN1' as 'clock_CLK_IN1' (xilinx.com:signal:clock:1.0)
+WARNING: [IP_Flow 19-4703] Upgraded interface 'clock_CLK_IN1' (xilinx.com:signal:clock:1.0) differs from original interface ':::'
+INFO: [IP_Flow 19-4701] Upgrade has renamed interface 'CLOCK_CLK_OUT1' as 'clock_CLK_OUT1' (xilinx.com:signal:clock:1.0)
+WARNING: [IP_Flow 19-4703] Upgraded interface 'clock_CLK_OUT1' (xilinx.com:signal:clock:1.0) differs from original interface ':::'
+WARNING: [IP_Flow 19-3670] Detected external interface differences while upgrading 'clk_wiz_0'.
+WARNING: [IP_Flow 19-4698] Upgrade has added port 'clk_300M'
+WARNING: [IP_Flow 19-4698] Upgrade has added port 'clk_in1'
+WARNING: [IP_Flow 19-4698] Upgrade has added port 'locked'
+WARNING: [IP_Flow 19-3298] Detected external port differences while upgrading 'clk_wiz_0'. These changes may impact your design.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block fir_ip_0 .
+WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'M_AXI_GP0'. A default connection has been created.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps7_0_50M .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.gen/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlslice_0 .
+Exporting to file c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.gen/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Block Design Tcl file c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.gen/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.gen/sources_1/bd/design_1/synth/design_1.hwdef
+generate_target: Time (s): cpu = 00:00:15 ; elapsed = 00:00:14 . Memory (MB): peak = 2282.691 ; gain = 20.418
+catch { config_ip_cache -export [get_ips -all design_1_fir_compiler_0_0] }
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_fir_compiler_0_0, cache-ID = a3af6367cd432765; cache size = 12.451 MB.
+catch { config_ip_cache -export [get_ips -all design_1_fir_ip_0_0] }
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_fir_ip_0_0, cache-ID = 3b720ff7de66d70c; cache size = 12.451 MB.
+catch { config_ip_cache -export [get_ips -all design_1_processing_system7_0_0] }
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_processing_system7_0_0, cache-ID = ee308348091b3bdf; cache size = 12.451 MB.
+catch { config_ip_cache -export [get_ips -all design_1_rst_ps7_0_50M_0] }
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_rst_ps7_0_50M_0, cache-ID = 8a5b0677bdfe8be0; cache size = 12.451 MB.
+catch { config_ip_cache -export [get_ips -all design_1_auto_pc_0] }
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_pc_0, cache-ID = 77f9c3171bdc2b58; cache size = 12.451 MB.
+export_ip_user_files -of_objects [get_files C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/bd/design_1/design_1.bd]
+export_simulation -of_objects [get_files C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/bd/design_1/design_1.bd] -directory C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.ip_user_files -ipstatic_source_dir C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.cache/compile_simlib/modelsim} {questa=C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.cache/compile_simlib/questa} {riviera=C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.cache/compile_simlib/riviera} {activehdl=C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+make_wrapper -files [get_files C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/bd/design_1/design_1.bd] -top
+add_files -norecurse c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.gen/sources_1/bd/design_1/hdl/design_1_wrapper.v
+update_compile_order -fileset sources_1
+set_property top design_1_wrapper [current_fileset]
+update_compile_order -fileset sources_1
+export_ip_user_files -of_objects  [get_files C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/constrs_1/new/fir_coe20.xdc] -no_script -reset -force -quiet
+remove_files  -fileset constrs_1 C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/constrs_1/new/fir_coe20.xdc
+reset_run synth_1
+launch_runs synth_1 -jobs 20
+[Mon Jul 14 19:57:56 2025] Launched synth_1...
+Run output will be captured here: C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.runs/synth_1/runme.log
+close_bd_design [get_bd_designs design_1]
+Wrote  : <C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/bd/design_1/design_1.bd]
+synth_design -rtl -rtl_skip_mlo -name rtl_1
+Command: synth_design -rtl -rtl_skip_mlo -name rtl_1
+Starting synth_design
+Using part: xc7z010clg400-1
+Top: design_1_wrapper
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2528.863 ; gain = 235.227
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'design_1_wrapper' [c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.gen/sources_1/bd/design_1/hdl/design_1_wrapper.v:12]
+INFO: [Synth 8-6157] synthesizing module 'design_1' [c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.gen/sources_1/bd/design_1/synth/design_1.v:13]
+INFO: [Synth 8-6157] synthesizing module 'design_1_fir_compiler_0_0' [C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/.Xil/Vivado-15604-hanqinghai/realtime/design_1_fir_compiler_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_fir_compiler_0_0' (1#1) [C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/.Xil/Vivado-15604-hanqinghai/realtime/design_1_fir_compiler_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 's_axis_reload_tready' of module 'design_1_fir_compiler_0_0' is unconnected for instance 'fir_compiler_0' [c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.gen/sources_1/bd/design_1/synth/design_1.v:173]
+WARNING: [Synth 8-7071] port 'event_s_reload_tlast_missing' of module 'design_1_fir_compiler_0_0' is unconnected for instance 'fir_compiler_0' [c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.gen/sources_1/bd/design_1/synth/design_1.v:173]
+WARNING: [Synth 8-7071] port 'event_s_reload_tlast_unexpected' of module 'design_1_fir_compiler_0_0' is unconnected for instance 'fir_compiler_0' [c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.gen/sources_1/bd/design_1/synth/design_1.v:173]
+WARNING: [Synth 8-7023] instance 'fir_compiler_0' of module 'design_1_fir_compiler_0_0' has 16 connections declared, but only 13 given [c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.gen/sources_1/bd/design_1/synth/design_1.v:173]
+INFO: [Synth 8-6157] synthesizing module 'design_1_fir_ip_0_0' [C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/.Xil/Vivado-15604-hanqinghai/realtime/design_1_fir_ip_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_fir_ip_0_0' (2#1) [C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/.Xil/Vivado-15604-hanqinghai/realtime/design_1_fir_ip_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_processing_system7_0_0' [C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/.Xil/Vivado-15604-hanqinghai/realtime/design_1_processing_system7_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_processing_system7_0_0' (3#1) [C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/.Xil/Vivado-15604-hanqinghai/realtime/design_1_processing_system7_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_ps7_0_axi_periph_0' [c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.gen/sources_1/bd/design_1/synth/design_1.v:363]
+INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_UYSKKA' [c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.gen/sources_1/bd/design_1/synth/design_1.v:678]
+INFO: [Synth 8-6157] synthesizing module 'design_1_auto_pc_0' [C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/.Xil/Vivado-15604-hanqinghai/realtime/design_1_auto_pc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_auto_pc_0' (4#1) [C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/.Xil/Vivado-15604-hanqinghai/realtime/design_1_auto_pc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_UYSKKA' (5#1) [c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.gen/sources_1/bd/design_1/synth/design_1.v:678]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_ps7_0_axi_periph_0' (6#1) [c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.gen/sources_1/bd/design_1/synth/design_1.v:363]
+INFO: [Synth 8-6157] synthesizing module 'design_1_rst_ps7_0_50M_0' [C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/.Xil/Vivado-15604-hanqinghai/realtime/design_1_rst_ps7_0_50M_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_rst_ps7_0_50M_0' (7#1) [C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/.Xil/Vivado-15604-hanqinghai/realtime/design_1_rst_ps7_0_50M_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'mb_reset' of module 'design_1_rst_ps7_0_50M_0' is unconnected for instance 'rst_ps7_0_50M' [c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.gen/sources_1/bd/design_1/synth/design_1.v:351]
+WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'design_1_rst_ps7_0_50M_0' is unconnected for instance 'rst_ps7_0_50M' [c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.gen/sources_1/bd/design_1/synth/design_1.v:351]
+WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'design_1_rst_ps7_0_50M_0' is unconnected for instance 'rst_ps7_0_50M' [c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.gen/sources_1/bd/design_1/synth/design_1.v:351]
+WARNING: [Synth 8-7071] port 'interconnect_aresetn' of module 'design_1_rst_ps7_0_50M_0' is unconnected for instance 'rst_ps7_0_50M' [c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.gen/sources_1/bd/design_1/synth/design_1.v:351]
+WARNING: [Synth 8-7023] instance 'rst_ps7_0_50M' of module 'design_1_rst_ps7_0_50M_0' has 10 connections declared, but only 6 given [c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.gen/sources_1/bd/design_1/synth/design_1.v:351]
+INFO: [Synth 8-6157] synthesizing module 'design_1_xlslice_0_0' [c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.gen/sources_1/bd/design_1/ip/design_1_xlslice_0_0/synth/design_1_xlslice_0_0.v:57]
+INFO: [Synth 8-6157] synthesizing module 'xlslice_v1_0_2_xlslice' [c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.gen/sources_1/bd/design_1/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
+	Parameter DIN_WIDTH bound to: 48 - type: integer 
+	Parameter DIN_FROM bound to: 41 - type: integer 
+	Parameter DIN_TO bound to: 0 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'xlslice_v1_0_2_xlslice' (8#1) [c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.gen/sources_1/bd/design_1/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_xlslice_0_0' (9#1) [c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.gen/sources_1/bd/design_1/ip/design_1_xlslice_0_0/synth/design_1_xlslice_0_0.v:57]
+INFO: [Synth 8-6155] done synthesizing module 'design_1' (10#1) [c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.gen/sources_1/bd/design_1/synth/design_1.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_wrapper' (11#1) [c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.gen/sources_1/bd/design_1/hdl/design_1_wrapper.v:12]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2582.812 ; gain = 289.176
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2602.719 ; gain = 309.082
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2602.719 ; gain = 309.082
+---------------------------------------------------------------------------------
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.gen/sources_1/bd/design_1/ip/design_1_fir_compiler_0_0/design_1_fir_compiler_0_0.dcp' for cell 'design_1_i/fir_compiler_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.gen/sources_1/bd/design_1/ip/design_1_fir_ip_0_0/design_1_fir_ip_0_0.dcp' for cell 'design_1_i/fir_ip_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.gen/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0.dcp' for cell 'design_1_i/processing_system7_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.gen/sources_1/bd/design_1/ip/design_1_rst_ps7_0_50M_0/design_1_rst_ps7_0_50M_0.dcp' for cell 'design_1_i/rst_ps7_0_50M'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.gen/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0.dcp' for cell 'design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc'
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.046 . Memory (MB): peak = 2635.227 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 194 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2020.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'design_1_i/fir_ip_0/s00_axi_aclk' is not directly connected to top level port. Synthesis is ignored for IBUF_LOW_PWR but preserved for implementation.
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.gen/sources_1/bd/design_1/ip/design_1_fir_compiler_0_0/constraints/fir_compiler_v7_2.xdc] for cell 'design_1_i/fir_compiler_0/U0'
+Finished Parsing XDC File [c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.gen/sources_1/bd/design_1/ip/design_1_fir_compiler_0_0/constraints/fir_compiler_v7_2.xdc] for cell 'design_1_i/fir_compiler_0/U0'
+Parsing XDC File [c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.gen/sources_1/bd/design_1/ip/design_1_fir_ip_0_0/src/clk_wiz_0/clk_wiz_0.xdc] for cell 'design_1_i/fir_ip_0/inst/fir_ip_v1_0_S00_AXI_inst/fir_ctrl_inst/clk_wiz_0_inst/inst'
+Finished Parsing XDC File [c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.gen/sources_1/bd/design_1/ip/design_1_fir_ip_0_0/src/clk_wiz_0/clk_wiz_0.xdc] for cell 'design_1_i/fir_ip_0/inst/fir_ip_v1_0_S00_AXI_inst/fir_ctrl_inst/clk_wiz_0_inst/inst'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.gen/sources_1/bd/design_1/ip/design_1_fir_ip_0_0/src/clk_wiz_0/clk_wiz_0.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/design_1_wrapper_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/design_1_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.gen/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0.xdc] for cell 'design_1_i/processing_system7_0/inst'
+Finished Parsing XDC File [c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.gen/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0.xdc] for cell 'design_1_i/processing_system7_0/inst'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.gen/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/design_1_wrapper_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/design_1_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.gen/sources_1/bd/design_1/ip/design_1_rst_ps7_0_50M_0/design_1_rst_ps7_0_50M_0_board.xdc] for cell 'design_1_i/rst_ps7_0_50M/U0'
+Finished Parsing XDC File [c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.gen/sources_1/bd/design_1/ip/design_1_rst_ps7_0_50M_0/design_1_rst_ps7_0_50M_0_board.xdc] for cell 'design_1_i/rst_ps7_0_50M/U0'
+Parsing XDC File [c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.gen/sources_1/bd/design_1/ip/design_1_rst_ps7_0_50M_0/design_1_rst_ps7_0_50M_0.xdc] for cell 'design_1_i/rst_ps7_0_50M/U0'
+Finished Parsing XDC File [c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.gen/sources_1/bd/design_1/ip/design_1_rst_ps7_0_50M_0/design_1_rst_ps7_0_50M_0.xdc] for cell 'design_1_i/rst_ps7_0_50M/U0'
+INFO: [Timing 38-2] Deriving generated clocks
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2681.980 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 2 instances were transformed.
+  RAM16X1D => RAM32X1D (RAMD32(x2)): 2 instances
+
+RTL Elaboration Complete:  : Time (s): cpu = 00:00:11 ; elapsed = 00:00:08 . Memory (MB): peak = 2816.438 ; gain = 522.801
+36 Infos, 10 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:14 ; elapsed = 00:00:13 . Memory (MB): peak = 2816.438 ; gain = 533.746
+open_bd_design {C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/bd/design_1/design_1.bd}
+Reading block design file <C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/bd/design_1/design_1.bd>...
+Adding component instance block -- xilinx.com:ip:fir_compiler:7.2 - fir_compiler_0
+Adding component instance block -- xilinx.com:user:fir_ip:1.0 - fir_ip_0
+Adding component instance block -- xilinx.com:ip:processing_system7:5.5 - processing_system7_0
+Adding component instance block -- xilinx.com:ip:axi_interconnect:2.1 - ps7_0_axi_periph
+Adding component instance block -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - rst_ps7_0_50M
+Adding component instance block -- xilinx.com:ip:xlslice:1.0 - xlslice_0
+Successfully read diagram <design_1> from block design file <C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/bd/design_1/design_1.bd>
+close_bd_design [get_bd_designs design_1]
+Wrote  : <C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+place_ports fir_data_in_clk_o_0 L17
+place_ports fir_data_invalid_0 J20
+place_ports fir_data_out_clk_o_0 P18
+place_ports fir_data_outvalid_0 H20
+set_property IOSTANDARD LVCMOS33 [get_ports [list fir_data_in_clk_o_0]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list fir_data_invalid_0]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list fir_data_out_clk_o_0]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list fir_data_outvalid_0]]
+place_ports {fir_data_in_0[11]} D18
+place_ports {fir_data_in_0[10]} E17
+place_ports {fir_data_in_0[9]} D20
+place_ports {fir_data_in_0[8]} D19
+place_ports {fir_data_in_0[7]} A20
+place_ports {fir_data_in_0[6]} B19
+place_ports {fir_data_in_0[5]} E19
+place_ports {fir_data_in_0[4]} E18
+place_ports {fir_data_in_0[3]} F17
+place_ports {fir_data_in_0[2]} F16
+place_ports {fir_data_in_0[1]} G15
+place_ports {fir_data_in_0[0]} H15
+set_property IOSTANDARD LVCMOS33 [get_ports [list {fir_data_in_0[11]}]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list {fir_data_in_0[10]}]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list {fir_data_in_0[9]}]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list {fir_data_in_0[8]}]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list {fir_data_in_0[7]}]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list {fir_data_in_0[6]}]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list {fir_data_in_0[5]}]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list {fir_data_in_0[4]}]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list {fir_data_in_0[3]}]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list {fir_data_in_0[2]}]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list {fir_data_in_0[1]}]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list {fir_data_in_0[0]}]]
+place_ports {fir_data_out_0[13]} R16
+place_ports {fir_data_out_0[12]} R17
+place_ports {fir_data_out_0[11]} T16
+place_ports {fir_data_out_0[10]} U17
+place_ports {fir_data_out_0[9]} W18
+place_ports {fir_data_out_0[9]} W19
+place_ports {fir_data_out_0[8]} Y18
+place_ports {fir_data_out_0[9]} W18
+place_ports {fir_data_out_0[8]} W19
+place_ports {fir_data_out_0[7]} Y18
+place_ports {fir_data_out_0[6]} Y19
+place_ports {fir_data_out_0[5]} Y16
+place_ports {fir_data_out_0[4]} Y17
+place_ports {fir_data_out_0[3]} V17
+place_ports {fir_data_out_0[2]} V18
+place_ports {fir_data_out_0[1]} W14
+place_ports {fir_data_out_0[0]} Y14
+set_property IOSTANDARD LVCMOS33 [get_ports [list {fir_data_out_0[13]}]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list {fir_data_out_0[12]}]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list {fir_data_out_0[11]}]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list {fir_data_out_0[10]}]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list {fir_data_out_0[9]}]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list {fir_data_out_0[8]}]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list {fir_data_out_0[7]}]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list {fir_data_out_0[6]}]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list {fir_data_out_0[5]}]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list {fir_data_out_0[4]}]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list {fir_data_out_0[3]}]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list {fir_data_out_0[2]}]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list {fir_data_out_0[1]}]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list {fir_data_out_0[0]}]]
+close [ open C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/constrs_1/new/fir.xdc w ]
+add_files -fileset constrs_1 C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/constrs_1/new/fir.xdc
+set_property target_constrs_file C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/constrs_1/new/fir.xdc [current_fileset -constrset]
+save_constraints -force
+close_design
+reset_run synth_1
+launch_runs synth_1 -jobs 20
+[Mon Jul 14 20:07:57 2025] Launched synth_1...
+Run output will be captured here: C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.runs/synth_1/runme.log
+launch_runs impl_1 -jobs 20
+[Mon Jul 14 20:08:55 2025] Launched impl_1...
+Run output will be captured here: C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.runs/impl_1/runme.log
+ipx::edit_ip_in_project -upgrade true -name fir_ip_v1_0_project -directory C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.tmp/fir_ip_v1_0_project c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/my_ip/fir_ip_1.0/component.xml
+INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.
+Current project path is 'c:/users/hanqi/desktop/eda_xilinx/fir_coe20/vivado_prj/fir_coe20.tmp/fir_ip_v1_0_project'
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/XILINX_IDE/Vivado/2020.2/data/ip'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/my_ip/fir_ip_1.0'.
+INFO: [IP_Flow 19-795] Syncing license key meta-data
+update_compile_order -fileset sources_1
+export_ip_user_files -of_objects  [get_files c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/my_ip/fir_ip_1.0/src/clk_wiz_0/clk_wiz_0.xci] -no_script -reset -force -quiet
+remove_files  c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/my_ip/fir_ip_1.0/src/clk_wiz_0/clk_wiz_0.xci
+create_ip -name clk_wiz -vendor xilinx.com -library ip -version 6.0 -module_name clk_wiz_0 -dir c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/my_ip/fir_ip_1.0/src
+set_property -dict [list CONFIG.PRIMITIVE {PLL} CONFIG.PRIM_IN_FREQ {50.000} CONFIG.CLK_OUT1_PORT {clk_300M} CONFIG.USE_RESET {false} CONFIG.CLKIN1_JITTER_PS {200.0} CONFIG.CLKOUT1_DRIVES {BUFG} CONFIG.CLKOUT2_DRIVES {BUFG} CONFIG.CLKOUT3_DRIVES {BUFG} CONFIG.CLKOUT4_DRIVES {BUFG} CONFIG.CLKOUT5_DRIVES {BUFG} CONFIG.CLKOUT6_DRIVES {BUFG} CONFIG.CLKOUT7_DRIVES {BUFG} CONFIG.MMCM_BANDWIDTH {OPTIMIZED} CONFIG.MMCM_CLKFBOUT_MULT_F {18} CONFIG.MMCM_CLKIN1_PERIOD {20.000} CONFIG.MMCM_CLKIN2_PERIOD {10.0} CONFIG.MMCM_COMPENSATION {ZHOLD} CONFIG.MMCM_CLKOUT0_DIVIDE_F {9} CONFIG.PLL_CLKIN_PERIOD {20.000} CONFIG.CLKOUT1_JITTER {175.200} CONFIG.CLKOUT1_PHASE_ERROR {161.614}] [get_ips clk_wiz_0]
+generate_target {instantiation_template} [get_files c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/my_ip/fir_ip_1.0/src/clk_wiz_0_1/clk_wiz_0.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'clk_wiz_0'...
+generate_target all [get_files  c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/my_ip/fir_ip_1.0/src/clk_wiz_0_1/clk_wiz_0.xci]
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'clk_wiz_0'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'clk_wiz_0'...
+INFO: [IP_Flow 19-1686] Generating 'Implementation' target for IP 'clk_wiz_0'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'clk_wiz_0'...
+catch { config_ip_cache -export [get_ips -all clk_wiz_0] }
+export_ip_user_files -of_objects [get_files c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/my_ip/fir_ip_1.0/src/clk_wiz_0_1/clk_wiz_0.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/my_ip/fir_ip_1.0/src/clk_wiz_0_1/clk_wiz_0.xci]
+launch_runs clk_wiz_0_synth_1 -jobs 20
+[Mon Jul 14 20:16:05 2025] Launched clk_wiz_0_synth_1...
+Run output will be captured here: c:/users/hanqi/desktop/eda_xilinx/fir_coe20/vivado_prj/fir_coe20.tmp/fir_ip_v1_0_project/fir_ip_v1_0_project.runs/clk_wiz_0_synth_1/runme.log
+export_simulation -of_objects [get_files c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/my_ip/fir_ip_1.0/src/clk_wiz_0_1/clk_wiz_0.xci] -directory c:/users/hanqi/desktop/eda_xilinx/fir_coe20/vivado_prj/fir_coe20.tmp/fir_ip_v1_0_project/fir_ip_v1_0_project.ip_user_files/sim_scripts -ip_user_files_dir c:/users/hanqi/desktop/eda_xilinx/fir_coe20/vivado_prj/fir_coe20.tmp/fir_ip_v1_0_project/fir_ip_v1_0_project.ip_user_files -ipstatic_source_dir c:/users/hanqi/desktop/eda_xilinx/fir_coe20/vivado_prj/fir_coe20.tmp/fir_ip_v1_0_project/fir_ip_v1_0_project.ip_user_files/ipstatic -lib_map_path [list {modelsim=c:/users/hanqi/desktop/eda_xilinx/fir_coe20/vivado_prj/fir_coe20.tmp/fir_ip_v1_0_project/fir_ip_v1_0_project.cache/compile_simlib/modelsim} {questa=c:/users/hanqi/desktop/eda_xilinx/fir_coe20/vivado_prj/fir_coe20.tmp/fir_ip_v1_0_project/fir_ip_v1_0_project.cache/compile_simlib/questa} {riviera=c:/users/hanqi/desktop/eda_xilinx/fir_coe20/vivado_prj/fir_coe20.tmp/fir_ip_v1_0_project/fir_ip_v1_0_project.cache/compile_simlib/riviera} {activehdl=c:/users/hanqi/desktop/eda_xilinx/fir_coe20/vivado_prj/fir_coe20.tmp/fir_ip_v1_0_project/fir_ip_v1_0_project.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+current_project fir_coe20
+current_project fir_ip_v1_0_project
+ipx::merge_project_changes files [ipx::current_core]
+WARNING: [IP_Flow 19-5226] Project source file 'c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/my_ip/fir_ip_1.0/component.xml' ignored by IP packager.
+WARNING: [IP_Flow 19-5109] File Group 'xilinx_verilogsynthesis (Verilog Synthesis)': File 'c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/my_ip/fir_ip_1.0/src/clk_wiz_0/clk_wiz_0.xci' does not exist in the project sources. It has been removed from the packaged IP. If still required, please add this file to the project, merge sources and re-package.
+WARNING: [IP_Flow 19-5109] File Group 'xilinx_verilogbehavioralsimulation (Verilog Simulation)': File 'c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/my_ip/fir_ip_1.0/src/clk_wiz_0/clk_wiz_0.xci' does not exist in the project sources. It has been removed from the packaged IP. If still required, please add this file to the project, merge sources and re-package.
+set_property core_revision 3 [ipx::current_core]
+ipx::update_source_project_archive -component [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::check_integrity [ipx::current_core]
+INFO: [IP_Flow 19-2181] Payment Required is not set for this core.
+INFO: [IP_Flow 19-2187] The Product Guide file is missing.
+INFO: [Ipptcl 7-1486] check_integrity: Integrity check passed.
+ipx::save_core [ipx::current_core]
+ipx::move_temp_component_back -component [ipx::current_core]
+close_project -delete
+update_ip_catalog -rebuild -repo_path c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/my_ip/fir_ip_1.0
+INFO: [IP_Flow 19-725] Reloaded user IP repository 'c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/my_ip/fir_ip_1.0'
+open_bd_design {C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/bd/design_1/design_1.bd}
+Reading block design file <C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/bd/design_1/design_1.bd>...
+Adding component instance block -- xilinx.com:ip:fir_compiler:7.2 - fir_compiler_0
+Adding component instance block -- xilinx.com:user:fir_ip:1.0 - fir_ip_0
+Adding component instance block -- xilinx.com:ip:processing_system7:5.5 - processing_system7_0
+Adding component instance block -- xilinx.com:ip:axi_interconnect:2.1 - ps7_0_axi_periph
+Adding component instance block -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - rst_ps7_0_50M
+Adding component instance block -- xilinx.com:ip:xlslice:1.0 - xlslice_0
+Successfully read diagram <design_1> from block design file <C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/bd/design_1/design_1.bd>
+ipx::edit_ip_in_project -upgrade true -name fir_ip_v1_0_project -directory C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.tmp/fir_ip_v1_0_project c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/my_ip/fir_ip_1.0/component.xml
+INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.
+Current project path is 'c:/users/hanqi/desktop/eda_xilinx/fir_coe20/vivado_prj/fir_coe20.tmp/fir_ip_v1_0_project'
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/XILINX_IDE/Vivado/2020.2/data/ip'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/my_ip/fir_ip_1.0'.
+INFO: [IP_Flow 19-795] Syncing license key meta-data
+update_compile_order -fileset sources_1
+set_property -dict [list CONFIG.PRIM_SOURCE {Global_buffer}] [get_ips clk_wiz_0]
+set_property generate_synth_checkpoint true [get_files  c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/my_ip/fir_ip_1.0/src/clk_wiz_0_1/clk_wiz_0.xci]
+generate_target all [get_files  c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/my_ip/fir_ip_1.0/src/clk_wiz_0_1/clk_wiz_0.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'clk_wiz_0'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'clk_wiz_0'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'clk_wiz_0'...
+INFO: [IP_Flow 19-1686] Generating 'Implementation' target for IP 'clk_wiz_0'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'clk_wiz_0'...
+catch { config_ip_cache -export [get_ips -all clk_wiz_0] }
+export_ip_user_files -of_objects [get_files c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/my_ip/fir_ip_1.0/src/clk_wiz_0_1/clk_wiz_0.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/my_ip/fir_ip_1.0/src/clk_wiz_0_1/clk_wiz_0.xci]
+launch_runs clk_wiz_0_synth_1 -jobs 20
+[Mon Jul 14 20:18:41 2025] Launched clk_wiz_0_synth_1...
+Run output will be captured here: c:/users/hanqi/desktop/eda_xilinx/fir_coe20/vivado_prj/fir_coe20.tmp/fir_ip_v1_0_project/fir_ip_v1_0_project.runs/clk_wiz_0_synth_1/runme.log
+export_simulation -of_objects [get_files c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/my_ip/fir_ip_1.0/src/clk_wiz_0_1/clk_wiz_0.xci] -directory c:/users/hanqi/desktop/eda_xilinx/fir_coe20/vivado_prj/fir_coe20.tmp/fir_ip_v1_0_project/fir_ip_v1_0_project.ip_user_files/sim_scripts -ip_user_files_dir c:/users/hanqi/desktop/eda_xilinx/fir_coe20/vivado_prj/fir_coe20.tmp/fir_ip_v1_0_project/fir_ip_v1_0_project.ip_user_files -ipstatic_source_dir c:/users/hanqi/desktop/eda_xilinx/fir_coe20/vivado_prj/fir_coe20.tmp/fir_ip_v1_0_project/fir_ip_v1_0_project.ip_user_files/ipstatic -lib_map_path [list {modelsim=c:/users/hanqi/desktop/eda_xilinx/fir_coe20/vivado_prj/fir_coe20.tmp/fir_ip_v1_0_project/fir_ip_v1_0_project.cache/compile_simlib/modelsim} {questa=c:/users/hanqi/desktop/eda_xilinx/fir_coe20/vivado_prj/fir_coe20.tmp/fir_ip_v1_0_project/fir_ip_v1_0_project.cache/compile_simlib/questa} {riviera=c:/users/hanqi/desktop/eda_xilinx/fir_coe20/vivado_prj/fir_coe20.tmp/fir_ip_v1_0_project/fir_ip_v1_0_project.cache/compile_simlib/riviera} {activehdl=c:/users/hanqi/desktop/eda_xilinx/fir_coe20/vivado_prj/fir_coe20.tmp/fir_ip_v1_0_project/fir_ip_v1_0_project.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+current_project fir_coe20
+current_project fir_ip_v1_0_project
+current_project fir_coe20
+current_project fir_ip_v1_0_project
+ipx::merge_project_changes files [ipx::current_core]
+WARNING: [IP_Flow 19-5226] Project source file 'c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/my_ip/fir_ip_1.0/component.xml' ignored by IP packager.
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+set_property core_revision 4 [ipx::current_core]
+ipx::update_source_project_archive -component [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::check_integrity [ipx::current_core]
+INFO: [IP_Flow 19-2181] Payment Required is not set for this core.
+INFO: [IP_Flow 19-2187] The Product Guide file is missing.
+INFO: [Ipptcl 7-1486] check_integrity: Integrity check passed.
+ipx::save_core [ipx::current_core]
+ipx::move_temp_component_back -component [ipx::current_core]
+close_project -delete
+update_ip_catalog -rebuild -repo_path c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/my_ip/fir_ip_1.0
+INFO: [IP_Flow 19-725] Reloaded user IP repository 'c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/my_ip/fir_ip_1.0'
+delete_bd_objs [get_bd_nets fir_data_invalid_0_1] [get_bd_nets fir_compiler_0_m_axis_data_tvalid] [get_bd_nets fir_ip_0_filter_config_tvalid] [get_bd_nets fir_data_in_0_1] [get_bd_nets fir_ip_0_filter_config_tdata] [get_bd_nets fir_ip_0_fir_data_out_clk_o] [get_bd_intf_nets ps7_0_axi_periph_M00_AXI] [get_bd_nets fir_ip_0_s_axis_data_tdata] [get_bd_nets fir_ip_0_fir_data_outvalid] [get_bd_nets xlslice_0_Dout] [get_bd_nets fir_compiler_0_s_axis_config_tready] [get_bd_nets fir_ip_0_fir_data_in_clk_o] [get_bd_nets fir_ip_0_s_axis_data_tvalid] [get_bd_nets fir_compiler_0_s_axis_data_tready] [get_bd_nets fir_ip_0_fir_data_out] [get_bd_nets fir_ip_0_clk_300M] [get_bd_cells fir_ip_0]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:user:fir_ip:1.0 fir_ip_0
+endgroup
+set_property location {4.5 1500 266} [get_bd_cells fir_ip_0]
+undo
+INFO: [Common 17-17] undo 'set_property location {4.5 1500 266} [get_bd_cells fir_ip_0]'
+undo
+INFO: [Common 17-17] undo 'endgroup'
+INFO: [Common 17-17] undo 'create_bd_cell -type ip -vlnv xilinx.com:user:fir_ip:1.0 fir_ip_0'
+INFO: [Common 17-17] undo 'startgroup'
+undo
+INFO: [Common 17-17] undo 'delete_bd_objs [get_bd_nets fir_data_invalid_0_1] [get_bd_nets fir_compiler_0_m_axis_data_tvalid] [get_bd_nets fir_ip_0_filter_config_tvalid] [get_bd_nets fir_data_in_0_1] [get_bd_nets fir_ip_0_filter_config_tdata] [get_bd_nets fir_ip_0_fir_data_out_clk_o] [get_bd_intf_nets ps7_0_axi_periph_M00_AXI] [get_bd_nets fir_ip_0_s_axis_data_tdata] [get_bd_nets fir_ip_0_fir_data_outvalid] [get_bd_nets xlslice_0_Dout] [get_bd_nets fir_compiler_0_s_axis_config_tready] [get_bd_nets fir_ip_0_fir_data_in_clk_o] [get_bd_nets fir_ip_0_s_axis_data_tvalid] [get_bd_nets fir_compiler_0_s_axis_data_tready] [get_bd_nets fir_ip_0_fir_data_out] [get_bd_nets fir_ip_0_clk_300M] [get_bd_cells fir_ip_0]'
+ipx::edit_ip_in_project -upgrade true -name fir_ip_v1_0_project -directory C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.tmp/fir_ip_v1_0_project c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/my_ip/fir_ip_1.0/component.xml
+INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.
+Current project path is 'c:/users/hanqi/desktop/eda_xilinx/fir_coe20/vivado_prj/fir_coe20.tmp/fir_ip_v1_0_project'
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/XILINX_IDE/Vivado/2020.2/data/ip'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/my_ip/fir_ip_1.0'.
+INFO: [IP_Flow 19-795] Syncing license key meta-data
+update_compile_order -fileset sources_1
+close_project
+update_ip_catalog -rebuild -scan_changes
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/my_ip/fir_ip_1.0'.
+report_ip_status -name ip_status
+upgrade_ip -vlnv xilinx.com:user:fir_ip:1.0 [get_ips  design_1_fir_ip_0_0] -log ip_upgrade.log
+Upgrading 'C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/bd/design_1/design_1.bd'
+INFO: [IP_Flow 19-3422] Upgraded design_1_fir_ip_0_0 (fir_ip_v1.0 1.0) from revision 2 to revision 4
+Wrote  : <C:\Users\hanqi\Desktop\EDA_XILINX\FIR_COE20\vivado_prj\fir_coe20.srcs\sources_1\bd\design_1\design_1.bd> 
+Wrote  : <C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+INFO: [Coretcl 2-1525] Wrote upgrade log to 'C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/ip_upgrade.log'.
+export_ip_user_files -of_objects [get_ips design_1_fir_ip_0_0] -no_script -sync -force -quiet
+generate_target all [get_files  C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/bd/design_1/design_1.bd]
+Wrote  : <C:\Users\hanqi\Desktop\EDA_XILINX\FIR_COE20\vivado_prj\fir_coe20.srcs\sources_1\bd\design_1\design_1.bd> 
+VHDL Output written to : c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.gen/sources_1/bd/design_1/synth/design_1.v
+VHDL Output written to : c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.gen/sources_1/bd/design_1/sim/design_1.v
+VHDL Output written to : c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.gen/sources_1/bd/design_1/hdl/design_1_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block fir_ip_0 .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.gen/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.gen/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Block Design Tcl file c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.gen/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.gen/sources_1/bd/design_1/synth/design_1.hwdef
+catch { config_ip_cache -export [get_ips -all design_1_fir_ip_0_0] }
+catch { config_ip_cache -export [get_ips -all design_1_auto_pc_0] }
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_pc_0, cache-ID = 77f9c3171bdc2b58; cache size = 12.451 MB.
+export_ip_user_files -of_objects [get_files C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/bd/design_1/design_1.bd]
+launch_runs design_1_fir_ip_0_0_synth_1 -jobs 20
+[Mon Jul 14 20:23:12 2025] Launched design_1_fir_ip_0_0_synth_1...
+Run output will be captured here: C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.runs/design_1_fir_ip_0_0_synth_1/runme.log
+export_simulation -of_objects [get_files C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/bd/design_1/design_1.bd] -directory C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.ip_user_files -ipstatic_source_dir C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.cache/compile_simlib/modelsim} {questa=C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.cache/compile_simlib/questa} {riviera=C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.cache/compile_simlib/riviera} {activehdl=C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+regenerate_bd_layout
+close_bd_design [get_bd_designs design_1]
+Wrote  : <C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+reset_run synth_1
+launch_runs synth_1 -jobs 20
+[Mon Jul 14 20:24:01 2025] Launched synth_1...
+Run output will be captured here: C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.runs/synth_1/runme.log
+launch_runs impl_1 -jobs 20
+[Mon Jul 14 20:24:58 2025] Launched impl_1...
+Run output will be captured here: C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.runs/impl_1/runme.log
+launch_runs impl_1 -to_step write_bitstream -jobs 20
+[Mon Jul 14 20:28:06 2025] Launched impl_1...
+Run output will be captured here: C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.runs/impl_1/runme.log
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/bd/design_1/design_1.bd]
+synth_design -rtl -rtl_skip_mlo -name rtl_1
+Command: synth_design -rtl -rtl_skip_mlo -name rtl_1
+Starting synth_design
+Using part: xc7z010clg400-1
+Top: design_1_wrapper
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 3136.797 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'design_1_wrapper' [c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.gen/sources_1/bd/design_1/hdl/design_1_wrapper.v:12]
+INFO: [Synth 8-6157] synthesizing module 'design_1' [c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.gen/sources_1/bd/design_1/synth/design_1.v:13]
+INFO: [Synth 8-6157] synthesizing module 'design_1_fir_compiler_0_0' [C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/.Xil/Vivado-15604-hanqinghai/realtime/design_1_fir_compiler_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_fir_compiler_0_0' (1#1) [C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/.Xil/Vivado-15604-hanqinghai/realtime/design_1_fir_compiler_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 's_axis_reload_tready' of module 'design_1_fir_compiler_0_0' is unconnected for instance 'fir_compiler_0' [c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.gen/sources_1/bd/design_1/synth/design_1.v:173]
+WARNING: [Synth 8-7071] port 'event_s_reload_tlast_missing' of module 'design_1_fir_compiler_0_0' is unconnected for instance 'fir_compiler_0' [c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.gen/sources_1/bd/design_1/synth/design_1.v:173]
+WARNING: [Synth 8-7071] port 'event_s_reload_tlast_unexpected' of module 'design_1_fir_compiler_0_0' is unconnected for instance 'fir_compiler_0' [c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.gen/sources_1/bd/design_1/synth/design_1.v:173]
+WARNING: [Synth 8-7023] instance 'fir_compiler_0' of module 'design_1_fir_compiler_0_0' has 16 connections declared, but only 13 given [c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.gen/sources_1/bd/design_1/synth/design_1.v:173]
+INFO: [Synth 8-6157] synthesizing module 'design_1_fir_ip_0_0' [C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/.Xil/Vivado-15604-hanqinghai/realtime/design_1_fir_ip_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_fir_ip_0_0' (2#1) [C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/.Xil/Vivado-15604-hanqinghai/realtime/design_1_fir_ip_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_processing_system7_0_0' [C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/.Xil/Vivado-15604-hanqinghai/realtime/design_1_processing_system7_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_processing_system7_0_0' (3#1) [C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/.Xil/Vivado-15604-hanqinghai/realtime/design_1_processing_system7_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_ps7_0_axi_periph_0' [c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.gen/sources_1/bd/design_1/synth/design_1.v:363]
+INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_UYSKKA' [c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.gen/sources_1/bd/design_1/synth/design_1.v:678]
+INFO: [Synth 8-6157] synthesizing module 'design_1_auto_pc_0' [C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/.Xil/Vivado-15604-hanqinghai/realtime/design_1_auto_pc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_auto_pc_0' (4#1) [C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/.Xil/Vivado-15604-hanqinghai/realtime/design_1_auto_pc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_UYSKKA' (5#1) [c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.gen/sources_1/bd/design_1/synth/design_1.v:678]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_ps7_0_axi_periph_0' (6#1) [c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.gen/sources_1/bd/design_1/synth/design_1.v:363]
+INFO: [Synth 8-6157] synthesizing module 'design_1_rst_ps7_0_50M_0' [C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/.Xil/Vivado-15604-hanqinghai/realtime/design_1_rst_ps7_0_50M_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_rst_ps7_0_50M_0' (7#1) [C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/.Xil/Vivado-15604-hanqinghai/realtime/design_1_rst_ps7_0_50M_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'mb_reset' of module 'design_1_rst_ps7_0_50M_0' is unconnected for instance 'rst_ps7_0_50M' [c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.gen/sources_1/bd/design_1/synth/design_1.v:351]
+WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'design_1_rst_ps7_0_50M_0' is unconnected for instance 'rst_ps7_0_50M' [c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.gen/sources_1/bd/design_1/synth/design_1.v:351]
+WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'design_1_rst_ps7_0_50M_0' is unconnected for instance 'rst_ps7_0_50M' [c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.gen/sources_1/bd/design_1/synth/design_1.v:351]
+WARNING: [Synth 8-7071] port 'interconnect_aresetn' of module 'design_1_rst_ps7_0_50M_0' is unconnected for instance 'rst_ps7_0_50M' [c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.gen/sources_1/bd/design_1/synth/design_1.v:351]
+WARNING: [Synth 8-7023] instance 'rst_ps7_0_50M' of module 'design_1_rst_ps7_0_50M_0' has 10 connections declared, but only 6 given [c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.gen/sources_1/bd/design_1/synth/design_1.v:351]
+INFO: [Synth 8-6157] synthesizing module 'design_1_xlslice_0_0' [c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.gen/sources_1/bd/design_1/ip/design_1_xlslice_0_0/synth/design_1_xlslice_0_0.v:57]
+INFO: [Synth 8-6157] synthesizing module 'xlslice_v1_0_2_xlslice' [c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.gen/sources_1/bd/design_1/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
+	Parameter DIN_WIDTH bound to: 48 - type: integer 
+	Parameter DIN_FROM bound to: 41 - type: integer 
+	Parameter DIN_TO bound to: 0 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'xlslice_v1_0_2_xlslice' (8#1) [c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.gen/sources_1/bd/design_1/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_xlslice_0_0' (9#1) [c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.gen/sources_1/bd/design_1/ip/design_1_xlslice_0_0/synth/design_1_xlslice_0_0.v:57]
+INFO: [Synth 8-6155] done synthesizing module 'design_1' (10#1) [c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.gen/sources_1/bd/design_1/synth/design_1.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_wrapper' (11#1) [c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.gen/sources_1/bd/design_1/hdl/design_1_wrapper.v:12]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 3136.797 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 3136.797 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 3136.797 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.gen/sources_1/bd/design_1/ip/design_1_fir_compiler_0_0/design_1_fir_compiler_0_0.dcp' for cell 'design_1_i/fir_compiler_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.gen/sources_1/bd/design_1/ip/design_1_fir_ip_0_0/design_1_fir_ip_0_0.dcp' for cell 'design_1_i/fir_ip_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.gen/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0.dcp' for cell 'design_1_i/processing_system7_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.gen/sources_1/bd/design_1/ip/design_1_rst_ps7_0_50M_0/design_1_rst_ps7_0_50M_0.dcp' for cell 'design_1_i/rst_ps7_0_50M'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.gen/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0.dcp' for cell 'design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc'
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.047 . Memory (MB): peak = 3142.684 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 194 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2020.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.gen/sources_1/bd/design_1/ip/design_1_fir_compiler_0_0/constraints/fir_compiler_v7_2.xdc] for cell 'design_1_i/fir_compiler_0/U0'
+Finished Parsing XDC File [c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.gen/sources_1/bd/design_1/ip/design_1_fir_compiler_0_0/constraints/fir_compiler_v7_2.xdc] for cell 'design_1_i/fir_compiler_0/U0'
+Parsing XDC File [c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.gen/sources_1/bd/design_1/ip/design_1_fir_ip_0_0/src/clk_wiz_0_1/clk_wiz_0.xdc] for cell 'design_1_i/fir_ip_0/inst/fir_ip_v1_0_S00_AXI_inst/fir_ctrl_inst/clk_wiz_0_inst/inst'
+Finished Parsing XDC File [c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.gen/sources_1/bd/design_1/ip/design_1_fir_ip_0_0/src/clk_wiz_0_1/clk_wiz_0.xdc] for cell 'design_1_i/fir_ip_0/inst/fir_ip_v1_0_S00_AXI_inst/fir_ctrl_inst/clk_wiz_0_inst/inst'
+Parsing XDC File [c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.gen/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0.xdc] for cell 'design_1_i/processing_system7_0/inst'
+Finished Parsing XDC File [c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.gen/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0.xdc] for cell 'design_1_i/processing_system7_0/inst'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.gen/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/design_1_wrapper_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/design_1_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.gen/sources_1/bd/design_1/ip/design_1_rst_ps7_0_50M_0/design_1_rst_ps7_0_50M_0_board.xdc] for cell 'design_1_i/rst_ps7_0_50M/U0'
+Finished Parsing XDC File [c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.gen/sources_1/bd/design_1/ip/design_1_rst_ps7_0_50M_0/design_1_rst_ps7_0_50M_0_board.xdc] for cell 'design_1_i/rst_ps7_0_50M/U0'
+Parsing XDC File [c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.gen/sources_1/bd/design_1/ip/design_1_rst_ps7_0_50M_0/design_1_rst_ps7_0_50M_0.xdc] for cell 'design_1_i/rst_ps7_0_50M/U0'
+Finished Parsing XDC File [c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.gen/sources_1/bd/design_1/ip/design_1_rst_ps7_0_50M_0/design_1_rst_ps7_0_50M_0.xdc] for cell 'design_1_i/rst_ps7_0_50M/U0'
+INFO: [Timing 38-2] Deriving generated clocks
+Parsing XDC File [C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/constrs_1/new/fir.xdc]
+Finished Parsing XDC File [C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/constrs_1/new/fir.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 3183.266 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 2 instances were transformed.
+  RAM16X1D => RAM32X1D (RAMD32(x2)): 2 instances
+
+RTL Elaboration Complete:  : Time (s): cpu = 00:00:09 ; elapsed = 00:00:06 . Memory (MB): peak = 3236.586 ; gain = 99.789
+34 Infos, 9 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:09 ; elapsed = 00:00:06 . Memory (MB): peak = 3236.586 ; gain = 99.789
+close_design
+open_run impl_1
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.040 . Memory (MB): peak = 3302.594 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 182 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2020.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.205 . Memory (MB): peak = 3691.965 ; gain = 0.000
+Restored from archive | CPU: 0.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.206 . Memory (MB): peak = 3691.965 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 3691.965 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 2 instances were transformed.
+  RAM16X1D => RAM32X1D (RAMD32(x2)): 2 instances
+
+open_run: Time (s): cpu = 00:00:10 ; elapsed = 00:00:07 . Memory (MB): peak = 3750.293 ; gain = 447.699
+close_design
+update_ip_catalog -rebuild -scan_changes
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/my_ip/fir_ip_1.0'.
+report_ip_status -name ip_status
+upgrade_ip -vlnv xilinx.com:user:fir_ip:1.0 [get_ips  design_1_fir_ip_0_0] -log ip_upgrade.log
+Reading block design file <C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/bd/design_1/design_1.bd>...
+Adding component instance block -- xilinx.com:ip:fir_compiler:7.2 - fir_compiler_0
+Adding component instance block -- xilinx.com:ip:processing_system7:5.5 - processing_system7_0
+Adding component instance block -- xilinx.com:ip:axi_interconnect:2.1 - ps7_0_axi_periph
+Adding component instance block -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - rst_ps7_0_50M
+Adding component instance block -- xilinx.com:ip:xlslice:1.0 - xlslice_0
+Adding component instance block -- xilinx.com:user:fir_ip:1.0 - fir_ip_0
+Successfully read diagram <design_1> from block design file <C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/bd/design_1/design_1.bd>
+Upgrading 'C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/bd/design_1/design_1.bd'
+INFO: [IP_Flow 19-1972] Upgraded design_1_fir_ip_0_0 from fir_ip_v1.0 1.0 to fir_ip_v1.0 1.0
+Wrote  : <C:\Users\hanqi\Desktop\EDA_XILINX\FIR_COE20\vivado_prj\fir_coe20.srcs\sources_1\bd\design_1\design_1.bd> 
+Wrote  : <C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+INFO: [Coretcl 2-1525] Wrote upgrade log to 'C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/ip_upgrade.log'.
+export_ip_user_files -of_objects [get_ips design_1_fir_ip_0_0] -no_script -sync -force -quiet
+generate_target all [get_files  C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/bd/design_1/design_1.bd]
+Wrote  : <C:\Users\hanqi\Desktop\EDA_XILINX\FIR_COE20\vivado_prj\fir_coe20.srcs\sources_1\bd\design_1\design_1.bd> 
+VHDL Output written to : c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.gen/sources_1/bd/design_1/synth/design_1.v
+VHDL Output written to : c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.gen/sources_1/bd/design_1/sim/design_1.v
+VHDL Output written to : c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.gen/sources_1/bd/design_1/hdl/design_1_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block fir_ip_0 .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.gen/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.gen/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Block Design Tcl file c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.gen/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.gen/sources_1/bd/design_1/synth/design_1.hwdef
+catch { config_ip_cache -export [get_ips -all design_1_fir_ip_0_0] }
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_fir_ip_0_0, cache-ID = 427d2fc6f5a434fd; cache size = 12.652 MB.
+catch { config_ip_cache -export [get_ips -all design_1_auto_pc_0] }
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_pc_0, cache-ID = 77f9c3171bdc2b58; cache size = 12.652 MB.
+export_ip_user_files -of_objects [get_files C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/bd/design_1/design_1.bd]
+export_simulation -of_objects [get_files C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/bd/design_1/design_1.bd] -directory C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.ip_user_files -ipstatic_source_dir C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.cache/compile_simlib/modelsim} {questa=C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.cache/compile_simlib/questa} {riviera=C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.cache/compile_simlib/riviera} {activehdl=C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+generate_target all [get_files  C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/bd/design_1/design_1.bd]
+export_ip_user_files -of_objects [get_files C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/bd/design_1/design_1.bd]
+export_simulation -of_objects [get_files C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/bd/design_1/design_1.bd] -directory C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.ip_user_files -ipstatic_source_dir C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.cache/compile_simlib/modelsim} {questa=C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.cache/compile_simlib/questa} {riviera=C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.cache/compile_simlib/riviera} {activehdl=C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+make_wrapper -files [get_files C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/bd/design_1/design_1.bd] -top
+reset_run synth_1
+launch_runs synth_1 -jobs 20
+[Mon Jul 14 20:34:15 2025] Launched synth_1...
+Run output will be captured here: C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.runs/synth_1/runme.log
+close_bd_design [get_bd_designs design_1]
+Wrote  : <C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+report_ip_status -name ip_status 
+launch_runs impl_1 -jobs 20
+[Mon Jul 14 20:35:27 2025] Launched impl_1...
+Run output will be captured here: C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.runs/impl_1/runme.log
+launch_runs impl_1 -to_step write_bitstream -jobs 20
+[Mon Jul 14 20:36:22 2025] Launched impl_1...
+Run output will be captured here: C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.runs/impl_1/runme.log
+open_run impl_1
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.039 . Memory (MB): peak = 3819.840 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 182 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2020.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.199 . Memory (MB): peak = 3819.840 ; gain = 0.000
+Restored from archive | CPU: 0.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.199 . Memory (MB): peak = 3819.840 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 3819.840 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 2 instances were transformed.
+  RAM16X1D => RAM32X1D (RAMD32(x2)): 2 instances
+
+close_design
+write_hw_platform -fixed -include_bit -force -file C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/vitis/design_1_wrapper.xsa
+INFO: [Vivado 12-4895] Creating Hardware Platform: C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/vitis/design_1_wrapper.xsa ...
+INFO: [Hsi 55-2053] elapsed time for repository (D:/XILINX_IDE/Vivado/2020.2/data\embeddedsw) loading 0 seconds
+INFO: [Vivado 12-12467] The Hardware Platform can be used for Hardware
+INFO: [Vivado 12-4896] Successfully created Hardware Platform: C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/vitis/design_1_wrapper.xsa
+INFO: [Vivado 12-8231] Launching Vitis
+INFO: [Vivado 12-417] Running vitis
+INFO: [Vivado 12-8232] Vitis launch initiated. Please check console for any further messages.
+INFO: [Vivado 12-8231] Launching Vitis
+INFO: [Vivado 12-417] Running vitis
+INFO: [Vivado 12-8232] Vitis launch initiated. Please check console for any further messages.
+open_bd_design {C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/bd/design_1/design_1.bd}
+Reading block design file <C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/bd/design_1/design_1.bd>...
+Adding component instance block -- xilinx.com:ip:fir_compiler:7.2 - fir_compiler_0
+Adding component instance block -- xilinx.com:ip:processing_system7:5.5 - processing_system7_0
+Adding component instance block -- xilinx.com:ip:axi_interconnect:2.1 - ps7_0_axi_periph
+Adding component instance block -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - rst_ps7_0_50M
+Adding component instance block -- xilinx.com:ip:xlslice:1.0 - xlslice_0
+Adding component instance block -- xilinx.com:user:fir_ip:1.0 - fir_ip_0
+Successfully read diagram <design_1> from block design file <C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/bd/design_1/design_1.bd>
+close_bd_design [get_bd_designs design_1]
+Wrote  : <C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+open_bd_design {C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/bd/design_1/design_1.bd}
+Reading block design file <C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/bd/design_1/design_1.bd>...
+Adding component instance block -- xilinx.com:ip:fir_compiler:7.2 - fir_compiler_0
+Adding component instance block -- xilinx.com:ip:processing_system7:5.5 - processing_system7_0
+Adding component instance block -- xilinx.com:ip:axi_interconnect:2.1 - ps7_0_axi_periph
+Adding component instance block -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - rst_ps7_0_50M
+Adding component instance block -- xilinx.com:ip:xlslice:1.0 - xlslice_0
+Adding component instance block -- xilinx.com:user:fir_ip:1.0 - fir_ip_0
+Successfully read diagram <design_1> from block design file <C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/bd/design_1/design_1.bd>
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/XILINX_IDE/Vivado/2020.2/data/xsim/xsim.ini' copied to run dir:'C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_fir' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.sim/sim_1/behav/xsim/untitled.coe'
+INFO: [SIM-utils-43] Exported 'C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.sim/sim_1/behav/xsim/design_1_fir_compiler_0_0.mif'
+INFO: [SIM-utils-43] Exported 'C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.sim/sim_1/behav/xsim/fir_compiler_0.mif'
+INFO: [SIM-utils-43] Exported 'C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.sim/sim_1/behav/xsim/untitled_100K.coe'
+WARNING: [SIM-utils-52] IP component XML file does not exist: 'c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xml'
+WARNING: [SIM-utils-52] IP component XML file does not exist: 'c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/ip/fir_compiler_0/fir_compiler_0.xml'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L axi_vip_v1_1_8 -L processing_system7_vip_v1_0_10 -L xilinx_vip -prj tb_fir_vlog.prj"
+ERROR: [XSIM 43-4316] Can not find file: c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_clk_wiz.v
+"xvhdl --incr --relax -prj tb_fir_vhdl.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.sim/sim_1/behav/xsim/xvlog.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.sim/sim_1/behav/xsim/xvlog.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+set_property top fir_top [current_fileset]
+update_compile_order -fileset sources_1
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/XILINX_IDE/Vivado/2020.2/data/xsim/xsim.ini' copied to run dir:'C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_fir' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.sim/sim_1/behav/xsim/untitled.coe'
+INFO: [SIM-utils-43] Exported 'C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.sim/sim_1/behav/xsim/design_1_fir_compiler_0_0.mif'
+INFO: [SIM-utils-43] Exported 'C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.sim/sim_1/behav/xsim/fir_compiler_0.mif'
+INFO: [SIM-utils-43] Exported 'C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.sim/sim_1/behav/xsim/untitled_100K.coe'
+WARNING: [SIM-utils-52] IP component XML file does not exist: 'c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xml'
+WARNING: [SIM-utils-52] IP component XML file does not exist: 'c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/ip/fir_compiler_0/fir_compiler_0.xml'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L axi_vip_v1_1_8 -L processing_system7_vip_v1_0_10 -L xilinx_vip -prj tb_fir_vlog.prj"
+ERROR: [XSIM 43-4316] Can not find file: c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_clk_wiz.v
+"xvhdl --incr --relax -prj tb_fir_vhdl.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.sim/sim_1/behav/xsim/xvlog.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.sim/sim_1/behav/xsim/xvlog.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 4105.203 ; gain = 0.000
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+set_property top design_1_wrapper [current_fileset]
+update_compile_order -fileset sources_1
+open_hw_manager
+connect_hw_server -allow_non_jtag
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042
+INFO: [Labtools 27-3417] Launching cs_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+
+******** Xilinx cs_server v2020.2
+  ****** Build date   : Nov 04 2020-05:02:56
+    **** Build number : 2020.2.1604437376
+      ** Copyright 2017-2020 Xilinx, Inc. All Rights Reserved.
+
+
+
+connect_hw_server: Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 4113.176 ; gain = 0.000
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210299495526
+open_hw_target: Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 5427.070 ; gain = 1313.895
+set_property PROGRAM.FILE {C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.runs/impl_1/design_1_wrapper.bit} [get_hw_devices xc7z010_1]
+current_hw_device [get_hw_devices xc7z010_1]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7z010_1] 0]
+INFO: [Labtools 27-1434] Device xc7z010 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7z010_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z010_1]
+set_property PROGRAM.FILE {C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.runs/impl_1/design_1_wrapper.bit} [get_hw_devices xc7z010_1]
+program_hw_devices [get_hw_devices xc7z010_1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7z010_1] 0]
+INFO: [Labtools 27-1434] Device xc7z010 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+close_hw_manager
+open_hw_manager
+connect_hw_server -allow_non_jtag
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042
+INFO: [Labtools 27-3417] Launching cs_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+
+******** Xilinx cs_server v2020.2
+  ****** Build date   : Nov 04 2020-05:02:56
+    **** Build number : 2020.2.1604437376
+      ** Copyright 2017-2020 Xilinx, Inc. All Rights Reserved.
+
+
+
+connect_hw_server: Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 5502.555 ; gain = 0.000
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210299495526
+set_property PROGRAM.FILE {C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.runs/impl_1/design_1_wrapper.bit} [get_hw_devices xc7z010_1]
+current_hw_device [get_hw_devices xc7z010_1]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7z010_1] 0]
+INFO: [Labtools 27-1434] Device xc7z010 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7z010_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z010_1]
+set_property PROGRAM.FILE {C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.runs/impl_1/design_1_wrapper.bit} [get_hw_devices xc7z010_1]
+program_hw_devices [get_hw_devices xc7z010_1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7z010_1] 0]
+INFO: [Labtools 27-1434] Device xc7z010 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210299495526
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210299495526
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+INFO: [Labtools 27-1435] Device xc7z010 (JTAG device index = 1) is not programmed (DONE status = 0).
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+close_hw_manager
+startgroup
+set_property -dict [list CONFIG.Clock_Frequency {50} CONFIG.Coefficient_Width {16} CONFIG.Coefficient_Structure {Inferred} CONFIG.Filter_Architecture {Systolic_Multiply_Accumulate} CONFIG.ColumnConfig {29}] [get_bd_cells fir_compiler_0]
+endgroup
+delete_bd_objs [get_bd_nets fir_ip_0_clk_300M]
+connect_bd_net [get_bd_pins fir_compiler_0/aclk] [get_bd_pins processing_system7_0/FCLK_CLK0]
+validate_bd_design
+generate_target all [get_files  C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/bd/design_1/design_1.bd]
+INFO: [BD 41-1662] The design 'design_1.bd' is already validated. Therefore parameter propagation will not be re-run.
+Wrote  : <C:\Users\hanqi\Desktop\EDA_XILINX\FIR_COE20\vivado_prj\fir_coe20.srcs\sources_1\bd\design_1\design_1.bd> 
+Wrote  : <C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+VHDL Output written to : c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.gen/sources_1/bd/design_1/synth/design_1.v
+VHDL Output written to : c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.gen/sources_1/bd/design_1/sim/design_1.v
+VHDL Output written to : c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.gen/sources_1/bd/design_1/hdl/design_1_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block fir_compiler_0 .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.gen/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.gen/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Block Design Tcl file c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.gen/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File c:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.gen/sources_1/bd/design_1/synth/design_1.hwdef
+catch { config_ip_cache -export [get_ips -all design_1_fir_compiler_0_0] }
+catch { config_ip_cache -export [get_ips -all design_1_auto_pc_0] }
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_pc_0, cache-ID = 77f9c3171bdc2b58; cache size = 12.652 MB.
+export_ip_user_files -of_objects [get_files C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/bd/design_1/design_1.bd]
+launch_runs design_1_fir_compiler_0_0_synth_1 -jobs 20
+[Mon Jul 14 22:08:36 2025] Launched design_1_fir_compiler_0_0_synth_1...
+Run output will be captured here: C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.runs/design_1_fir_compiler_0_0_synth_1/runme.log
+export_simulation -of_objects [get_files C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/bd/design_1/design_1.bd] -directory C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.ip_user_files -ipstatic_source_dir C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.cache/compile_simlib/modelsim} {questa=C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.cache/compile_simlib/questa} {riviera=C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.cache/compile_simlib/riviera} {activehdl=C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+make_wrapper -files [get_files C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/bd/design_1/design_1.bd] -top
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.runs/synth_1
+
+launch_runs synth_1 -jobs 20
+[Mon Jul 14 22:09:27 2025] Launched design_1_fir_compiler_0_0_synth_1...
+Run output will be captured here: C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.runs/design_1_fir_compiler_0_0_synth_1/runme.log
+[Mon Jul 14 22:09:27 2025] Launched synth_1...
+Run output will be captured here: C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.runs/synth_1/runme.log
+close_bd_design [get_bd_designs design_1]
+Wrote  : <C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+launch_runs impl_1 -jobs 20
+[Mon Jul 14 22:11:02 2025] Launched impl_1...
+Run output will be captured here: C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.runs/impl_1/runme.log
+launch_runs impl_1 -to_step write_bitstream -jobs 20
+[Mon Jul 14 22:12:32 2025] Launched impl_1...
+Run output will be captured here: C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/fir_coe20.runs/impl_1/runme.log
+write_hw_platform -fixed -include_bit -force -file C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/vitis/design_1_wrapper.xsa
+INFO: [Vivado 12-4895] Creating Hardware Platform: C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/vitis/design_1_wrapper.xsa ...
+INFO: [Vivado 12-12467] The Hardware Platform can be used for Hardware
+INFO: [Vivado 12-4896] Successfully created Hardware Platform: C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/vitis/design_1_wrapper.xsa
+INFO: [Vivado 12-8231] Launching Vitis
+INFO: [Vivado 12-417] Running vitis
+INFO: [Vivado 12-8232] Vitis launch initiated. Please check console for any further messages.
+exit
+INFO: [Common 17-206] Exiting Vivado at Mon Jul 14 22:34:13 2025...

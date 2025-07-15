@@ -1,0 +1,96 @@
+/*
+
+Xilinx Vivado v2020.2 (64-bit) [Major: 2020, Minor: 2]
+SW Build: 3064766 on Wed Nov 18 09:12:45 MST 2020
+IP Build: 3064653 on Wed Nov 18 14:17:31 MST 2020
+
+Process ID (PID): 15800
+License: Customer
+Mode: Batch Mode
+
+Current time: 	Tue Jul 15 09:05:16 CST 2025
+Time zone: 	China Standard Time (Asia/Shanghai)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 20
+
+Screen size: 2560x1440
+Screen resolution (DPI): 150
+Available screens: 1
+Default font: family=Dialog,name=Dialog,style=plain,size=18
+Scale size: 27
+
+Java version: 	11.0.2 64-bit
+Java home: 	D:/XILINX_IDE/Vivado/2020.2/tps/win64/jre11.0.2
+Java executable location: 	D:/XILINX_IDE/Vivado/2020.2/tps/win64/jre11.0.2/bin/java.exe
+Java initial memory (-Xms): 	128 MB
+Java maximum memory (-Xmx):	 3 GB
+
+
+User name: 	hanqi
+User home directory: C:/Users/hanqi
+User working directory: C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj
+User country: 	CN
+User language: 	zh
+User locale: 	zh_CN
+
+RDI_BASEROOT: D:/XILINX_IDE/Vivado
+HDI_APPROOT: D:/XILINX_IDE/Vivado/2020.2
+RDI_DATADIR: D:/XILINX_IDE/Vivado/2020.2/data
+RDI_BINDIR: D:/XILINX_IDE/Vivado/2020.2/bin
+
+Vivado preferences file location: C:/Users/hanqi/AppData/Roaming/Xilinx/Vivado/2020.2/vivado.xml
+Vivado preferences directory: C:/Users/hanqi/AppData/Roaming/Xilinx/Vivado/2020.2/
+Vivado layouts directory: C:/Users/hanqi/AppData/Roaming/Xilinx/Vivado/2020.2/data/layouts
+PlanAhead jar file location: 	D:/XILINX_IDE/Vivado/2020.2/lib/classes/planAhead.jar
+Vivado log file location: 	C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/vivado.log
+Vivado journal file location: 	C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/vivado.jou
+Engine tmp dir: 	C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/.Xil/Vivado-15800-hanqinghai
+
+Xilinx Environment Variables
+----------------------------
+INTELFPGAOCLSDKROOT: D:\intelFPGA\18.1\hld
+XILINX: D:/XILINX_IDE/Vivado/2020.2/ids_lite/ISE
+XILINX_DSP: D:/XILINX_IDE/Vivado/2020.2/ids_lite/ISE
+XILINX_HLS: D:/XILINX_IDE/Vitis_HLS/2020.2
+XILINX_PLANAHEAD: D:/XILINX_IDE/Vivado/2020.2
+XILINX_SDK: D:/XILINX_IDE/Vitis/2020.2
+XILINX_VITIS: D:/XILINX_IDE/Vitis/2020.2
+XILINX_VIVADO: D:/XILINX_IDE/Vivado/2020.2
+XILINX_VIVADO_HLS: D:/XILINX_IDE/Vivado/2020.2
+
+
+GUI allocated memory:	145 MB
+GUI max memory:		3,072 MB
+Engine allocated memory: 1,152 MB
+
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+closeMainWindow("Vivado 2020.2"); // cr
+// Tcl Command: 'exit'
+// TclEventType: STOP_GUI
+// HMemoryUtils.trashcanNow. Engine heap size: 1,152 MB. GUI used memory: 68 MB. Current time: 7/15/25, 9:05:04 AM CST
+// TclEventType: STOP_PROGRESS_DIALOG
+// TclEventType: PA_SHUTDOWN
+// HMemoryUtils.trashcanNow. Engine heap size: 1,152 MB. GUI used memory: 66 MB. Current time: 7/15/25, 9:05:04 AM CST
+// Rodin thread is still running after join(10000)
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2020.2 (64-bit)
+# SW Build: 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build: 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Current time: Tue Jul 15 09:05:16 CST 2025
+# Process ID (PID): 15800
+# OS: Windows 10
+# User: hanqi
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.NullPointerException (See C:/Users/hanqi/Desktop/EDA_XILINX/FIR_COE20/vivado_prj/vivado_pid15800.debug)
+*/
